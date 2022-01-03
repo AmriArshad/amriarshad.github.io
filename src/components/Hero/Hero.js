@@ -14,7 +14,7 @@ const Hero = (props) => (
       <SectionText>
       ☪️ | Computer Science Student | Digital Artist | Creative Coder
       </SectionText>
-      <Button onClick={() => window.location = 'https://linktr.ee/TheMel0n'}>Learn more</Button>
+      <Button onClick={() => location.href = 'https://linktr.ee/TheMel0n'}>Learn more</Button>
     </LeftSection>
   </Section>
 );
