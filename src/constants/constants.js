@@ -1,11 +1,11 @@
 export const projects = [
   {
-    title: 'Project Polygon',
+    title: 'Holocryptic',
     description: "An ongoing creative coding project that explores elements of mathematics and generative art. The animations are coded in p5.js, a Javascript port of the Java based language Processing.",
       image: '/images/1.png',
       tags: ['p5.js', 'HTML', 'CSS'],
-    live: 'https://amriarshad.github.io/Project-Polygon/',
-    source: 'https://github.com/AmriArshad/Project-Polygon',
+    live: 'https://amriarshad.github.io/Holocryptic/',
+    source: 'https://github.com/AmriArshad/Holocryptic',
     id: 0,
   },
   {
