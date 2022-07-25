@@ -3,15 +3,59 @@
 
 <head>
   <meta charset="utf-8">
-  <title>MyBlog</title>
+  {% if page.title %}
+  <title>{{ page.title }}</title>
+  {% else %}
+  <title>Amri's website</title>
+  {% endif %}
+  <meta name="description" content="Amri Arshad's Personal Website">
+  <meta name="author" content="Amri Arshad">
+  <link rel="icon" type="image/png" href="/favicon.ico">
 </head>
 
 <body>
+  <header>
+    <h1>Amri Arshad</h1>
+  </header>
+
+  <nav>
+    <a href="/">Home</a>
+    <a href="/blog/">Posts</a>
+    <a href="/links">Links</a>
+  </nav>
+
   <section class="section">
     <div class="container">
       {% block content %} {% endblock %}
     </div>
   </section>
+
+  <footer>
+    <div>
+      <a href="https://landchad.net" target="_blank" title="LandChad">
+        <img src="https://landchad.net/pix/landchad.gif" alt="LandChad.net">
+      </a>
+      <a href="https://wiby.me" target="_blank" title="Wiby">
+        <img src="https://wiby.me/about/wiby.gif" alt="Wiby.me">
+      </a>
+      <a href="https://sadgrl.online/" target="_blank" title="Sadgrl">
+        <img src="https://sadgrl.online/images/homepage/button-new.gif" alt="sadgrl online">
+      </a>
+      <a href="https://eggramen.neocities.org" target="_blank" title="Eggramen">
+        <img src="https://eggramen.neocities.org/link5.png" alt="Eggramen">
+      </a>
+      <a href="https://code.visualstudio.com/" target="_blank" title="Visual Studio Code">
+        <img src="https://openbooks.neocities.org/img/codebutton.gif" alt="Visual Studio Code">
+      </a>
+    </div>
+
+    <p>
+      &copy Copyright 2022
+      <a href="https://amri.dev">Amri Arshad</a>.
+      All rights reserved.
+    </p>
+  </footer>
+
 </body>
 
 </html>
