@@ -10,3 +10,15 @@ There are so many different fields of Computer Science that interest me, but If 
 I have been using Linux as my daily driver since the second half of 2020 and the only time I've ever booted back into windows was to play some games that weren't supported on Linux. I'm currently using [ArcoLinux](https://arcolinux.com/) since I'm too lazy to build Arch up from scratch. Maybe one day...
 
 My Linux and Computer Science journey is far from over and I aim to be constantly learning new technologies to further improve my workflow.
+
+<hr/>
+
+### My Socials
+- [Oncyber](https://oncyber.io/mel0n) - Virtual Showroom of my NFTs (Yes ik very controversial)
+- [Crypto addresses](https://unstoppabledomains.com/d/themel0n.crypto)
+- [GitHub](https://github.com/AmriArshad)
+- [Twitter](https://twitter.com/Amri__A)
+- Holocryptic (Generative Art/Creative Coding)
+  - [Twitter](https://twitter.com/holocrypt1c)
+  - [Instagram](https://www.instagram.com/_Holocrypt1c)
+  - [Website](https://amri.dev/Holocryptic/)
