@@ -46,12 +46,14 @@ A collection of resources that I have found over the years.
 - [Paraphrasing Tool](https://quillbot.com/) - Rewrites your text
 - [Otter.ai](https://otter.ai/) - Real time audio to text capture for Zoom, Google Meet and Microsoft Teams
 - [TinyWow](https://tinywow.com/) - free online tools for conversion of file formats
+- [ZLibrary](https://b-ok.global/) - Books
+- [PDFDrive](https://www.pdfdrive.com/) - PDFs and eBooks
 
 ### Misc
 - [SpongeBob Time Cards Generator](https://spongebob.gavinr.com/)
 - [Internet Bumper Stickers](https://www.internetbumperstickers.com/)
 - [Sandspiel](https://sandspiel.club/) - A small, falling sand type game
 - [Fallout 3 Terminal](https://github.com/fohtla/Fallout3Terminal)
-- [Nudoku](https://github.com/jubalh/nudoku) Sudoku in the terminal
+- [Nudoku](https://github.com/jubalh/nudoku) - Sudoku in the terminal
 - [Python Pixelsort](https://github.com/satyarth/pixelsort)
 - [Pokemon roms](https://www.reddit.com/r/Roms/comments/7hxzro/some_pokemon_roms/)
