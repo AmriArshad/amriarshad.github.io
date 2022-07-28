@@ -3,6 +3,8 @@ title = "Projects"
 page_template = "page.html"
 +++
 
+<div class="projects">
+
 ### [Holocryptic](https://amri.dev/Holocryptic/)
 ![Holocryptic - Perlin Alps](/images/projects/PerlinAlps.png)
 
@@ -27,3 +29,5 @@ A simple Naughts and Crosses game written in Java for COMPSCI 230.
 ![Simple Solitaire](/images/projects/SimpleSolitaire.png)
 
 A simple terminal based version of Solitaire that I made as part of a COMPSCI 130 assignment.
+
+</div>

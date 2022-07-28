@@ -26,7 +26,6 @@ a {
 }
 
 nav {
-  /* margin: auto; */
   text-align: center;
 }
 
@@ -42,8 +41,17 @@ p {
   font-size: 25px;
 }
 
-.container img {
+.projects img {
   width: 200px;
+}
+
+code {
+  padding: 12px;
+  overflow: auto;
+  font-size: 95%;
+  line-height: 1.45;
+  background-color: #161b22;
+  border-radius: 5px;
 }
 
 footer {
