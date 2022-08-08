@@ -3,7 +3,7 @@ title = "Links"
 page_template = "page.html"
 +++
 
-A collection of resources that I have found over the years.
+A collection of resources that I have found over the years. If you are looking for my socials, they can be found [here](/socials).
 
 - [Islam](#islam)
 - [Computer Science](#computer-science)
@@ -44,6 +44,7 @@ A collection of resources that I have found over the years.
 - [waldl](https://github.com/pystardust/waldl) - Browse and download wallpapers in the terminal
 - [Privacy Tools](https://www.privacytools.io/)
 - [Paraphrasing Tool](https://quillbot.com/) - Rewrites your text
+- [Spell Checker](https://www.websiteplanet.com/webtools/spell-checker/) - Spell checks inserted text or websites
 - [Otter.ai](https://otter.ai/) - Real time audio to text capture for Zoom, Google Meet and Microsoft Teams
 - [TinyWow](https://tinywow.com/) - free online tools for conversion of file formats
 - [ZLibrary](https://b-ok.global/) - Books
