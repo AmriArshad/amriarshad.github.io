@@ -3,7 +3,7 @@ title = "Links"
 page_template = "page.html"
 +++
 
-A collection of resources that I have found over the years. If you are looking for my socials, they can be found [here](/socials).
+A collection of resources that I have found over the years.
 
 - [Islam](#islam)
 - [Computer Science](#computer-science)
