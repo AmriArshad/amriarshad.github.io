@@ -54,6 +54,25 @@ code {
   border-radius: 5px;
 }
 
+/* .socials {
+  padding-top: 10px;
+} */
+
+.socials-column {
+  float: left;
+  width: 50%;
+}
+
+.socials:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.twitter-timeline {
+  padding-top: 20px;
+}
+
 footer {
   margin-top: 25px;
 }
@@ -62,6 +81,9 @@ footer {
   body {
     max-width: 600px;
     margin: auto;
+  }
+  .socials-column {
+    width: 100%;
   }
 }
 
