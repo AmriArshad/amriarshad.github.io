@@ -12,7 +12,12 @@ The sections I completed each day can be found below.
 - 1.0 Hello World
   - 1.1 Comments
 
-<!-- ### Day 2 - 15/9/2022
+### Day 2 - 15/9/2022
 - 1.2 Formatted Print
   - 1.2.1 Debug
-  - 1.2.2 Display -->
+  - 1.2.2 Display
+    - 1.2.2.1 Testcase: List
+  - 1.2.3 Formatting
+- 2.0 Primitives
+- 2.1 Literals and operators
+- 2.2 Tuples
