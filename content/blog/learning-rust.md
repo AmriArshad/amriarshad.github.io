@@ -21,3 +21,13 @@ The sections I completed each day can be found below.
 - 2.0 Primitives
 - 2.1 Literals and operators
 - 2.2 Tuples
+
+### Day 3 - 16/9/2022
+- 2.3 Arrays and Slices
+- 3.0 Custom Types
+  - 3.1 Structures
+  - 3.2 Enums
+    - 3.2.1 use
+    - 3.2.2 C-like
+    - Testcase: linked-list
+  - 3.3 Constants
