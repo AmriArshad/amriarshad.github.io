@@ -19,8 +19,8 @@ The sections I completed each day can be found below.
     - 1.2.2.1 Testcase: List
   - 1.2.3 Formatting
 - 2.0 Primitives
-- 2.1 Literals and operators
-- 2.2 Tuples
+  - 2.1 Literals and operators
+  - 2.2 Tuples
 
 ### Day 3 - 16/9/2022
 - 2.3 Arrays and Slices
