@@ -31,3 +31,15 @@ The sections I completed each day can be found below.
     - 3.2.2 C-like
     - Testcase: linked-list
   - 3.3 Constants
+
+### Day 4 - 17/9/2022
+- 4.0 Variable Bindings
+  - 4.1 Mutability
+  - 4.2 Scope and Shadowing
+  - 4.3 Declare first
+  - 4.4 Freezing
+- 5.0 Types
+  - 5.1 Casting
+  - 5.2 Literals
+  - 5.3 Inference
+  - 5.4 Aliasing
