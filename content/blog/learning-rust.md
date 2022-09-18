@@ -43,3 +43,7 @@ The sections I completed each day can be found below.
   - 5.2 Literals
   - 5.3 Inference
   - 5.4 Aliasing
+
+### Day 5 - 18/9/2022
+- 6.0 Conversion
+  - 6.1 From and Into
