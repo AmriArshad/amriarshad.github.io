@@ -54,8 +54,8 @@ The sections I completed each day can be found below.
 - 6.3 To and from Strings
 - 7.0 Expressions
 - 8.0 Flow of Control
- - 8.1 if/else
- - 8.2 loop
-  - 8.2.1 Nesting and Labels
-  - 8.2.2 Returning from loops
-- 8.3 while
+  - 8.1 if/else
+  - 8.2 loop
+    - 8.2.1 Nesting and Labels
+    - 8.2.2 Returning from loops
+  - 8.3 while
