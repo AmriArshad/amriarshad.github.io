@@ -3,6 +3,9 @@ title = "Git/GitHub basics"
 date = 2022-07-28
 +++
 
+Git/GitHub are extremely useful tools that every developer should be familiar with. In this post I highlight some of the main features and how to use them.
+<!-- more -->
+
 - [What is Git?](#what-is-git)
 - [What is GitHub](#what-is-github)
 - [Definitions](#definitions)
