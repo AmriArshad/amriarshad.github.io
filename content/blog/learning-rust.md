@@ -4,6 +4,7 @@ date = 2022-09-14
 +++
 
 After having a read of this [blog post](https://ibraheem.ca/posts/why-devs-love-rust/), I've decided to try and learn Rust. I will start by reading [Rust By Example](https://doc.rust-lang.org/stable/rust-by-example/) and then proceed with [codewars](https://www.codewars.com/) challenges to familiarising myself with the language.
+<!-- more -->
 
 The sections I completed each day can be found below.
 
@@ -47,3 +48,14 @@ The sections I completed each day can be found below.
 ### Day 5 - 18/9/2022
 - 6.0 Conversion
   - 6.1 From and Into
+
+### Day 6 - 19/9/2022
+- 6.2 TryFrom and TryInto
+- 6.3 To and from Strings
+- 7.0 Expressions
+- 8.0 Flow of Control
+ - 8.1 if/else
+ - 8.2 loop
+  - 8.2.1 Nesting and Labels
+  - 8.2.2 Returning from loops
+- 8.3 while
