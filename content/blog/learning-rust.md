@@ -59,3 +59,12 @@ The sections I completed each day can be found below.
     - 8.2.1 Nesting and Labels
     - 8.2.2 Returning from loops
   - 8.3 while
+
+### Day 7 - 20/9/2022
+- 8.4 for and range
+- 8.5 match
+  - 8.5.1 Destructuring
+    - 8.5.1.1 tuples
+    - 8.5.1.2 arrays/slices
+    - 8.5.1.2 arrays/slices
+    - 8.5.1.3 enums
