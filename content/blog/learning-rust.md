@@ -74,3 +74,7 @@ The sections I completed each day can be found below.
 - 8.5.1.5 structs
 - 8.5.2 Guards
 - 8.5.3 Binding
+
+### Day 9 - 22/9/2022
+- 8.5.4 if let
+- 8.5.5 while let
