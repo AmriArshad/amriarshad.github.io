@@ -78,3 +78,7 @@ The sections I completed each day can be found below.
 ### Day 9 - 22/9/2022
 - 8.5.4 if let
 - 8.5.5 while let
+
+### Day 10 - 23/9/2022
+- 9.0 Functions
+	- 9.1 Methods
