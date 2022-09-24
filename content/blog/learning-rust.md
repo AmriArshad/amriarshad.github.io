@@ -82,3 +82,11 @@ The sections I completed each day can be found below.
 ### Day 10 - 23/9/2022
 - 9.0 Functions
 	- 9.1 Methods
+
+### Day 11 - 24/9/2022
+- 9.2 Closures
+	- 9.2.1 Capturing
+	- 9.2.2 As input parameters
+	- 9.2.3 Type anonymity
+	- 9.2.4 Input functions
+	- 9.2.5 As output parameters
