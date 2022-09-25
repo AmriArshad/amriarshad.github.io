@@ -90,3 +90,8 @@ The sections I completed each day can be found below.
 	- 9.2.3 Type anonymity
 	- 9.2.4 Input functions
 	- 9.2.5 As output parameters
+
+### Day 12 - 25/9/2022
+- 9.2.6 Examples in std
+	- 9.2.6.1 Iterator::any
+	- 9.2.6.2 Searching through iterators
