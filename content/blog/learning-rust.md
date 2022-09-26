@@ -95,3 +95,13 @@ The sections I completed each day can be found below.
 - 9.2.6 Examples in std
 	- 9.2.6.1 Iterator::any
 	- 9.2.6.2 Searching through iterators
+
+### Day 13 - 26/9/2022
+- 9.3 Higher Order Functions
+- 9.4 Diverging Functions
+
+### Day 14 - 27/9/2022
+-	10.0  Modules
+	- 10.1 Visibility
+	- 10.2 Struct visibility
+	- 10.3 The use declaration
