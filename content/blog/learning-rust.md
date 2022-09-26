@@ -85,16 +85,16 @@ The sections I completed each day can be found below.
 
 ### Day 11 - 24/9/2022
 - 9.2 Closures
-	- 9.2.1 Capturing
-	- 9.2.2 As input parameters
-	- 9.2.3 Type anonymity
-	- 9.2.4 Input functions
-	- 9.2.5 As output parameters
+  - 9.2.1 Capturing
+  - 9.2.2 As input parameters
+  - 9.2.3 Type anonymity
+  - 9.2.4 Input functions
+  - 9.2.5 As output parameters
 
 ### Day 12 - 25/9/2022
 - 9.2.6 Examples in std
-	- 9.2.6.1 Iterator::any
-	- 9.2.6.2 Searching through iterators
+  - 9.2.6.1 Iterator::any
+  - 9.2.6.2 Searching through iterators
 
 ### Day 13 - 26/9/2022
 - 9.3 Higher Order Functions
@@ -102,6 +102,6 @@ The sections I completed each day can be found below.
 
 ### Day 14 - 27/9/2022
 -	10.0  Modules
-	- 10.1 Visibility
-	- 10.2 Struct visibility
-	- 10.3 The use declaration
+  - 10.1 Visibility
+  - 10.2 Struct visibility
+  - 10.3 The use declaration
