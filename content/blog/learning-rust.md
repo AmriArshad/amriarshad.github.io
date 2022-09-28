@@ -107,3 +107,18 @@ The sections I completed each day can be found below.
   - 10.3 The use declaration
   - 10.4 super and self
   - 10.5 File hierarchy
+
+### Day 15 - 28/9/2022
+- 11.0 Crates
+  - 11.1 Creating a Library
+  - 11.2 Using a Library
+- 12.0 Cargo
+  - 12.1 Dependencies
+  - 12.2 Conventions
+  - 12.3 Tests
+  - 12.4 Buidl Scripts
+- 13.0 Attributes
+  - 13.1 dead_code
+  - 13.2 Creates
+  - 13.3 cfg
+    - 13.3.1 Custom
