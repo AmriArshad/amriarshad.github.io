@@ -116,9 +116,18 @@ The sections I completed each day can be found below.
   - 12.1 Dependencies
   - 12.2 Conventions
   - 12.3 Tests
-  - 12.4 Buidl Scripts
+  - 12.4 Build Scripts
 - 13.0 Attributes
   - 13.1 dead_code
   - 13.2 Creates
   - 13.3 cfg
     - 13.3.1 Custom
+
+### Day 16 - 29/9/2022
+- 14.0 Generics
+  - 14.1 Functions
+  - 14.2 Implementation
+  - 14.3 Traits
+  - 14.4 Bounds
+    - 14.4.1 Testcase: empty bounds
+  - 14.5 Multiple bounds
