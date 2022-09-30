@@ -131,3 +131,11 @@ The sections I completed each day can be found below.
   - 14.4 Bounds
     - 14.4.1 Testcase: empty bounds
   - 14.5 Multiple bounds
+
+### Day 17 - 30/9/2022
+- 14.6 Where clauses
+- 14.7 New Type Idiom
+- 14.8 Associated items
+  - 14.8.1 The Problem
+  - 14.8.2 Associated Types
+- 14.9 Phantom type parameters
