@@ -139,3 +139,11 @@ The sections I completed each day can be found below.
   - 14.8.1 The Problem
   - 14.8.2 Associated Types
 - 14.9 Phantom type parameters
+
+### Day 18 - 1/10/2022
+- 14.9.1 Testcase: unit clarification
+- 15.0 Scoping rules
+  - 15.1 RAII
+  - 15.2 Ownership and moves
+    - 15.2.1 Mutability
+    - 15.2.2 Partial moves
