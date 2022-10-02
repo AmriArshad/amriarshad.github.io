@@ -147,3 +147,9 @@ The sections I completed each day can be found below.
   - 15.2 Ownership and moves
     - 15.2.1 Mutability
     - 15.2.2 Partial moves
+
+### Day 19 - 2/10/2022
+- 15.3 Borrowing
+  - 15.3.1 Mutability
+  - 15.3.2 Aliasing
+  - 15.3.3 The ref pattern
