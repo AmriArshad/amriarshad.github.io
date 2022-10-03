@@ -153,3 +153,9 @@ The sections I completed each day can be found below.
   - 15.3.1 Mutability
   - 15.3.2 Aliasing
   - 15.3.3 The ref pattern
+
+### Day 20 - 3/10/2022
+- 15.4 Lifetimes
+  - 15.4.1 Explicit annotation
+  - 15.4.2 Functions
+  - 15.4.3 Methods
