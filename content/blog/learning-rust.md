@@ -159,3 +159,7 @@ The sections I completed each day can be found below.
   - 15.4.1 Explicit annotation
   - 15.4.2 Functions
   - 15.4.3 Methods
+
+### Day 21 - 4/10/2022
+- 15.4.4 Structs
+- 15.4.5 Traits
