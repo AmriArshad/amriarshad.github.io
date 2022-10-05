@@ -163,3 +163,9 @@ The sections I completed each day can be found below.
 ### Day 21 - 4/10/2022
 - 15.4.4 Structs
 - 15.4.5 Traits
+
+### Day 22 - 5/10/2022
+- 15.4.6 Bounds
+- 15.4.7 Coercion
+- 15.4.8 Static
+- 15.4.9 Elision
