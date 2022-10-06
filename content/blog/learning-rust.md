@@ -169,3 +169,7 @@ The sections I completed each day can be found below.
 - 15.4.7 Coercion
 - 15.4.8 Static
 - 15.4.9 Elision
+
+### Day 23 - 6/10/2022
+- 16.0 Traits
+  - 16.1 Derive
