@@ -177,3 +177,6 @@ The sections I completed each day can be found below.
 ### Day 24 - 7/10/2022
 - 16.2 Returning Traits with dyn
 - 16.3 Operator Overloading
+
+### Day 25 - 8/10/2022
+- 16.4 Drop
