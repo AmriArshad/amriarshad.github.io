@@ -180,3 +180,6 @@ The sections I completed each day can be found below.
 
 ### Day 25 - 8/10/2022
 - 16.4 Drop
+
+### Day 26 - 9/10/2022
+- 16.5 Iterators
