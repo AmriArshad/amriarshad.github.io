@@ -183,3 +183,8 @@ The sections I completed each day can be found below.
 
 ### Day 26 - 9/10/2022
 - 16.5 Iterators
+
+### Day 27 - 10/10/2022
+- 16.6 Impl Trait
+- 16.7 Clone
+- 16.8 Supertraits
