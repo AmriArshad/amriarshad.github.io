@@ -188,3 +188,9 @@ The sections I completed each day can be found below.
 - 16.6 Impl Trait
 - 16.7 Clone
 - 16.8 Supertraits
+
+### Day 28 - 11/10/2022
+- 16.9 Disambiguating overlapping traits
+- 17.0 macro_rules!
+  - 17.1 Syntax
+
