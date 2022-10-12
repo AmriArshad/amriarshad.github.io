@@ -194,3 +194,7 @@ The sections I completed each day can be found below.
 - 17.0 macro_rules!
   - 17.1 Syntax
 
+### Day 29 - 12/10/2022
+- 17.1.1 Designators
+- 17.1.2 Overload
+- 17.1.3 Repeat
