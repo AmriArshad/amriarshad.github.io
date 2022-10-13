@@ -198,3 +198,7 @@ The sections I completed each day can be found below.
 - 17.1.1 Designators
 - 17.1.2 Overload
 - 17.1.3 Repeat
+
+### Day 30 - 13/10/2022
+- 17.2 DRY (Don't Repeat Yourself)
+- 17.3 DSL (Domain Specific Languages)
