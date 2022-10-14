@@ -202,3 +202,6 @@ The sections I completed each day can be found below.
 ### Day 30 - 13/10/2022
 - 17.2 DRY (Don't Repeat Yourself)
 - 17.3 DSL (Domain Specific Languages)
+
+### Day 31 - 14/10/2022
+- 17.4 Variadic Interfaces
