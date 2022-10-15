@@ -205,3 +205,8 @@ The sections I completed each day can be found below.
 
 ### Day 31 - 14/10/2022
 - 17.4 Variadic Interfaces
+
+### Day 32 - 15/10/2022
+- 18.0 Error handling
+  - 18.1 panic
+  - 18.2 abort & unwind
