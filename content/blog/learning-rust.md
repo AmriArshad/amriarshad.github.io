@@ -210,3 +210,6 @@ The sections I completed each day can be found below.
 - 18.0 Error handling
   - 18.1 panic
   - 18.2 abort & unwind
+
+### Day 33 - 16/10/2022
+- 18.3 Option & unwrap
