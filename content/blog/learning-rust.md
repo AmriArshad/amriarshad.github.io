@@ -213,3 +213,6 @@ The sections I completed each day can be found below.
 
 ### Day 33 - 16/10/2022
 - 18.3 Option & unwrap
+
+### Day 34 - 17/10/2022
+- 18.3.1 Unpacking options with ?
