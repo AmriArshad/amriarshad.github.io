@@ -216,3 +216,7 @@ The sections I completed each day can be found below.
 
 ### Day 34 - 17/10/2022
 - 18.3.1 Unpacking options with ?
+
+### Day 35 - 18/10/2022
+- 18.3.2 Combinators: map
+- 18.3.3 Combinators: and_then
