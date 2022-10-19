@@ -220,3 +220,6 @@ The sections I completed each day can be found below.
 ### Day 35 - 18/10/2022
 - 18.3.2 Combinators: map
 - 18.3.3 Combinators: and_then
+
+### Day 36 - 19/10/2022
+- 18.3.4 Defaults: or, or_else, get_or_insert, 'get_or_insert_with'
