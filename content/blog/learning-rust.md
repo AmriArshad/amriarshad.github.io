@@ -223,3 +223,7 @@ The sections I completed each day can be found below.
 
 ### Day 36 - 19/10/2022
 - 18.3.4 Defaults: or, or_else, get_or_insert, 'get_or_insert_with'
+
+### Day 37 - 20/10/2022
+- 18.4 Result
+  - 18.4.1 map for Result
