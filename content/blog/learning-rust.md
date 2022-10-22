@@ -230,3 +230,7 @@ The sections I completed each day can be found below.
 
 ### Day 38 - 21/10/2022
 - 18.4.2 aliases for Result
+
+### Day 39 - 22/10/2022
+- 18.4.3 Early Return
+- 18.4.4 Introducing ?
