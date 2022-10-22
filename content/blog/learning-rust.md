@@ -227,3 +227,6 @@ The sections I completed each day can be found below.
 ### Day 37 - 20/10/2022
 - 18.4 Result
   - 18.4.1 map for Result
+
+### Day 38 - 21/10/2022
+- 18.4.2 aliases for Result
