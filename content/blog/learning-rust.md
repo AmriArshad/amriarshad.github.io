@@ -234,3 +234,6 @@ The sections I completed each day can be found below.
 ### Day 39 - 22/10/2022
 - 18.4.3 Early Return
 - 18.4.4 Introducing ?
+
+### Day 40 - 23/10/2022
+- 18.5 Multiple error types
