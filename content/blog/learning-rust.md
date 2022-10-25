@@ -237,3 +237,9 @@ The sections I completed each day can be found below.
 
 ### Day 40 - 23/10/2022
 - 18.5 Multiple error types
+
+### Day 41 - 24/10/2022
+- 18.5.1 Pulling Results out of Options
+
+### Day 42 - 25/10/2022
+- 18.5.2 Defining an error type
