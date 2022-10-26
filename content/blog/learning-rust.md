@@ -243,3 +243,8 @@ The sections I completed each day can be found below.
 
 ### Day 42 - 25/10/2022
 - 18.5.2 Defining an error type
+
+### Day 43 - 26/10/2022
+- 18.5.3 Boxing Errors
+- 18.5.4 Other uses of ?
+- 18.5.5 Wrapping errors
