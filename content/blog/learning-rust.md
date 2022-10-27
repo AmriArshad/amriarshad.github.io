@@ -248,3 +248,6 @@ The sections I completed each day can be found below.
 - 18.5.3 Boxing Errors
 - 18.5.4 Other uses of ?
 - 18.5.5 Wrapping errors
+
+### Day 44 - 27/10/2022
+- 18.6 Iterating over Results

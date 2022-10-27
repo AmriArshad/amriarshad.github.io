@@ -1,5 +1,5 @@
 html {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -45,8 +45,45 @@ p {
   font-size: 25px;
 }
 
+.portfolio {
+  display: flex;
+}
+
+.portfolio-title {
+  font-size: 50px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: auto;
+  flex: 80%;
+}
+
 .projects img {
   width: 200px;
+}
+
+.project {
+  background-color: #101014;
+  padding: 0 20px 0px 20px;
+  margin-bottom: 20px;
+}
+
+.skills {
+  background-color: #101014;
+  padding: 0 20px 8px 20px;
+  margin-left: 20px;
+  /* margin-bottom: 20px; */
+  height: 100%;
+  flex: 20%;
+}
+
+.skills ul {
+  margin-left: -20px;
+}
+
+.skills li {
+  margin-bottom: 10px;
 }
 
 code {
@@ -89,6 +126,13 @@ footer {
   }
   .socials-column {
     width: 100%;
+  }
+  .portfolio {
+    display: contents;
+  }
+  .skills {
+    margin-left: 0px;
+    padding: 5px 20px 5px 20px;
   }
 }
 
