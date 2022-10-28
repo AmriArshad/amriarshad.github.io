@@ -251,3 +251,7 @@ The sections I completed each day can be found below.
 
 ### Day 44 - 27/10/2022
 - 18.6 Iterating over Results
+
+### Day 45 - 28/10/2022
+- 19.0 Std library types
+  - 19.1 Box, stack and heap
