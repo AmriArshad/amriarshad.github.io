@@ -35,6 +35,13 @@ A simple, yet elegant To Do app built in React Native.
 
 <div class="project">
 
+### [Shoppy-admin-dashboard](https://amri.dev/shoppy-admin-dashboard/)
+A mock ecommerce dashboard built with React, Tailwind CSS and Syncfusion components. The dashboard features dynamic theming, tables, a calendar, kanban board, text editor and colour picker apps alongside various charts. The app is deployed using GitHub Actions and GitHub Pages.
+
+</div>
+
+<div class="project">
+
 ### [Peeper.js](https://amri.dev/peeperjs)
 
 A gaze tracker prototype I worked on as part of my final uni project. Built in 12 weeks using [Face-api](https://github.com/justadudewhohacks/face-api.js/) and [OpenCV](https://opencv.org/) with the remaining components being coded in vanilla JavaScript. Although we managed to solve the issue of pupil detection to a certain degree, our gaze tracking is limited due to our direct mapping algorithm.
@@ -103,7 +110,7 @@ A simple terminal based version of Solitaire that I built as part of a COMPSCI 1
 
 - Linux/Unix
 - Git/GitHub
-- Github Actions
+- GitHub Actions
 - Vim
 - VS Code
 - Notion
