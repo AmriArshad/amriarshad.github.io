@@ -79,18 +79,35 @@ A simple terminal based version of Solitaire that I built as part of a COMPSCI 1
 
 <div class="skills">
 
-<h1 class="portfolio-title">Skills</h1>
+<h1 class="portfolio-title">Skills<hr/></h1>
+
+### Languages
+
+- JavaScript/TypeScript
+- Python
+- HTML/CSS
+- R
+- Java
+- Markdown
+- LaTeX
+
+### Frameworks
 
 - React
 - React Native
 - p5.js
-- JavaScript/TypeScript
-- Python
+- Zola
+- Agile
+
+### Technologies
+
 - Linux/Unix
 - Git/GitHub
-- R
-- Java
-- LaTeX
+- Github Actions
+- Vim
+- VS Code
+- Notion
+- Jira
 
 </div>
 

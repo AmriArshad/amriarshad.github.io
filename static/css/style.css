@@ -53,6 +53,10 @@ p {
   font-size: 50px;
 }
 
+.portfolio-title hr {
+  margin-top: 19px;
+}
+
 .projects {
   display: grid;
   grid-template-columns: auto;
@@ -73,7 +77,6 @@ p {
   background-color: #101014;
   padding: 0 20px 8px 20px;
   margin-left: 20px;
-  /* margin-bottom: 20px; */
   height: 100%;
   flex: 20%;
 }
