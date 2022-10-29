@@ -1,16 +1,30 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block content %}
+<h1 class="title">Hello World</h1>
 
-{% block content %}
-<h1 class="title">
-  Hello World
-</h1>
-
-<p>Welcome to my domain. Here you will find my projects, interesting links, a few blog posts here and there, and some
-  memes if I ever get around to posting them. One of the aims of this website is to be as minimal as possible, so don't
-  expect to find anything too fancy. Ideally this site will become a place where I can fully express myself without
-  censorship. It will also become a hub for me to store information and potentially share information with others.</p>
+<p>
+  Welcome to my site. Here you will find my projects, interesting links, a few
+  blog posts here and there, and some memes if I ever get around to posting
+  them. One of the aims of this website is to be as minimal as possible, so
+  don't expect to find anything too fancy. Ideally this site will become a hub
+  for me to store information and potentially share information with others.
+</p>
 
 <p>Enjoy your stay.</p>
+
+<hr />
+
+<h2>Most recent post</h2>
+{% set blog_section = get_section(path="blog/_index.md") %} {% for year, posts
+in blog_section.pages | group_by(attribute="year") %}
+<ul>
+  <li>
+    <a href="{{ posts[0].permalink | safe }}">{{ posts[0].title }}</a> - {{
+    posts[0].date }}
+  </li>
+  {{ posts[0].summary | safe }}
+  <a href="{{ posts[0].permalink | safe }}" id="cont-read">read more...</a>
+</ul>
+{% endfor %}
 
 <hr />
 
@@ -23,7 +37,11 @@
       <li><a href="https://twitter.com/Amri__A">Twitter</a></li>
       <li><a href="https://www.linkedin.com/in/amriarshad/">Linkedin</a></li>
       <li><a href="https://oncyber.io/mel0n">OnCyber</a></li>
-      <li><a href="https://unstoppabledomains.com/d/themel0n.crypto">Crypto addresses</a></li>
+      <li>
+        <a href="https://unstoppabledomains.com/d/themel0n.crypto"
+          >Crypto addresses</a
+        >
+      </li>
     </ul>
 
     <h3>Holocryptic (Generative Art/Creative Coding)</h3>
@@ -32,11 +50,28 @@
       <li><a href="https://twitter.com/holocrypt1c">Twitter</a></li>
       <li><a href="https://www.instagram.com/_Holocrypt1c">Instagram</a></li>
     </ul>
+
+    <h3>Latest artwork</h3>
+    <a href="https://amri.dev/Holocryptic/src/2022/0905/">
+    <h4>10Print Circuit V2</h>
+    </a>
+      <embed
+        type="text/html"
+        src="https://amri.dev/Holocryptic/src/2022/0905/"
+        width="400"
+        height="400"
+        />
+    </a>
   </div>
 
   <div class="socials-column">
-    <a class="twitter-timeline" data-theme="dark" data-height="550"
-      href="https://twitter.com/holocrypt1c?ref_src=twsrc%5Etfw">Tweets by holocrypt1c</a>
+    <a
+      class="twitter-timeline"
+      data-theme="dark"
+      data-height="800"
+      href="https://twitter.com/holocrypt1c?ref_src=twsrc%5Etfw"
+      >Tweets by holocrypt1c</a
+    >
   </div>
 </div>
 
