@@ -255,3 +255,6 @@ The sections I completed each day can be found below.
 ### Day 45 - 28/10/2022
 - 19.0 Std library types
   - 19.1 Box, stack and heap
+
+### Day 46 - 29/10/2022
+- 19.2 Vectors
