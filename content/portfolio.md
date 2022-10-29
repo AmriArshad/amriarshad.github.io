@@ -93,6 +93,7 @@ A simple terminal based version of Solitaire that I built as part of a COMPSCI 1
 - JavaScript/TypeScript
 - Python
 - HTML/CSS
+- Bash
 - R
 - Java
 - Markdown
