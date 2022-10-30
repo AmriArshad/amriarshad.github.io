@@ -258,3 +258,6 @@ The sections I completed each day can be found below.
 
 ### Day 46 - 29/10/2022
 - 19.2 Vectors
+
+### Day 47 - 30/10/2022
+- 19.3 Strings
