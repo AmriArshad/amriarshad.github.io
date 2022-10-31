@@ -261,3 +261,6 @@ The sections I completed each day can be found below.
 
 ### Day 47 - 30/10/2022
 - 19.3 Strings
+
+### Day 48 - 31/10/2022
+- 19.4 Option
