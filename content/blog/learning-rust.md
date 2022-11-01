@@ -264,3 +264,7 @@ The sections I completed each day can be found below.
 
 ### Day 48 - 31/10/2022
 - 19.4 Option
+
+### Day 49 - 1/11/2022
+- 19.5 Result
+  - 19.5.1 ?
