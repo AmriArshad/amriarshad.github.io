@@ -268,3 +268,5 @@ The sections I completed each day can be found below.
 ### Day 49 - 1/11/2022
 - 19.5 Result
   - 19.5.1 ?
+
+### Day 50 - 2/11/2022
