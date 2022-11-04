@@ -274,3 +274,7 @@ The sections I completed each day can be found below.
 
 ### Day 51 - 3/11/2022
 - 19.7 HashMap
+
+### Day 52 - 4/11/2022
+- 19.7.1 Alternate/custom key types
+- 19.7.2 HashSet
