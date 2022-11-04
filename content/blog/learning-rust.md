@@ -270,3 +270,4 @@ The sections I completed each day can be found below.
   - 19.5.1 ?
 
 ### Day 50 - 2/11/2022
+- 19.6 panic!
