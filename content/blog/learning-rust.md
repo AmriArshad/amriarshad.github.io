@@ -271,3 +271,6 @@ The sections I completed each day can be found below.
 
 ### Day 50 - 2/11/2022
 - 19.6 panic!
+
+### Day 51 - 3/11/2022
+- 19.7 HashMap
