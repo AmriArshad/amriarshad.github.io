@@ -278,3 +278,6 @@ The sections I completed each day can be found below.
 ### Day 52 - 4/11/2022
 - 19.7.1 Alternate/custom key types
 - 19.7.2 HashSet
+
+### Day 53 - 5/11/2022
+- 19.8 Rc
