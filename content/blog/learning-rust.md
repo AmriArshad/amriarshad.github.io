@@ -281,3 +281,6 @@ The sections I completed each day can be found below.
 
 ### Day 53 - 5/11/2022
 - 19.8 Rc
+
+### Day 54 - 6/11/2022
+- 19.9 Arc
