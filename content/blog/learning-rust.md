@@ -284,3 +284,8 @@ The sections I completed each day can be found below.
 
 ### Day 54 - 6/11/2022
 - 19.9 Arc
+
+### Day 55 - 7/11/2022
+- 20.0 Std misc
+  - 20.1 Threads
+    - 20.1.1 Testcase: map-reduce
