@@ -289,3 +289,6 @@ The sections I completed each day can be found below.
 - 20.0 Std misc
   - 20.1 Threads
     - 20.1.1 Testcase: map-reduce
+
+### Day 56 - 8/11/2022
+- 20.2 Channels
