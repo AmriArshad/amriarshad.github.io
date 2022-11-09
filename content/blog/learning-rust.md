@@ -292,3 +292,6 @@ The sections I completed each day can be found below.
 
 ### Day 56 - 8/11/2022
 - 20.2 Channels
+
+### Day 57 - 9/11/2022
+- 20.3 Path
