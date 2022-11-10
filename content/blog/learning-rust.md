@@ -295,3 +295,9 @@ The sections I completed each day can be found below.
 
 ### Day 57 - 9/11/2022
 - 20.3 Path
+
+### Day 58 - 10/11/2022
+- 20.4 File I/O
+  - 20.4.1 open
+  - 20.4.2 create
+  - 20.4.3 read lines
