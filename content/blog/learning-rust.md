@@ -304,3 +304,6 @@ The sections I completed each day can be found below.
 
 ### Day 59 - 11/11/2022
 - 20.5 Child Processes
+
+### Day 60 - 12/11/2022
+- 20.5.1 Pipes
