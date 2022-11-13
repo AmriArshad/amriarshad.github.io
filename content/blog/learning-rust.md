@@ -307,3 +307,6 @@ The sections I completed each day can be found below.
 
 ### Day 60 - 12/11/2022
 - 20.5.1 Pipes
+
+### Day 61 - 13/11/2022
+- 20.5.2 Wait
