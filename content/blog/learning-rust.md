@@ -310,3 +310,6 @@ The sections I completed each day can be found below.
 
 ### Day 61 - 13/11/2022
 - 20.5.2 Wait
+
+### Day 62 - 14/11/2022
+- 20.7 Program arguments
