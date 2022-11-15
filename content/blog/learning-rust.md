@@ -313,3 +313,6 @@ The sections I completed each day can be found below.
 
 ### Day 62 - 14/11/2022
 - 20.7 Program arguments
+
+### Day 63 - 15/11/2022
+- 20.7.1 Argument parsing
