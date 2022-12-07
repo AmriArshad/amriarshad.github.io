@@ -50,35 +50,9 @@ A gaze tracker prototype I worked on as part of my final uni project. Built in 1
 
 <div class="project">
 
-### [Space Invaders](https://github.com/amriarshad/SpaceInvaders)
-
-![Space Invaders](/images/projects/SpaceInvaders.png)
-
-The classic shoot 'em up arcade game, coded in Python with Pygame.
-
-</div>
-
-<div class="project">
-
 ### [235 Flix](https://github.com/amriarshad/235Flix)
 
 A basic movie review web application that relies on a repository pattern and other architectural design patterns such as Dependency Inversion and Single Responsibility. The app utilises the Flask framework, Jinja templating and WTForms.
-
-</div>
-
-<div class="project">
-
-### [Naughts and Crosses](https://github.com/AmriArshad/NaughtsandCrosses)
-
-A simple Naughts and Crosses game written in Java for COMPSCI 230.
-
-</div>
-
-<div class="project">
-
-### [Simple Solitaire](https://github.com/AmriArshad/SimpleSolitaire)
-
-A simple terminal based version of Solitaire that I built as part of a COMPSCI 130 assignment.
 
 </div>
 
