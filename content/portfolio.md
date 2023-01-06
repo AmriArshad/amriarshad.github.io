@@ -15,7 +15,7 @@ page_template = "page.html"
 
 <div class="project">
 
-### [Holocryptic](https://amri.dev/Holocryptic/)
+### [Holocryptic](https://holocryptic.xyz)
 
 ![Holocryptic - Perlin Alps](/images/projects/PerlinAlps.png)
 
