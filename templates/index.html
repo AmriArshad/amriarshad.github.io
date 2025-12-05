@@ -1,12 +1,18 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %}
+{% block content %}
 <h1 class="title">Hello World</h1>
 
 <p>
-  Welcome to my site. Here you will find my projects, interesting links, a few
-  blog posts here and there, and some memes if I ever get around to posting
-  them. One of the aims of this website is to be as minimal as possible, so
-  don't expect to find anything too fancy. Ideally this site will become a hub
-  for me to store information and potentially share information with others.
+  Welcome to my site. I'm Amri, an IT Operations Specialist with a passion for
+  automation, infrastructure, and building efficient systems. Here you'll find
+  my projects, technical blog posts, and insights from working across various
+  areas of IT.
+</p>
+
+<p>
+  I like tackling diverse technical challenges and learning new technologies.
+  This site serves as a hub for documenting my work, sharing knowledge, and
+  showcasing the things I build along the way.
 </p>
 
 <p>Enjoy your stay.</p>
@@ -14,8 +20,8 @@
 <hr />
 
 <h2>Most recent post</h2>
-{% set blog_section = get_section(path="blog/_index.md") %} {% for year, posts
-in blog_section.pages | group_by(attribute="year") %}
+{% set blog_section = get_section(path="blog/_index.md") %}
+{% for year, posts in blog_section.pages | group_by(attribute="year") %}
 <ul>
   <li>
     <a href="{{ posts[0].permalink | safe }}">{{ posts[0].title }}</a> - {{
@@ -28,51 +34,58 @@ in blog_section.pages | group_by(attribute="year") %}
 
 <hr />
 
-<div class="socials">
-  <div class="socials-column">
-    <h2>Socials</h2>
-    <h3>Personal</h3>
-    <ul>
-      <li><a href="https://github.com/AmriArshad">GitHub</a></li>
-      <li><a href="https://twitter.com/Amri__A">Twitter</a></li>
-      <li><a href="https://www.linkedin.com/in/amriarshad/">Linkedin</a></li>
-      <li><a href="https://oncyber.io/mel0n">OnCyber</a></li>
-      <li>
-        <a href="https://unstoppabledomains.com/d/themel0n.crypto"
-          >Crypto addresses</a
-        >
-      </li>
-    </ul>
+<h2>Featured Projects</h2>
 
-    <h3>Holocryptic (Generative Art/Creative Coding)</h3>
-    <ul>
-      <li><a href="https://holocryptic.xyz">Website</a></li>
-      <li><a href="https://twitter.com/holocrypt1c">Twitter</a></li>
-      <li><a href="https://www.instagram.com/_Holocrypt1c">Instagram</a></li>
-    </ul>
+<div class="project-feature">
+  <h3><a href="https://holocryptic.xyz">Holocryptic</a></h3>
+  <p>
+    A generative art and creative coding project exploring algorithmic
+    design and on-chain art. Built with JavaScript and various creative
+    coding libraries to generate unique visual experiences.
+  </p>
+  <p>
+    <strong>Tech Stack:</strong> JavaScript, p5.js, Canvas API, Web3<br>
+  </p>
 
-    <h3>Latest artwork</h3>
-    <a href="https://vault.holocryptic.xyz/src/2022/0905/">
-    <h4>10Print Circuit V2</h>
-    </a>
-      <embed
-        type="text/html"
-        src="https://vault.holocryptic.xyz/src/2022/0905/"
-        width="400"
-        height="400"
-        />
-    </a>
-  </div>
-
-  <div class="socials-column">
-    <a
-      class="twitter-timeline"
-      data-theme="dark"
-      data-height="800"
-      href="https://twitter.com/holocrypt1c?ref_src=twsrc%5Etfw"
-      >Tweets by holocrypt1c</a
-    >
+  <h4>Some of my favourite pieces</h4>
+  <div class="artwork-grid">
+    <div class="artwork-item">
+      <a href="https://holocryptic.xyz/220905/">
+        <strong>10Print Circuit V2</strong>
+        <embed type="text/html" src="https://vault.holocryptic.xyz/src/2022/0905/" width="400" height="400" />
+      </a>
+      <p><em>Click to regenerate!</em></p>
+    </div>
+    <div class="artwork-item">
+      <a href="https://holocryptic.xyz/210721/">
+        <strong>Perlin's Storm</strong>
+        <embed type="text/html" src="https://vault.holocryptic.xyz/src/2021/21-X64/" width="400" height="400" />
+      </a>
+      <a href="https://vault.holocryptic.xyz/src/2022/0905">
+        <p><em>View in full screen!</em></p>
+      </a>
+    </div>
+    <div class="artwork-item">
+      <a href="https://holocryptic.xyz/220105/">
+        <strong>Simple Flowfield</strong>
+        <embed type="text/html" src="https://vault.holocryptic.xyz/src/2022/0105/" width="400" height="400" />
+      </a>
+      <a href="https://vault.holocryptic.xyz/src/2022/0105/"">
+        <p><em>View in full screen!</em></p>
+      </a>
+    </div>
+    <div class="artwork-item">
+      <a href="https://vault.holocryptic.xyz/src/2023/0101/">
+        <strong>Gaussian Flow</strong>
+        <embed type="text/html" src="https://vault.holocryptic.xyz/src/2023/0101/" width="400" height="400" />
+      </a>
+      <p><em>Click to regenerate!</em></p>
+    </div>
   </div>
 </div>
+
+<hr />
+
+<!-- Additional featured projects will go here -->
 
 {% endblock content %}

@@ -37,6 +37,13 @@ p {
   font-size: 17px;
 }
 
+.name-header {
+  font-family: "Saira Stencil One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 70px;
+}
+
 .subtitle {
   font-size: 15px;
 }
@@ -108,6 +115,44 @@ code {
   width: 50%;
 }
 
+.artwork-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin: 20px 0;
+}
+
+.artwork-item {
+  text-align: center;
+}
+
+.artwork-item a {
+  display: block;
+  text-decoration: none;
+}
+
+.artwork-item strong {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* .artwork-item embed {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+} */
+
+.artwork-item p {
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+/* Make it responsive on mobile */
+@media (max-width: 900px) {
+  .artwork-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .socials:after {
   content: "";
   display: table;
@@ -120,6 +165,7 @@ code {
 
 footer {
   margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 @media only screen and (max-width: 800px) {
