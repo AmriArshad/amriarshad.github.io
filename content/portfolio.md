@@ -15,44 +15,59 @@ page_template = "page.html"
 
 <div class="project">
 
+### [n8n Self-Hosting](/blog/4-n8n-self-hosting)
+
+Tech Stack: Docker, n8n, Cloudflare Zero-Trust
+
+Timeline: 2025
+
+Deployed [n8n](https://n8n.io/) locally with docker and made it securely accessible via my custom domain by setting up a Cloudflare Tunnel through Cloudflare Zero Trust.
+
+</div>
+
+<div class="project">
+
+### Home Server
+
+Tech Stack: Ubuntu, Docker, Jellyfin, Tailscale VPN, Synology NAS
+
+Timeline: 2022 - Present
+
+My home server runs Ubuntu and hosts various services through Docker containers. It uses locally redundant storage on a Synology NAS and includes Jellyfin for media streaming, accessible from anywhere via Tailscale VPN.
+
+This setup serves as both practical infrastructure and a testing ground for new technologies. I use Docker extensively to spin up containers for testing different applications—keeping the host system clean and making experimentation easy. It's where I test automation scripts and workflows before implementing similar solutions elsewhere.
+
+</div>
+
+<div class="project">
+
+### [Virtualised Home Lab](/projects/virtualised-home-lab)
+
+Tech Stack: Windows Server 2022, KVM/QEMU, Virt-Manager, Active Directory Domain Services
+
+Timeline: 2025
+
+Built a virtualised environment to practice system administration in a realistic domain network. Using KVM/QEMU, I've deployed Windows Server 2022 and Windows 11 VMs to simulate an on-premises enterprise environment.
+
+The lab includes a fully configured Active Directory setup with DNS, DHCP, organizational units, security groups, and Group Policy Objects. It's where I test GPO configurations, practice user and group management, and experiment with domain administration tasks in a safe environment before implementing them in production.
+
+</div>
+
+<div class="project">
+
 ### [Holocryptic](https://holocryptic.xyz)
 
-![Holocryptic - Perlin Alps](/images/projects/PerlinAlps.png)
+<!-- ![Holocryptic - Perlin Alps](/images/projects/PerlinAlps.png) -->
 
-An ongoing creative coding project that explores elements of mathematics and generative art. The animations are coded in [p5.js](https://p5js.org/), a JavaScript port of the Java based language [Processing](https://processing.org/).
+<embed type="text/html" src="https://vault.holocryptic.xyz/src/2021/21-X64/" width="400" height="400" />
 
-</div>
+Tech Stack: JavaScript, p5.js
 
-<div class="project">
+Timeline: 2021 - 2023
 
-### [ToDo](https://github.com/amriarshad/ToDo)
+A creative coding project where I explored elements of mathematics and generative art. The animations are coded in [p5.js](https://p5js.org/), a JavaScript port of the Java based language [Processing](https://processing.or g/).
 
-![ToDo](/images/projects/ToDo.jpg)
-
-A simple, yet elegant To Do app built in React Native.
-
-</div>
-
-<div class="project">
-
-### [Shoppy-admin-dashboard](https://amri.dev/shoppy-admin-dashboard/)
-A mock ecommerce dashboard built with React, Tailwind CSS and Syncfusion components. The dashboard features dynamic theming, tables, a calendar, kanban board, text editor and colour picker apps alongside various charts. The app is deployed using GitHub Actions and GitHub Pages.
-
-</div>
-
-<div class="project">
-
-### [Peeper.js](https://amri.dev/peeperjs)
-
-A gaze tracker prototype I worked on as part of my final uni project. Built in 12 weeks using [Face-api](https://github.com/justadudewhohacks/face-api.js/) and [OpenCV](https://opencv.org/) with the remaining components being coded in vanilla JavaScript. Although we managed to solve the issue of pupil detection to a certain degree, our gaze tracking is limited due to our direct mapping algorithm.
-
-</div>
-
-<div class="project">
-
-### [235 Flix](https://github.com/amriarshad/235Flix)
-
-A basic movie review web application that relies on a repository pattern and other architectural design patterns such as Dependency Inversion and Single Responsibility. The app utilises the Flask framework, Jinja templating and WTForms.
+While the project has concluded, it was an incredible learning experience that taught me to think about problems differently. Creative coding requires balancing randomness with control, performance with visual complexity. You can still view some of my favorite pieces on the homepage and explore the full collection at holocryptic.xyz.
 
 </div>
 
@@ -62,34 +77,48 @@ A basic movie review web application that relies on a repository pattern and oth
 
 <h1 class="portfolio-title">Skills<hr/></h1>
 
-### Languages
+### Languages & Scripting
 
-- JavaScript/TypeScript
-- Python
-- HTML/CSS
+- PowerShell
 - Bash
-- R
-- Java
-- Markdown
-- LaTeX
+- Python
+- JavaScript/TypeScript
 
-### Frameworks
+### Systems & Infrastructure
 
-- React
-- React Native
+- Windows Server 2022
+- Active Directory & Entra ID (Azure AD)
+- Group Policy Management
+- DNS & DHCP
+- Linux (Arch & Ubuntu)
+- Virtual Machines (KVM/QEMU, Virt-Manager)
+
+### Tools & Platforms
+
+- Docker
+- Git/GitHub
+- ServiceNow
+- Datto RMM
+- Microsoft 365 & SharePoint
+- 8x8
+- Tailscale VPN
+
+### Cloud & Networking
+
+- Azure
+- Remote Desktop Services
+- VPN configuration
+- Network administration
+
+### Development & Design
+
+- VS Code
+- Vim
+- Figma & Penpot
+- Framer
+- React & React Native
 - p5.js
 - Zola
-- Agile
-
-### Technologies
-
-- Linux/Unix
-- Git/GitHub
-- GitHub Actions
-- Vim
-- VS Code
-- Notion
-- Jira
 
 </div>
 
