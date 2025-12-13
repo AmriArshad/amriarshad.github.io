@@ -21,16 +21,16 @@
 
 <h2>Most recent post</h2>
 {% set blog_section = get_section(path="blog/_index.md") %}
-{% for year, posts in blog_section.pages | group_by(attribute="year") %}
+{% if blog_section.pages %}
 <ul>
   <li>
-    <a href="{{ posts[0].permalink | safe }}">{{ posts[0].title }}</a> - {{
-    posts[0].date }}
+    <a href="{{ blog_section.pages[0].permalink | safe }}">{{ blog_section.pages[0].title }}</a> - {{
+    blog_section.pages[0].date }}
   </li>
-  {{ posts[0].summary | safe }}
-  <a href="{{ posts[0].permalink | safe }}" id="cont-read">read more...</a>
+  {{ blog_section.pages[0].summary | safe }}
+  <a href="{{ blog_section.pages[0].permalink | safe }}" id="cont-read">read more...</a>
 </ul>
-{% endfor %}
+{% endif %}
 
 <hr />
 
