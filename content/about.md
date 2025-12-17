@@ -17,6 +17,16 @@ I'm constantly picking up new skills and technologies. Recently completed certif
 
 I work primarily with PowerShell, Bash, and Python for scripting and automation. My environment includes Windows Server, Azure AD, Active Directory, ServiceNow, and various other tools. I've been using Linux as my daily driver since 2020—currently running Arch Linux—and I maintain a home server running Ubuntu with Docker containers, Jellyfin, and Tailscale VPN, along with a Synology NAS for storage.
 
+Some of the courses/certifications that I've completed:
+
+| Certification/Course | Issuer | Year |
+|:--------------|:--------|:------|
+| Microsoft Entra ID for Administrators | LinkedIn Learning | 2025 |
+| 8x8 UCaaS Admin Certification | 8x8 | 2025 |
+| Personal Leadership Training | [Milena Velez](https://milenavelez.co.nz/) | 2025 |
+| Advanced PowerShell: Automating Active Directory | LinkedIn Learning | 2024 |
+| Career Essentials in System Administration | Microsoft & LinkedIn | 2024 |
+
 ## Beyond Work
 
 My home setup doubles as a learning lab. I use Docker containers extensively to test and experiment with new technologies—some run on my home server for always-on services like Jellyfin and other self-hosted apps, while resource-intensive containers run on my main machine.
