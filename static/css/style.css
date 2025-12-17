@@ -1,3 +1,11 @@
+:root {
+  /* --accent-color: rgb(252, 3, 111); */
+  --accent-color: #cba6f7;
+  --background-color: #11111b;
+  --secondary-background-color: #181825;
+  --font-color: #cdd6f4;
+}
+
 html {
   font-family: "Roboto", sans-serif;
 }
@@ -6,8 +14,8 @@ body {
   margin: auto;
   padding: 10px;
   max-width: 900px;
-  background-color: black;
-  color: white;
+  background-color: var(--background-color);
+  color: var(--font-color);
 }
 
 header {
@@ -22,7 +30,7 @@ header h1 {
 
 a {
   text-decoration: none;
-  color: rgb(252, 3, 111);
+  color:  var(--accent-color)
 }
 
 nav {
@@ -75,13 +83,13 @@ p {
 }
 
 .project {
-  background-color: #101014;
+  background-color: var(--secondary-background-color);
   padding: 0 20px 0px 20px;
   margin-bottom: 20px;
 }
 
 .skills {
-  background-color: #101014;
+  background-color: var(--secondary-background-color);
   padding: 0 20px 8px 20px;
   margin-left: 20px;
   height: 100%;
@@ -102,7 +110,7 @@ code {
 
 .blog-summary {
   padding-bottom: 5px;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--font-color);
 }
 
 .socials-column {
@@ -156,6 +164,36 @@ code {
 
 .twitter-timeline {
   padding-top: 20px;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+th {
+  font-weight: bold;
+  background-color: var(--accent-color);
+  color: var(--background-color);
+}
+
+/* Optional: Responsive tables */
+@media (max-width: 768px) {
+  table {
+    font-size: 0.9em;
+  }
+  
+  th, td {
+    padding: 8px 10px;
+  }
 }
 
 footer {
