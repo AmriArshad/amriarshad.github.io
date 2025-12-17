@@ -6,6 +6,18 @@
   --font-color: #cdd6f4;
 }
 
+/* For most browsers */
+::selection {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+}
+
+/* For Firefox */
+::-moz-selection {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+}
+
 html {
   font-family: "Roboto", sans-serif;
 }
