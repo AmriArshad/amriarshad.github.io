@@ -197,6 +197,35 @@ th {
   color: var(--background-color);
 }
 
+.quote-container {
+  margin: 40px 0;
+  padding: 20px;
+  border-left: 4px solid var(--accent-color);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.quote-container blockquote {
+  margin: 0;
+  font-style: italic;
+}
+
+.quote-container blockquote p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.quote-container blockquote footer {
+  text-align: right;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+.quote-source {
+  font-size: 0.8em;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
 /* Optional: Responsive tables */
 @media (max-width: 768px) {
   table {

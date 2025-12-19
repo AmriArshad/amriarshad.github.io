@@ -69,7 +69,82 @@
     <a href="https://www.linkedin.com/in/amriarshad/">linkedIn</a> |
     <a href="mailto:amriarshad0@gmail.com">amriarshad0@gmail.com</a>
   </footer>
+  <script>
+    async function displayRandomQuote() {
+      try {
+        const response = await fetch('https://raw.githubusercontent.com/victorlaerte/awesome-it-quotes/refs/heads/master/README.md');
+        const text = await response.text();
 
+        const lines = text.split('\n');
+        const tableLines = lines.filter(line => line.startsWith('|') && line.includes('"'));
+        const quotes = [];
+
+        for (const line of tableLines) {
+          if (line.includes('Quote') || line.includes(':-:')) {
+            continue;
+          }
+
+          const parts = line.split('|');
+
+          if (parts.length >= 3) {
+            const quoteText = parts[1].trim();
+            const authorPart = parts[2].trim();
+
+            // Extract author name - look for text after <br> or just plain text
+            let authorName = 'Unknown';
+
+            // Try to find text between > and < (from markdown links)
+            const bracketMatch = authorPart.match(/\[([^\]]+)\]/);
+            if (bracketMatch) {
+              authorName = bracketMatch[1];
+            } else {
+              // Try to find plain text after <br>
+              const brMatch = authorPart.match(/<br>\s*([^(<]+)/);
+              if (brMatch) {
+                authorName = brMatch[1].trim();
+              }
+            }
+
+            // Remove any remaining markdown image syntax
+            authorName = authorName.replace(/^!\[/, '').replace(/\].*$/, '');
+
+            // Split multiple quotes and only take the first one
+            const firstQuote = quoteText.split('<br><br>')[0].trim();
+            const cleanQuote = firstQuote.replace(/^[""]|[""]$/g, '').trim();
+
+            if (cleanQuote && cleanQuote.length > 20) {
+              quotes.push({
+                text: cleanQuote,
+                author: authorName
+              });
+            }
+          }
+        }
+
+        if (quotes.length > 0) {
+          const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+          const quoteElement = document.getElementById('random-quote');
+          if (quoteElement) {
+            quoteElement.innerHTML = `
+  <blockquote>
+    <p>"${randomQuote.text}"</p>
+    <footer>
+      — ${randomQuote.author}
+      <br>
+      <a href="https://github.com/victorlaerte/awesome-it-quotes" target="_blank" rel="noopener" class="quote-source">source</a>
+    </footer>
+  </blockquote>
+`;
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching quote:', error);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', displayRandomQuote);
+  </script>
 </body>
 
 </html>

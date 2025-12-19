@@ -19,6 +19,12 @@
 
 <hr />
 
+<div id="random-quote" class="quote-container">
+  <p>Loading quote...</p>
+</div>
+
+<hr />
+
 <h2>Most recent post</h2>
 {% set blog_section = get_section(path="blog/_index.md") %}
 {% if blog_section.pages %}
@@ -39,7 +45,8 @@
 <div class="project-feature">
   <h3><a href="https://holocryptic.xyz">Holocryptic</a></h3>
   <p>
-    A generative art and creative coding project exploring mathematics and generative art. Built with JavaScript and the p5.js library to generate unique visual experiences.
+    A generative art and creative coding project exploring mathematics and generative art. Built with JavaScript and the
+    p5.js library to generate unique visual experiences.
   </p>
   <p>
     <strong>Tech Stack:</strong> JavaScript, p5.js<br>
@@ -72,12 +79,12 @@
         <p><em>View in full screen!</em></p>
       </a>
     </div>
-    <div class="artwork-item">
-      <a href="https://vault.holocryptic.xyz/src/2023/0101/">
-        <strong>Gaussian Flow</strong>
-        <embed type="text/html" src="https://vault.holocryptic.xyz/src/2023/0101/" width="400" height="400" />
-      </a>
-      <p><em>Click to regenerate!</em></p>
+    <div class=" artwork-item">
+        <a href="https://vault.holocryptic.xyz/src/2023/0101/">
+          <strong>Gaussian Flow</strong>
+          <embed type="text/html" src="https://vault.holocryptic.xyz/src/2023/0101/" width="400" height="400" />
+        </a>
+        <p><em>Click to regenerate!</em></p>
     </div>
   </div>
 </div>
