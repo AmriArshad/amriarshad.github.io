@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>Windows Server and Active Directory Infrastructure Lab</title>
+  
+  <meta name="description" content="Amri Arshad's Personal Website">
+  <meta name="author" content="Amri Arshad">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" type="image/png" href="/favicon.ico">
+</head>
+
+<body>
+  <header>
+    <h1 class="name-header">Amri Arshad</h1>
+  </header>
+
+  <nav>
+    <a href="/">Home</a>
+    <a href="/portfolio">Portfolio</a>
+    <a href="/links">Links</a>
+    <a href="/blog/">Posts</a>
+    <a href="/about">About</a>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      
+<h1 class="title">
+  Windows Server and Active Directory Infrastructure Lab 
+ <!-- Windows Server and Active Directory Infrastructure Lab -->
+</h1>
+<p class="subtitle"><strong></strong></p>
+<p><strong>Project Objective:</strong></p>
+<p>Designed, deployed, and managed a complete virtualized Active Directory environment to simulate real-world system administration tasks. Focused on practicing user, computer, and policy management within an isolated internal network.</p>
+<hr />
+<h2 id="project-scope">Project Scope</h2>
+<ul>
+<li>
+<p><strong>Environment Setup</strong></p>
+<ul>
+<li>Configured KVM/QEMU virtualization stack with Virt-Manager on Linux.</li>
+<li>Created isolated virtual networking (LabNet) for full VM-to-VM communication without external internet access.</li>
+</ul>
+</li>
+<li>
+<p><strong>Server Deployment</strong></p>
+<ul>
+<li>Installed and configured Windows Server 2022 as a Domain Controller (DC01).</li>
+<li>Promoted DC01 to manage the <code>lab.local</code> domain, including DNS and DHCP services.</li>
+</ul>
+</li>
+<li>
+<p><strong>Client Deployment</strong></p>
+<ul>
+<li>Installed Windows 11 Pro (CL01) and successfully joined it to the <code>lab.local</code> domain.</li>
+</ul>
+</li>
+<li>
+<p><strong>Active Directory Management</strong></p>
+<ul>
+<li>Structured Organizational Units (OUs) for Computers and Users (<code>Lab Computers</code> and <code>Lab Users</code>).</li>
+<li>Created and managed domain user accounts and security groups.</li>
+</ul>
+</li>
+<li>
+<p><strong>Group Policy Management</strong></p>
+<ul>
+<li>Deployed and managed Group Policy Objects (GPOs) to enforce environment controls:
+<ul>
+<li>Set custom desktop wallpaper via GPO.</li>
+<li>Disabled Control Panel and Settings access for standard users.</li>
+<li>Mapped network drives dynamically based on security group membership using Item-Level Targeting.</li>
+<li>Enforced strong password policies at the domain level.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Security Group Access Control</strong></p>
+<ul>
+<li>Implemented drive mapping restrictions based on group membership to simulate least-privilege access controls.</li>
+<li>Tested access scenarios with both administrative and standard user accounts.</li>
+</ul>
+</li>
+<li>
+<p><strong>Troubleshooting and Validation</strong></p>
+<ul>
+<li>Used <code>gpresult</code>, <code>rsop.msc</code>, and Group Policy Results Wizard to validate GPO applications.</li>
+<li>Diagnosed and resolved common GPO application issues related to user/computer targeting and security filtering.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="skills-practised">Skills Practised</h2>
+<ul>
+<li>Active Directory Domain Services (AD DS)</li>
+<li>DNS and DHCP configuration on Windows Server</li>
+<li>Group Policy Object (GPO) deployment and management</li>
+<li>Security group-based resource access control</li>
+<li>Windows Server and Windows 11 client management</li>
+<li>Troubleshooting GPO delivery and domain join issues</li>
+<li>Virtualization and isolated network lab environment management</li>
+</ul>
+<hr />
+<h2 id="outcome">Outcome</h2>
+<p>Successfully simulated a professional-grade corporate environment.<br />
+Demonstrated ability to deploy, configure, secure, and manage a functional Active Directory infrastructure and client devices, reflecting real-world System Administration and Infrastructure Support tasks.</p>
+
+
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      <p> &#128064;</p>
+      <a href="https://amri.dev" target="_blank" title="amri.dev">
+        <img src="/images/button-dark.png" alt="amri.dev">
+      </a>
+      <a href="https://landchad.net" target="_blank" title="LandChad">
+        <img src="https://landchad.net/pix/landchad.gif" alt="LandChad.net">
+      </a>
+      <a href="https://wiby.me" target="_blank" title="Wiby">
+        <img src="https://wiby.me/about/wiby.gif" alt="Wiby.me">
+      </a>
+      <a href="https://sadgrl.online/" target="_blank" title="Sadgrl">
+        <img src="https://sadgrlonline.github.io/archived-sadgrl.online/assets/images/buttons/sadgrlonline.gif" alt="sadgrl online">
+      </a>
+      <a href="https://eggramen.neocities.org" target="_blank" title="Eggramen">
+        <img src="https://eggramen.neocities.org/link5.png" alt="Eggramen">
+      </a>
+      <a href="https://code.visualstudio.com/" target="_blank" title="Visual Studio Code">
+        <img src="https://openbooks.neocities.org/img/codebutton.gif" alt="Visual Studio Code">
+      </a>
+      <a href="https://cyuucat.moe/" target="_blank" title="Cyuucat">
+        <img src="https://cyuucat.moe/images/buttons/cyuu.gif" alt="Cyuucat">
+      </a>
+    </div>
+
+    <br>
+    <a href="https://github.com/AmriArshad">GitHub</a> |
+    <a href="https://www.linkedin.com/in/amriarshad/">linkedIn</a> |
+    <a href="mailto:amriarshad0@gmail.com">amriarshad0@gmail.com</a>
+  </footer>
+  <script>
+    async function displayRandomQuote() {
+      try {
+        const response = await fetch('https://raw.githubusercontent.com/victorlaerte/awesome-it-quotes/refs/heads/master/README.md');
+        const text = await response.text();
+
+        const lines = text.split('\n');
+        const tableLines = lines.filter(line => line.startsWith('|') && line.includes('"'));
+        const quotes = [];
+
+        for (const line of tableLines) {
+          if (line.includes('Quote') || line.includes(':-:')) {
+            continue;
+          }
+
+          const parts = line.split('|');
+
+          if (parts.length >= 3) {
+            const quoteText = parts[1].trim();
+            const authorPart = parts[2].trim();
+
+            // Extract author name - look for text after <br> or just plain text
+            let authorName = 'Unknown';
+
+            // Try to find text between > and < (from markdown links)
+            const bracketMatch = authorPart.match(/\[([^\]]+)\]/);
+            if (bracketMatch) {
+              authorName = bracketMatch[1];
+            } else {
+              // Try to find plain text after <br>
+              const brMatch = authorPart.match(/<br>\s*([^(<]+)/);
+              if (brMatch) {
+                authorName = brMatch[1].trim();
+              }
+            }
+
+            // Remove any remaining markdown image syntax
+            authorName = authorName.replace(/^!\[/, '').replace(/\].*$/, '');
+
+            // Split multiple quotes and only take the first one
+            const firstQuote = quoteText.split('<br><br>')[0].trim();
+            const cleanQuote = firstQuote.replace(/^[""]|[""]$/g, '').trim();
+
+            if (cleanQuote && cleanQuote.length > 20) {
+              quotes.push({
+                text: cleanQuote,
+                author: authorName
+              });
+            }
+          }
+        }
+
+        if (quotes.length > 0) {
+          const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+          const quoteElement = document.getElementById('random-quote');
+          if (quoteElement) {
+            quoteElement.innerHTML = `
+  <blockquote>
+    <p>"${randomQuote.text}"</p>
+    <footer>
+      — ${randomQuote.author}
+      <br>
+      <a href="https://github.com/victorlaerte/awesome-it-quotes" target="_blank" rel="noopener" class="quote-source">source</a>
+    </footer>
+  </blockquote>
+`;
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching quote:', error);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', displayRandomQuote);
+  </script>
+</body>
+
+</html>
