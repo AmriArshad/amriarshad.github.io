@@ -112,10 +112,12 @@ While the project has concluded, it was an incredible learning experience that t
 
 ### Development & Design
 
+- Zed
 - VS Code
 - Vim
 - Figma & Penpot
 - Framer
+- Astro
 - React & React Native
 - p5.js
 - Zola
