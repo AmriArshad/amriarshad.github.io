@@ -1,0 +1,267 @@
+:root {
+  /* --accent-color: rgb(252, 3, 111); */
+  --accent-color: #cba6f7;
+  --background-color: #11111b;
+  --secondary-background-color: #181825;
+  --font-color: #cdd6f4;
+}
+
+/* For most browsers */
+::selection {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+}
+
+/* For Firefox */
+::-moz-selection {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: auto;
+  padding: 10px;
+  max-width: 900px;
+  background-color: var(--background-color);
+  color: var(--font-color);
+}
+
+header {
+  font-size: 30px;
+  margin-top: 25px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 5px;
+}
+
+a {
+  text-decoration: none;
+  color:  var(--accent-color)
+}
+
+nav {
+  text-align: center;
+}
+
+nav a {
+  margin: 3px;
+}
+
+p {
+  font-size: 17px;
+}
+
+.name-header {
+  font-family: "Saira Stencil One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 70px;
+}
+
+.subtitle {
+  font-size: 15px;
+}
+
+.container h1 {
+  font-size: 25px;
+}
+
+.portfolio {
+  display: flex;
+}
+
+.portfolio-title {
+  font-size: 50px;
+}
+
+.portfolio-title hr {
+  margin-top: 19px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: auto;
+  flex: 80%;
+}
+
+.projects img {
+  width: 200px;
+}
+
+.project {
+  background-color: var(--secondary-background-color);
+  padding: 0 20px 0px 20px;
+  margin-bottom: 20px;
+}
+
+.skills {
+  background-color: var(--secondary-background-color);
+  padding: 0 20px 8px 20px;
+  margin-left: 20px;
+  height: 100%;
+  flex: 20%;
+}
+
+.skills ul {
+  margin-left: -20px;
+}
+
+.skills li {
+  margin-bottom: 10px;
+}
+
+code {
+  padding: 12px;
+}
+
+.blog-summary {
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--font-color);
+}
+
+.socials-column {
+  float: left;
+  width: 50%;
+}
+
+.artwork-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin: 20px 0;
+}
+
+.artwork-item {
+  text-align: center;
+}
+
+.artwork-item a {
+  display: block;
+  text-decoration: none;
+}
+
+.artwork-item strong {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* .artwork-item embed {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+} */
+
+.artwork-item p {
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+/* Make it responsive on mobile */
+@media (max-width: 900px) {
+  .artwork-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.socials:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.twitter-timeline {
+  padding-top: 20px;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+th {
+  font-weight: bold;
+  background-color: var(--accent-color);
+  color: var(--background-color);
+}
+
+.quote-container {
+  margin: 40px 0;
+  padding: 20px;
+  border-left: 4px solid var(--accent-color);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.quote-container blockquote {
+  margin: 0;
+  font-style: italic;
+}
+
+.quote-container blockquote p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.quote-container blockquote footer {
+  text-align: right;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+.quote-source {
+  font-size: 0.8em;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+/* Optional: Responsive tables */
+@media (max-width: 768px) {
+  table {
+    font-size: 0.9em;
+  }
+  
+  th, td {
+    padding: 8px 10px;
+  }
+}
+
+footer {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    max-width: 600px;
+    margin: auto;
+  }
+  .socials-column {
+    width: 100%;
+  }
+  .portfolio {
+    display: contents;
+  }
+  .skills {
+    margin-left: 0px;
+    padding: 5px 20px 5px 20px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    max-width: 400px;
+    margin: auto;
+  }
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>Migrating my domain to Cloudflare</title>
+  
+  <meta name="description" content="Amri Arshad's Personal Website">
+  <meta name="author" content="Amri Arshad">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" type="image/png" href="/favicon.ico">
+</head>
+
+<body>
+  <header>
+    <h1 class="name-header">Amri Arshad</h1>
+  </header>
+
+  <nav>
+    <a href="/">Home</a>
+    <a href="/portfolio">Portfolio</a>
+    <a href="/links">Links</a>
+    <a href="/blog/">Posts</a>
+    <a href="/about">About</a>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      
+<h1 class="title">
+  Migrating my domain to Cloudflare 
+ <!-- Migrating my domain to Cloudflare -->
+</h1>
+<p class="subtitle"><strong>2025-12-29</strong></p>
+<p>I decided to migrate my domain from Namecheap to Cloudflare and wanted to share why I made the switch and how the process went. If you're considering a similar move, this guide should help you understand the benefits and walk through the migration process.</p>
+<span id="continue-reading"></span>
+<hr />
+<h2 id="why-migrate-to-cloudflare">Why Migrate to Cloudflare?</h2>
+<h3 id="cost-savings">Cost Savings</h3>
+<p>This was the biggest factor for me. Cloudflare offers domain registration at cost—meaning they don't mark up the wholesale price from the registry. For most domains, this translates to significant savings compared to traditional registrars.</p>
+<ul>
+<li>.com domains: ~$9.77 USD/year on Cloudflare vs $12-15/year elsewhere</li>
+<li>.dev domains: ~$12.50 USD/year on Cloudflare vs $15-20/year elsewhere</li>
+<li>No hidden renewal price increases</li>
+</ul>
+<h3 id="integrated-experience">Integrated Experience</h3>
+<p>If you're already using Cloudflare for DNS, CDN, or security features, having your domain registration in the same place streamlines everything. No need to juggle between different dashboards or worry about nameserver configurations.</p>
+<h3 id="transparent-pricing">Transparent Pricing</h3>
+<p>Cloudflare doesn't bundle unwanted services or try to upsell you on every page. The pricing is straightforward—you pay the registry fee, and that's it. No surprise charges, no automatic renewals at inflated prices.</p>
+<h3 id="security-features">Security Features</h3>
+<p>Having your domain and DNS management in one place makes it easier to implement security best practices like DNSSEC, which Cloudflare enables by default.</p>
+<h3 id="better-dns-management">Better DNS Management</h3>
+<p>Cloudflare's DNS management is significantly faster and more intuitive than most traditional registrars. Changes propagate quickly, and the interface is clean and easy to use.</p>
+<hr />
+<h1 id="the-migration-process">The Migration Process</h1>
+<p>The actual migration is straightforward, though it does require some patience as domain transfers can take several days to complete.</p>
+<p><strong>Step 1: Set Up Cloudflare DNS</strong></p>
+<ol>
+<li>Log into your Cloudflare dashboard</li>
+<li>Click "Add a site" and enter your domain name</li>
+<li>Choose a plan (Free plan works fine for most use cases)</li>
+<li>Cloudflare will scan your existing DNS records</li>
+<li>Review and confirm the detected records</li>
+<li>Update your nameservers on Namecheap to point to Cloudflare's nameservers - this will be under the Domain tab for your domain settings</li>
+</ol>
+<p><strong>Step 2: Unlock Your Domain at Namecheap</strong></p>
+<ol>
+<li>Navigate to the Sharing &amp; Transfer tab</li>
+<li>Under the Transfer out section, unlock "Domain Lock"</li>
+<li>Click the "AUTH CODE" button to receive your auth code via email</li>
+</ol>
+<img src="/images/migrating-domain-to-cloudflare/namecheap-transfer-out.png" alt="Transfer Out" height="150">
+<p><strong>Step 3: Initiate the Transfer</strong></p>
+<ol>
+<li>Go back to your Cloudflare dashboard</li>
+<li>Click on the domain you just added</li>
+<li>Click on the "Transfer" button</li>
+<li>Enter the auth code you received from Namecheap</li>
+<li>Follow the prompts to complete the transfer</li>
+<li>Once the transfer is complete, you can manage your domain and DNS records directly from Cloudflare</li>
+</ol>
+<img src="/images/migrating-domain-to-cloudflare/amri.dev-domain-transfer.png" alt="Transfer Out" height="300">
+<p><strong>Step 4: Approve the Transfer</strong></p>
+<ol>
+<li>You will receive an email from Namecheap notifying you of the transfer request</li>
+<li>The transfer will automatically complete within a few days</li>
+<li>You can also approve the transfer manually to speed this proccess up</li>
+</ol>
+<p><strong>Step 5: Verify the Transfer
+Once the transfer completes</strong></p>
+<ol>
+<li>Check your Cloudflare dashboard to confirm the domain shows as active</li>
+<li>Verify your DNS records are still working correctly</li>
+<li>Check that your domain expiration date has been extended by one year</li>
+<li>Configure any additional settings (WHOIS privacy, auto-renew, etc.)</li>
+</ol>
+<img src="/images/migrating-domain-to-cloudflare/active-domain.png" alt="Status Active">
+<p>Your domain is now managed through Cloudflare!</p>
+
+
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      <p> &#128064;</p>
+      <a href="https://amri.dev" target="_blank" title="amri.dev">
+        <img src="/images/button-dark.png" alt="amri.dev">
+      </a>
+      <a href="https://landchad.net" target="_blank" title="LandChad">
+        <img src="https://landchad.net/pix/landchad.gif" alt="LandChad.net">
+      </a>
+      <a href="https://wiby.me" target="_blank" title="Wiby">
+        <img src="https://wiby.me/about/wiby.gif" alt="Wiby.me">
+      </a>
+      <a href="https://sadgrl.online/" target="_blank" title="Sadgrl">
+        <img src="https://sadgrlonline.github.io/archived-sadgrl.online/assets/images/buttons/sadgrlonline.gif" alt="sadgrl online">
+      </a>
+      <a href="https://eggramen.neocities.org" target="_blank" title="Eggramen">
+        <img src="https://eggramen.neocities.org/link5.png" alt="Eggramen">
+      </a>
+      <a href="https://code.visualstudio.com/" target="_blank" title="Visual Studio Code">
+        <img src="https://openbooks.neocities.org/img/codebutton.gif" alt="Visual Studio Code">
+      </a>
+      <a href="https://cyuucat.moe/" target="_blank" title="Cyuucat">
+        <img src="https://cyuucat.moe/images/buttons/cyuu.gif" alt="Cyuucat">
+      </a>
+    </div>
+
+    <br>
+    <a href="https://github.com/AmriArshad">GitHub</a> |
+    <a href="https://www.linkedin.com/in/amriarshad/">linkedIn</a> |
+    <a href="mailto:amriarshad0@gmail.com">amriarshad0@gmail.com</a>
+  </footer>
+  <script>
+    async function displayRandomQuote() {
+      try {
+        const response = await fetch('https://raw.githubusercontent.com/victorlaerte/awesome-it-quotes/refs/heads/master/README.md');
+        const text = await response.text();
+
+        const lines = text.split('\n');
+        const tableLines = lines.filter(line => line.startsWith('|') && line.includes('"'));
+        const quotes = [];
+
+        for (const line of tableLines) {
+          if (line.includes('Quote') || line.includes(':-:')) {
+            continue;
+          }
+
+          const parts = line.split('|');
+
+          if (parts.length >= 3) {
+            const quoteText = parts[1].trim();
+            const authorPart = parts[2].trim();
+
+            // Extract author name - look for text after <br> or just plain text
+            let authorName = 'Unknown';
+
+            // Try to find text between > and < (from markdown links)
+            const bracketMatch = authorPart.match(/\[([^\]]+)\]/);
+            if (bracketMatch) {
+              authorName = bracketMatch[1];
+            } else {
+              // Try to find plain text after <br>
+              const brMatch = authorPart.match(/<br>\s*([^(<]+)/);
+              if (brMatch) {
+                authorName = brMatch[1].trim();
+              }
+            }
+
+            // Remove any remaining markdown image syntax
+            authorName = authorName.replace(/^!\[/, '').replace(/\].*$/, '');
+
+            // Split multiple quotes and only take the first one
+            const firstQuote = quoteText.split('<br><br>')[0].trim();
+            const cleanQuote = firstQuote.replace(/^[""]|[""]$/g, '').trim();
+
+            if (cleanQuote && cleanQuote.length > 20) {
+              quotes.push({
+                text: cleanQuote,
+                author: authorName
+              });
+            }
+          }
+        }
+
+        if (quotes.length > 0) {
+          const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+          const quoteElement = document.getElementById('random-quote');
+          if (quoteElement) {
+            quoteElement.innerHTML = `
+  <blockquote>
+    <p>"${randomQuote.text}"</p>
+    <footer>
+      — ${randomQuote.author}
+      <br>
+      <a href="https://github.com/victorlaerte/awesome-it-quotes" target="_blank" rel="noopener" class="quote-source">source</a>
+    </footer>
+  </blockquote>
+`;
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching quote:', error);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', displayRandomQuote);
+  </script>
+</body>
+
+</html>

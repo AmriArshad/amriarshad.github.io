@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>Git&#x2F;GitHub basics</title>
+  
+  <meta name="description" content="Amri Arshad's Personal Website">
+  <meta name="author" content="Amri Arshad">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" type="image/png" href="/favicon.ico">
+</head>
+
+<body>
+  <header>
+    <h1 class="name-header">Amri Arshad</h1>
+  </header>
+
+  <nav>
+    <a href="/">Home</a>
+    <a href="/portfolio">Portfolio</a>
+    <a href="/links">Links</a>
+    <a href="/blog/">Posts</a>
+    <a href="/about">About</a>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      
+<h1 class="title">
+  Git&#x2F;GitHub basics 
+ <!-- Git&#x2F;GitHub basics -->
+</h1>
+<p class="subtitle"><strong>2022-07-28</strong></p>
+<p>Git/GitHub are extremely useful tools that every developer should be familiar with. In this post I highlight some of the main features and how to use them.</p>
+<span id="continue-reading"></span>
+<ul>
+<li><a href="https://amri.dev/blog/2-git-github-basics/#what-is-git">What is Git?</a></li>
+<li><a href="https://amri.dev/blog/2-git-github-basics/#what-is-github">What is GitHub</a></li>
+<li><a href="https://amri.dev/blog/2-git-github-basics/#definitions">Definitions</a></li>
+<li><a href="https://amri.dev/blog/2-git-github-basics/#using-git-and-github">Using Git and GitHub</a>
+<ul>
+<li><a href="https://amri.dev/blog/2-git-github-basics/#cloning">Cloning</a></li>
+<li><a href="https://amri.dev/blog/2-git-github-basics/#committing">Committing</a></li>
+<li><a href="https://amri.dev/blog/2-git-github-basics/#pushing-to-github">Pushing to GitHub</a></li>
+<li><a href="https://amri.dev/blog/2-git-github-basics/#branching">Branching</a></li>
+<li><a href="https://amri.dev/blog/2-git-github-basics/#creating-a-pr">Creating a PR</a></li>
+<li><a href="https://amri.dev/blog/2-git-github-basics/#reviewing-a-pr">Reviewing a PR</a></li>
+<li><a href="https://amri.dev/blog/2-git-github-basics/#merging">Merging</a></li>
+<li><a href="https://amri.dev/blog/2-git-github-basics/#deleting-local-branches">Deleting local branches</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="what-is-git">What is Git?</h2>
+<p>Git is an open-source version control software widely used in software development to collaborate and track changes to a set of files. The latest version of Git can be downloaded <a href="https://git-scm.com/">here.</a></p>
+<h2 id="what-is-github">What is <a href="https://github.com/">GitHub</a>?</h2>
+<p>GitHub is a web service that allows you to store a remote repository (a set of files) on their servers. This means that after you make changes to files on your local machine, you can then “push” those changes to the remote repository on GitHub. This allows you and others to access these changes on separate computers and collaborate on your repository.</p>
+<h2 id="definitions">Definitions</h2>
+<p><strong>Repository</strong> - A GitHub repository/repo is a set of files and folders that make up your project. These files are typically required to build and contribute to your project on another computer. A repo will usually contain a README markdown file that describes the project clearly.</p>
+<p><strong>Branch</strong> - A branch is a way to work with a different version of your repo whilst keeping an existing version active. The default branch is called the master/main branch. Creating a new branch from the main branch will result in a copy of the main branch. Changes to the new branch will not be reflected in the main branch until a merge has occurred.</p>
+<p align="center">
+  <img src="/images/git-github-basics/git-branches-merge.png" alt="Git Branches" width="500">
+</p>
+<p align="center"><a href="https://www.nobledesktop.com/learn/git/git-branches">Image Source</a></p>
+<p>This image illustrates how multiple people can collaborate on the same project by using separate branches. Each circle is a commit. Lines moving from master outwards are branches, and lines moving towards master are merges.</p>
+<p><strong>Commits</strong> - Every change to your repo is called a commit. Each commit has a small description of the changes made.</p>
+<p><strong>Pull Requests</strong> - Pull requests are made to pull the changes made in one branch into another. This means that someone working on a branch can create a PR (pull request) to merge into the main branch whilst another person working on a separate branch continues to work until they create a PR. If a PR has no conflicts, the PR can be merged.</p>
+<h2 id="using-git-and-github">Using Git and GitHub</h2>
+<h3 id="basic-setup">Basic setup</h3>
+<p>Install <a href="https://git-scm.com/">Git</a> and make a <a href="https://github.com/">GitHub</a> account.
+Create a new repo on GitHub by clicking on the plus dropdown at the top right.</p>
+<img src="/images/git-github-basics/new-repo.png" alt="New Repo">
+<h3 id="cloning">Cloning</h3>
+<p>To download/clone the repo to your computer, click on the green code button and copy the HTTPS link to your repo. Now in the terminal of your choice or the git bash terminal, enter:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ git clone &amp;lt;insert your HTTPS repo link here&amp;gt;
+</span></code></pre>
+<h3 id="committing">Committing</h3>
+<p>As mentioned earlier, git keeps track of changes made to your repo when you make commits to your repo. To make a commit you must first add the files that you have changed. You can view the changes made to the repo by using:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ git status
+</span></code></pre>
+<p>After identifying the files you want to commit, use:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ git add &amp;lt;name of file&amp;gt;
+</span></code></pre>
+<p>If you need to add multiple files, you can simply name those files one after the other like:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ git add &amp;lt;name of file 1&amp;gt; &amp;lt;name of file 2&amp;gt; &amp;lt;etc&amp;gt;
+</span></code></pre>
+<p>If you simply want to commit all changes, you can use:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ git add .
+</span></code></pre>
+<p>Now that your files have been added, you can commit our changes using (make sure to include the quotation marks):</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ git commit -m “&amp;lt;insert description of changes made here&amp;gt;&quot;
+</span></code></pre>
+<h3 id="pushing-to-github">Pushing to GitHub</h3>
+<p>Now that you have made your first commit, you can upload our changes to GitHub by making use of the git push command:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ git push
+</span></code></pre>
+<p>At this point, you can navigate to your GitHub repository to see the changes you have made alongside the commit and its description.</p>
+<h3 id="branching">Branching</h3>
+<p>Although the above method of pushing to the main branch works fine when you are the only person working on a repo, doing the same with a team will quickly become problematic. This is where branching comes in handy.</p>
+<p>Before branching from any existing branch, you must ensure that our local repo has the latest changes downloaded. You can do this with:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ git fetch
+</span></code></pre>
+<p>To create a new branch, you can now use:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ git checkout -b &amp;lt;insert name of new branch&amp;gt;
+</span></code></pre>
+<p>Now that our new branch has been created and you have checked out to said branch, you can begin making changes. Once you have committed these new changes and are ready to push to GitHub use:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ git push origin &amp;lt;insert name of branch&amp;gt;
+</span></code></pre>
+<p>At this point, if you navigate to your repo on GitHub, you should see a dropdown displaying the various active branches. Selecting your new branch will display your recent commit whilst the main branch will not.</p>
+<p align="center">
+  <img src="/images/git-github-basics/2-branches.png" alt="Two Branches">
+</p>
+<h3 id="creating-a-pr">Creating a PR</h3>
+<p>You should also see a “compare &amp; pull request” button in the top area of the screen. Clicking this button will allow you to enter a PR name and description. You can also change which branch you want to merge into, and assign people to review the PR.</p>
+<h3 id="reviewing-a-pr">Reviewing a PR</h3>
+<p>As a reviewer, your job is to ensure that the feature implemented in the PR works as intended and that the code is optimised and tidy. First, fetch the remote repo using:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ git fetch
+</span></code></pre>
+<p>Then checkout to the desired branch using:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ git checkout &amp;lt;insert branch name&amp;gt;
+</span></code></pre>
+<p>Now that you have the branch you want to review on your local system, you can test the implementation of your team member’s code. Once you have reviewed the code, you can either request changes or approve the PR.</p>
+<h3 id="merging">Merging</h3>
+<p>Ideally, you would want to have your PR approved by at least two people, but If your PR has no conflicts, you have the option of merging via GitHub by clicking on the green merge button. After merging, you can also delete the remote branch if you do not plan on using it again.</p>
+<p align="center">
+  <img src="/images/git-github-basics/branch-no-conflicts.png" alt="Branch no conflicts">
+</p>
+<h3 id="deleting-local-branches">Deleting local branches</h3>
+<p>Once you have finished reviewing or have merged your changes, you can delete your local branch. First switch back to the main branch using:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ git checkout main
+</span></code></pre>
+<p>Then delete the now merged feature branch:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ git branch -D &amp;lt;name of merged branch&amp;gt;
+</span></code></pre>
+<p>Thats the general gist of Git/GitHub. There are more commands and features, but this post covers the most common commands.</p>
+
+
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      <p> &#128064;</p>
+      <a href="https://amri.dev" target="_blank" title="amri.dev">
+        <img src="/images/button-dark.png" alt="amri.dev">
+      </a>
+      <a href="https://landchad.net" target="_blank" title="LandChad">
+        <img src="https://landchad.net/pix/landchad.gif" alt="LandChad.net">
+      </a>
+      <a href="https://wiby.me" target="_blank" title="Wiby">
+        <img src="https://wiby.me/about/wiby.gif" alt="Wiby.me">
+      </a>
+      <a href="https://sadgrl.online/" target="_blank" title="Sadgrl">
+        <img src="https://sadgrlonline.github.io/archived-sadgrl.online/assets/images/buttons/sadgrlonline.gif" alt="sadgrl online">
+      </a>
+      <a href="https://eggramen.neocities.org" target="_blank" title="Eggramen">
+        <img src="https://eggramen.neocities.org/link5.png" alt="Eggramen">
+      </a>
+      <a href="https://code.visualstudio.com/" target="_blank" title="Visual Studio Code">
+        <img src="https://openbooks.neocities.org/img/codebutton.gif" alt="Visual Studio Code">
+      </a>
+      <a href="https://cyuucat.moe/" target="_blank" title="Cyuucat">
+        <img src="https://cyuucat.moe/images/buttons/cyuu.gif" alt="Cyuucat">
+      </a>
+    </div>
+
+    <br>
+    <a href="https://github.com/AmriArshad">GitHub</a> |
+    <a href="https://www.linkedin.com/in/amriarshad/">linkedIn</a> |
+    <a href="mailto:amriarshad0@gmail.com">amriarshad0@gmail.com</a>
+  </footer>
+  <script>
+    async function displayRandomQuote() {
+      try {
+        const response = await fetch('https://raw.githubusercontent.com/victorlaerte/awesome-it-quotes/refs/heads/master/README.md');
+        const text = await response.text();
+
+        const lines = text.split('\n');
+        const tableLines = lines.filter(line => line.startsWith('|') && line.includes('"'));
+        const quotes = [];
+
+        for (const line of tableLines) {
+          if (line.includes('Quote') || line.includes(':-:')) {
+            continue;
+          }
+
+          const parts = line.split('|');
+
+          if (parts.length >= 3) {
+            const quoteText = parts[1].trim();
+            const authorPart = parts[2].trim();
+
+            // Extract author name - look for text after <br> or just plain text
+            let authorName = 'Unknown';
+
+            // Try to find text between > and < (from markdown links)
+            const bracketMatch = authorPart.match(/\[([^\]]+)\]/);
+            if (bracketMatch) {
+              authorName = bracketMatch[1];
+            } else {
+              // Try to find plain text after <br>
+              const brMatch = authorPart.match(/<br>\s*([^(<]+)/);
+              if (brMatch) {
+                authorName = brMatch[1].trim();
+              }
+            }
+
+            // Remove any remaining markdown image syntax
+            authorName = authorName.replace(/^!\[/, '').replace(/\].*$/, '');
+
+            // Split multiple quotes and only take the first one
+            const firstQuote = quoteText.split('<br><br>')[0].trim();
+            const cleanQuote = firstQuote.replace(/^[""]|[""]$/g, '').trim();
+
+            if (cleanQuote && cleanQuote.length > 20) {
+              quotes.push({
+                text: cleanQuote,
+                author: authorName
+              });
+            }
+          }
+        }
+
+        if (quotes.length > 0) {
+          const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+          const quoteElement = document.getElementById('random-quote');
+          if (quoteElement) {
+            quoteElement.innerHTML = `
+  <blockquote>
+    <p>"${randomQuote.text}"</p>
+    <footer>
+      — ${randomQuote.author}
+      <br>
+      <a href="https://github.com/victorlaerte/awesome-it-quotes" target="_blank" rel="noopener" class="quote-source">source</a>
+    </footer>
+  </blockquote>
+`;
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching quote:', error);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', displayRandomQuote);
+  </script>
+</body>
+
+</html>

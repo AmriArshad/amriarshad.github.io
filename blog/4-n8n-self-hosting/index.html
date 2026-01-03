@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>Self-Hosting n8n with Cloudflare Tunnels</title>
+  
+  <meta name="description" content="Amri Arshad's Personal Website">
+  <meta name="author" content="Amri Arshad">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" type="image/png" href="/favicon.ico">
+</head>
+
+<body>
+  <header>
+    <h1 class="name-header">Amri Arshad</h1>
+  </header>
+
+  <nav>
+    <a href="/">Home</a>
+    <a href="/portfolio">Portfolio</a>
+    <a href="/links">Links</a>
+    <a href="/blog/">Posts</a>
+    <a href="/about">About</a>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      
+<h1 class="title">
+  Self-Hosting n8n with Cloudflare Tunnels 
+ <!-- Self-Hosting n8n with Cloudflare Tunnels -->
+</h1>
+<p class="subtitle"><strong>2025-08-23</strong></p>
+<p>I recently set up n8n, a powerful workflow automation platform, on my local PC and made it accessible via my custom domain using Cloudflare Tunnels. This setup gives me a secure, always-on automation platform without exposing ports or dealing with traditional VPN configurations.</p>
+<span id="continue-reading"></span><h2 id="why-n8n">Why n8n?</h2>
+<p>n8n is an open-source workflow automation tool that's essentially a self-hosted alternative to services like Zapier or Make. What drew me to it was the ability to host it myself, have complete control over my data, and create complex automations without monthly subscription fees.</p>
+<p>I've been exploring workflow automation as a way to streamline repetitive tasks and integrate different services I use. Being able to self-host this on my own infrastructure means I can experiment freely and build automations that connect to internal services running on my network.</p>
+<h2 id="the-setup-challenge">The Setup Challenge</h2>
+<p>The main challenge with self-hosting any application is making it securely accessible from outside your local network. Traditional approaches involve:</p>
+<ul>
+<li>Port forwarding (security risk, exposes your home IP)</li>
+<li>Dynamic DNS (requires open ports, maintenance)</li>
+<li>VPN (adds complexity, not always convenient)</li>
+</ul>
+<p>I wanted something more elegant that provided HTTPS by default and didn't require opening ports on my router.</p>
+<h2 id="enter-cloudflare-tunnels">Enter Cloudflare Tunnels</h2>
+<p>Cloudflare Tunnels (part of Cloudflare Zero Trust) creates a secure, outbound-only connection from your local network to Cloudflare's edge. Your application connects to Cloudflare rather than the internet connecting to you—meaning no open ports and no exposed IP address.</p>
+<p>The setup is surprisingly straightforward:</p>
+<h3 id="1-cloudflare-zero-trust-configuration">1. Cloudflare Zero Trust Configuration</h3>
+<p>First, I set up Cloudflare Zero Trust and created a tunnel. This generates a token that identifies your tunnel to Cloudflare's network. The Zero Trust dashboard makes this process intuitive—you define which internal service you want to expose and what domain/subdomain should point to it.</p>
+<h3 id="2-running-the-cloudflare-tunnel">2. Running the Cloudflare Tunnel</h3>
+<p>Rather than installing the Cloudflare daemon directly on my host, I ran it as a Docker container. This keeps everything containerized and makes the setup reproducible.</p>
+<p>The tunnel establishes an outbound connection to Cloudflare and waits for incoming requests to route back to my local services.</p>
+<h3 id="3-deploying-n8n">3. Deploying n8n</h3>
+<p>With the tunnel ready, I deployed n8n using Docker with persistent storage.</p>
+<p>The key here is mounting a volume for persistent storage—this ensures workflows, credentials, and configurations survive container restarts.</p>
+<h3 id="4-connecting-the-pieces">4. Connecting the Pieces</h3>
+<p>In the Cloudflare Zero Trust dashboard, I configured the tunnel to route traffic from my custom domain (for example <code>n8n.amri.dev</code>) to <code>localhost:5678</code> where n8n is running. Cloudflare automatically handles SSL/TLS certificates, so the connection is HTTPS by default.</p>
+<h2 id="what-this-enables">What This Enables</h2>
+<p>Now I have n8n accessible from anywhere via a proper domain with HTTPS, without exposing any ports or setting up complex networking. Some automations I'm building:</p>
+<ul>
+<li><strong>Discord notifications</strong> for system monitoring and alerts</li>
+<li><strong>API integrations</strong> between different services I use</li>
+<li><strong>Data processing workflows</strong> that pull from various sources</li>
+<li><strong>Scheduled tasks</strong> that run maintenance scripts</li>
+</ul>
+<p>The beauty of this setup is that n8n can connect to both external APIs and internal services on my network—making it a powerful bridge between the public internet and my local infrastructure.</p>
+<h2 id="lessons-learned">Lessons Learned</h2>
+<p>This project reinforced a few important concepts:</p>
+<p><strong>Containerization is powerful</strong> - Having both n8n and the Cloudflare tunnel in containers makes the setup clean, reproducible, and easy to maintain. If something breaks, I can tear it down and recreate it in minutes.</p>
+<p><strong>Zero Trust is the future</strong> - Traditional security models of "inside vs outside the network" are giving way to Zero Trust approaches where you verify every connection. Cloudflare Tunnels embody this—there's no implicit trust just because something is on your network.</p>
+<p><strong>Self-hosting gives you control</strong> - While cloud services are convenient, self-hosting means I own my data, can customize everything, and don't have usage limits or monthly fees. For learning and experimentation, this is invaluable.</p>
+<h2 id="next-steps">Next Steps</h2>
+<p>With n8n running and accessible, I'm planning to:</p>
+<ul>
+<li>Build more complex multi-step workflows</li>
+<li>Integrate it with my home server services</li>
+<li>Explore n8n's ability to trigger workflows via webhooks</li>
+<li>Create automations that help with my day-to-day IT work</li>
+</ul>
+<p>If you're interested in workflow automation or self-hosting, I highly recommend trying out n8n. The combination with Cloudflare Tunnels creates a secure, professional setup that's surprisingly easy to maintain.</p>
+<hr />
+<p><em>Tech Stack: Docker, n8n, Cloudflare Zero Trust, Cloudflare Tunnels</em></p>
+
+
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      <p> &#128064;</p>
+      <a href="https://amri.dev" target="_blank" title="amri.dev">
+        <img src="/images/button-dark.png" alt="amri.dev">
+      </a>
+      <a href="https://landchad.net" target="_blank" title="LandChad">
+        <img src="https://landchad.net/pix/landchad.gif" alt="LandChad.net">
+      </a>
+      <a href="https://wiby.me" target="_blank" title="Wiby">
+        <img src="https://wiby.me/about/wiby.gif" alt="Wiby.me">
+      </a>
+      <a href="https://sadgrl.online/" target="_blank" title="Sadgrl">
+        <img src="https://sadgrlonline.github.io/archived-sadgrl.online/assets/images/buttons/sadgrlonline.gif" alt="sadgrl online">
+      </a>
+      <a href="https://eggramen.neocities.org" target="_blank" title="Eggramen">
+        <img src="https://eggramen.neocities.org/link5.png" alt="Eggramen">
+      </a>
+      <a href="https://code.visualstudio.com/" target="_blank" title="Visual Studio Code">
+        <img src="https://openbooks.neocities.org/img/codebutton.gif" alt="Visual Studio Code">
+      </a>
+      <a href="https://cyuucat.moe/" target="_blank" title="Cyuucat">
+        <img src="https://cyuucat.moe/images/buttons/cyuu.gif" alt="Cyuucat">
+      </a>
+    </div>
+
+    <br>
+    <a href="https://github.com/AmriArshad">GitHub</a> |
+    <a href="https://www.linkedin.com/in/amriarshad/">linkedIn</a> |
+    <a href="mailto:amriarshad0@gmail.com">amriarshad0@gmail.com</a>
+  </footer>
+  <script>
+    async function displayRandomQuote() {
+      try {
+        const response = await fetch('https://raw.githubusercontent.com/victorlaerte/awesome-it-quotes/refs/heads/master/README.md');
+        const text = await response.text();
+
+        const lines = text.split('\n');
+        const tableLines = lines.filter(line => line.startsWith('|') && line.includes('"'));
+        const quotes = [];
+
+        for (const line of tableLines) {
+          if (line.includes('Quote') || line.includes(':-:')) {
+            continue;
+          }
+
+          const parts = line.split('|');
+
+          if (parts.length >= 3) {
+            const quoteText = parts[1].trim();
+            const authorPart = parts[2].trim();
+
+            // Extract author name - look for text after <br> or just plain text
+            let authorName = 'Unknown';
+
+            // Try to find text between > and < (from markdown links)
+            const bracketMatch = authorPart.match(/\[([^\]]+)\]/);
+            if (bracketMatch) {
+              authorName = bracketMatch[1];
+            } else {
+              // Try to find plain text after <br>
+              const brMatch = authorPart.match(/<br>\s*([^(<]+)/);
+              if (brMatch) {
+                authorName = brMatch[1].trim();
+              }
+            }
+
+            // Remove any remaining markdown image syntax
+            authorName = authorName.replace(/^!\[/, '').replace(/\].*$/, '');
+
+            // Split multiple quotes and only take the first one
+            const firstQuote = quoteText.split('<br><br>')[0].trim();
+            const cleanQuote = firstQuote.replace(/^[""]|[""]$/g, '').trim();
+
+            if (cleanQuote && cleanQuote.length > 20) {
+              quotes.push({
+                text: cleanQuote,
+                author: authorName
+              });
+            }
+          }
+        }
+
+        if (quotes.length > 0) {
+          const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+          const quoteElement = document.getElementById('random-quote');
+          if (quoteElement) {
+            quoteElement.innerHTML = `
+  <blockquote>
+    <p>"${randomQuote.text}"</p>
+    <footer>
+      — ${randomQuote.author}
+      <br>
+      <a href="https://github.com/victorlaerte/awesome-it-quotes" target="_blank" rel="noopener" class="quote-source">source</a>
+    </footer>
+  </blockquote>
+`;
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching quote:', error);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', displayRandomQuote);
+  </script>
+</body>
+
+</html>
