@@ -1,5 +1,5 @@
 +++
-title = "Portfolio"
+title = "Projects"
 page_template = "page.html"
 +++
 
@@ -15,13 +15,28 @@ page_template = "page.html"
 
 <div class="project">
 
+### [Self-Hosted Game Server Platform](@/blog/7.game-server-platform.md)
+
+**Tech Stack:** Ubuntu, AMP, Podman, playit.gg  
+**Timeline:** 2026 - Present
+
+A multi-instance game server platform running on bare-metal Ubuntu, built so my friends and I can play modded Minecraft and Terraria without paying for hosting or depending on one person's PC staying on. AMP handles the lifecycle of each server, including backups and mod updates, while Podman containers keep every modded Minecraft server isolated from the others.
+
+Servers are exposed to players through playit.gg tunnels, so there's no router port forwarding and the home network perimeter stays closed. Read the full write-up in [the blog post](@/blog/7.game-server-platform.md).
+
+</div>
+
+<div class="project">
+
 ### [n8n Self-Hosting](/blog/4-n8n-self-hosting)
 
 Tech Stack: Docker, n8n, Cloudflare Zero-Trust
 
 Timeline: 2025
 
-Deployed [n8n](https://n8n.io/) locally with docker and made it securely accessible via my custom domain by setting up a Cloudflare Tunnel through Cloudflare Zero Trust.
+[n8n](https://n8n.io/) workflow automation running in Docker with persistent storage, available on a custom domain over HTTPS. A Cloudflare Tunnel running as its own container handles remote access, so nothing is exposed through port forwarding.
+
+It's my sandbox for building automations that connect APIs and services.
 
 </div>
 
@@ -88,20 +103,29 @@ While the project has concluded, it was an incredible learning experience that t
 
 - Windows Server 2022
 - Active Directory & Entra ID (Azure AD)
+- Intune
+- Microsoft Graph API
 - Group Policy Management
 - DNS & DHCP
 - Linux (Arch & Ubuntu)
 - Virtual Machines (KVM/QEMU, Virt-Manager)
 
-### Tools & Platforms
+### Containers & DevOps
 
 - Docker
+- Podman
 - Git/GitHub
+- GitHub Actions (CI/CD)
+- Cloudflare (DNS, Tunnels, Workers)
+
+### Tools & Platforms
+
 - ServiceNow
 - Datto RMM
 - Microsoft 365 & SharePoint
 - 8x8
 - Tailscale VPN
+- Domain management (Cloudflare, Namecheap, GoDaddy, Squarespace)
 
 ### Cloud & Networking
 
@@ -112,13 +136,12 @@ While the project has concluded, it was an incredible learning experience that t
 
 ### Development & Design
 
-- Zed
 - VS Code
 - Vim
-- Figma & Penpot
-- Framer
 - Astro
 - React & React Native
+- Figma & Penpot
+- Framer
 - p5.js
 - Zola
 
