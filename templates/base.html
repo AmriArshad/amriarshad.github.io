@@ -3,8 +3,10 @@
 
 <head>
   <meta charset="utf-8">
-  {% if page.title %}
+  {% if page and page.title %}
   <title>{{ page.title }}</title>
+  {% elif section and section.title %}
+  <title>{{ section.title }}</title>
   {% else %}
   <title>Amri's website</title>
   {% endif %}
