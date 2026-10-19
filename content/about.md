@@ -21,6 +21,7 @@ Some of the courses/certifications that I've completed:
 
 | Certification/Course | Issuer | Year |
 |:--------------|:--------|:------|
+| Claude Code 101 | Anthropic | 2026 |
 | Microsoft Entra ID for Administrators | LinkedIn Learning | 2025 |
 | 8x8 UCaaS Admin Certification | 8x8 | 2025 |
 | Personal Leadership Training | [Milena Velez](https://milenavelez.co.nz/) | 2025 |

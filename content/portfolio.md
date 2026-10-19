@@ -1,5 +1,5 @@
 +++
-title = "Projects"
+title = "Portfolio"
 page_template = "page.html"
 +++
 
@@ -80,7 +80,7 @@ Tech Stack: JavaScript, p5.js
 
 Timeline: 2021 - 2023
 
-A creative coding project where I explored elements of mathematics and generative art. The animations are coded in [p5.js](https://p5js.org/), a JavaScript port of the Java based language [Processing](https://processing.or g/).
+A creative coding project where I explored elements of mathematics and generative art. The animations are coded in [p5.js](https://p5js.org/), a JavaScript port of the Java based language [Processing](https://processing.org/).
 
 While the project has concluded, it was an incredible learning experience that taught me to think about problems differently. Creative coding requires balancing randomness with control, performance with visual complexity. You can still view some of my favorite pieces on the homepage and explore the full collection at holocryptic.xyz.
 
