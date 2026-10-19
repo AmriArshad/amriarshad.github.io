@@ -265,3 +265,53 @@ footer {
     margin: auto;
   }
 }
+
+.web-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin: 20px 0 40px;
+}
+
+.web-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  border: 1px solid var(--accent-color);
+}
+
+.web-card h3 {
+  margin: 12px 0 4px;
+}
+
+.web-card p {
+  margin: 4px 0;
+}
+
+.web-card .web-tools {
+  font-size: 0.85em;
+  opacity: 0.7;
+}
+
+.web-card embed {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  display: block;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .web-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.case-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  margin: 20px 0;
+}
