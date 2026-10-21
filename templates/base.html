@@ -10,7 +10,7 @@
   {% else %}
   <title>Amri's website</title>
   {% endif %}
-  <meta name="description" content="Amri Arshad's Personal Website">
+  <meta name="description" content="Amri Arshad - IT Operations Specialist, web developer and designer. Projects, web work and generative art.">
   <meta name="author" content="Amri Arshad">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,7 +29,7 @@
   <nav>
     <a href="/">Home</a>
     <a href="/portfolio">Portfolio</a>
-    <a href="/web">Web Dev & Design</a>
+    <a href="/web">Web Dev &amp; Design</a>
     <!-- <a href="/links">Links</a> -->
     <a href="/blog/">Posts</a>
     <a href="/about">About</a>
@@ -74,6 +74,10 @@
   </footer>
   <script>
     async function displayRandomQuote() {
+      // Only run on pages that have a quote container (the homepage)
+      const quoteElement = document.getElementById('random-quote');
+      if (!quoteElement) return;
+
       try {
         const response = await fetch('https://raw.githubusercontent.com/victorlaerte/awesome-it-quotes/refs/heads/master/README.md');
         const text = await response.text();
@@ -96,7 +100,7 @@
             // Extract author name - look for text after <br> or just plain text
             let authorName = 'Unknown';
 
-            // Try to find text between > and < (from markdown links)
+            // Try to find text between [ and ] (from markdown links)
             const bracketMatch = authorPart.match(/\[([^\]]+)\]/);
             if (bracketMatch) {
               authorName = bracketMatch[1];
@@ -111,9 +115,13 @@
             // Remove any remaining markdown image syntax
             authorName = authorName.replace(/^!\[/, '').replace(/\].*$/, '');
 
-            // Split multiple quotes and only take the first one
+            // Split multiple quotes and only take the first one, then tidy it up:
+            // turn <br> into spaces and strip straight/curly quote marks at the ends
             const firstQuote = quoteText.split('<br><br>')[0].trim();
-            const cleanQuote = firstQuote.replace(/^[""]|[""]$/g, '').trim();
+            const cleanQuote = firstQuote
+              .replace(/<br\s*\/?>/gi, ' ')
+              .replace(/^[\u201C\u201D"]+|[\u201C\u201D"]+$/g, '')
+              .trim();
 
             if (cleanQuote && cleanQuote.length > 20) {
               quotes.push({
@@ -127,19 +135,25 @@
         if (quotes.length > 0) {
           const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
-          const quoteElement = document.getElementById('random-quote');
-          if (quoteElement) {
-            quoteElement.innerHTML = `
-  <blockquote>
-    <p>"${randomQuote.text}"</p>
-    <footer>
-      — ${randomQuote.author}
-      <br>
-      <a href="https://github.com/victorlaerte/awesome-it-quotes" target="_blank" rel="noopener" class="quote-source">source</a>
-    </footer>
-  </blockquote>
-`;
-          }
+          // Build the quote with textContent so fetched text is never run as HTML
+          const blockquote = document.createElement('blockquote');
+
+          const p = document.createElement('p');
+          p.textContent = `"${randomQuote.text}"`;
+
+          const footer = document.createElement('footer');
+          footer.append(`\u2014 ${randomQuote.author}`, document.createElement('br'));
+
+          const source = document.createElement('a');
+          source.href = 'https://github.com/victorlaerte/awesome-it-quotes';
+          source.target = '_blank';
+          source.rel = 'noopener';
+          source.className = 'quote-source';
+          source.textContent = 'source';
+          footer.append(source);
+
+          blockquote.append(p, footer);
+          quoteElement.replaceChildren(blockquote);
         }
       } catch (error) {
         console.error('Error fetching quote:', error);
