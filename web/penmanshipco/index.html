@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>ThePenmanshipCo</title>
+  
+  <meta name="description" content="Amri Arshad - IT Operations Specialist, web developer and designer. Projects, web work and generative art.">
+  <meta name="author" content="Amri Arshad">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" type="image/png" href="/favicon.ico">
+</head>
+
+<body>
+  <header>
+    <h1 class="name-header">Amri Arshad</h1>
+  </header>
+
+  <nav>
+    <a href="/">Home</a>
+    <a href="/portfolio">Portfolio</a>
+    <a href="/web">Web Dev &amp; Design</a>
+    <!-- <a href="/links">Links</a> -->
+    <a href="/blog/">Posts</a>
+    <a href="/about">About</a>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      
+<h1 class="title">
+  ThePenmanshipCo 
+ <!-- ThePenmanshipCo -->
+</h1>
+<p class="subtitle"><strong></strong></p>
+<p><strong>Services:</strong> Branding, logo design, social media templates<br />
+<strong>Industry:</strong> Copywriting</p>
+<img class="case-img" src="/images/web/penmanship.webp" alt="ThePenmanshipCo logo and wordmark" loading="lazy">
+<h2 id="overview">Overview</h2>
+<p>ThePenmanshipCo is a professional copywriting agency that provides expert writing services to businesses and individuals. They were looking for a fresh brand identity that communicates their expertise and professionalism.</p>
+<h2 id="solution">Solution</h2>
+<p>I created a minimal yet modern logo and a few social media templates that capture the essence of the brand. The new design gives the agency a sleek, professional look that has been well received by its audience.</p>
+<h2 id="logo">Logo</h2>
+<p>The logo is built from the starting letters of the brand name (T, P and C), with an additional nib added for aesthetics.</p>
+<img class="case-img" src="/images/web/penmanship-construction.webp" alt="Logo construction showing the letters T, P and C plus a nib" loading="lazy">
+<img class="case-img" src="/images/web/penmanship-logo.webp" alt="ThePenmanshipCo logo in light and dark versions" loading="lazy">
+<h2 id="typography">Typography</h2>
+<p>Stardos Stencil is used for the wordmark, Lora for headings and Roboto for general text, all from Google Fonts.</p>
+<img class="case-img" src="/images/web/penmanship-typography.webp" alt="Typography specimens for Stardos Stencil, Lora and Roboto" loading="lazy">
+<h2 id="colour-and-social-media">Colour and social media</h2>
+<p>The palette pairs two blues with a soft rose and an off-white, and it carries through to the social media templates.</p>
+<ul>
+<li>Dark Tyrian Blue <code>#0D2B52</code></li>
+<li>YinMn Blue <code>#405774</code></li>
+<li>Misty Rose <code>#F5E2E0</code></li>
+<li>Moon White <code>#EAF4FC</code></li>
+</ul>
+<img class="case-img" src="/images/web/penmanship-social.webp" alt="Brand colour palette and social media template examples" loading="lazy">
+<p><a href="/web">← Back to Web Dev</a></p>
+
+
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      <p> &#128064;</p>
+      <a href="https://amri.dev" target="_blank" title="amri.dev">
+        <img src="/images/button-dark.png" alt="amri.dev">
+      </a>
+      <a href="https://landchad.net" target="_blank" title="LandChad">
+        <img src="https://landchad.net/pix/landchad.gif" alt="LandChad.net">
+      </a>
+      <a href="https://wiby.me" target="_blank" title="Wiby">
+        <img src="https://wiby.me/about/wiby.gif" alt="Wiby.me">
+      </a>
+      <a href="https://sadgrl.online/" target="_blank" title="Sadgrl">
+        <img src="https://sadgrlonline.github.io/archived-sadgrl.online/assets/images/buttons/sadgrlonline.gif" alt="sadgrl online">
+      </a>
+      <a href="https://eggramen.neocities.org" target="_blank" title="Eggramen">
+        <img src="https://eggramen.neocities.org/link5.png" alt="Eggramen">
+      </a>
+      <a href="https://code.visualstudio.com/" target="_blank" title="Visual Studio Code">
+        <img src="https://openbooks.neocities.org/img/codebutton.gif" alt="Visual Studio Code">
+      </a>
+      <a href="https://cyuucat.moe/" target="_blank" title="Cyuucat">
+        <img src="https://cyuucat.moe/images/buttons/cyuu.gif" alt="Cyuucat">
+      </a>
+    </div>
+
+    <br>
+    <a href="https://github.com/AmriArshad">GitHub</a> |
+    <a href="https://www.linkedin.com/in/amriarshad/">linkedIn</a> |
+    <a href="mailto:amriarshad0@gmail.com">amriarshad0@gmail.com</a>
+  </footer>
+  <script>
+    async function displayRandomQuote() {
+      // Only run on pages that have a quote container (the homepage)
+      const quoteElement = document.getElementById('random-quote');
+      if (!quoteElement) return;
+
+      try {
+        const response = await fetch('https://raw.githubusercontent.com/victorlaerte/awesome-it-quotes/refs/heads/master/README.md');
+        const text = await response.text();
+
+        const lines = text.split('\n');
+        const tableLines = lines.filter(line => line.startsWith('|') && line.includes('"'));
+        const quotes = [];
+
+        for (const line of tableLines) {
+          if (line.includes('Quote') || line.includes(':-:')) {
+            continue;
+          }
+
+          const parts = line.split('|');
+
+          if (parts.length >= 3) {
+            const quoteText = parts[1].trim();
+            const authorPart = parts[2].trim();
+
+            // Extract author name - look for text after <br> or just plain text
+            let authorName = 'Unknown';
+
+            // Try to find text between [ and ] (from markdown links)
+            const bracketMatch = authorPart.match(/\[([^\]]+)\]/);
+            if (bracketMatch) {
+              authorName = bracketMatch[1];
+            } else {
+              // Try to find plain text after <br>
+              const brMatch = authorPart.match(/<br>\s*([^(<]+)/);
+              if (brMatch) {
+                authorName = brMatch[1].trim();
+              }
+            }
+
+            // Remove any remaining markdown image syntax
+            authorName = authorName.replace(/^!\[/, '').replace(/\].*$/, '');
+
+            // Split multiple quotes and only take the first one, then tidy it up:
+            // turn <br> into spaces and strip straight/curly quote marks at the ends
+            const firstQuote = quoteText.split('<br><br>')[0].trim();
+            const cleanQuote = firstQuote
+              .replace(/<br\s*\/?>/gi, ' ')
+              .replace(/^[\u201C\u201D"]+|[\u201C\u201D"]+$/g, '')
+              .trim();
+
+            if (cleanQuote && cleanQuote.length > 20) {
+              quotes.push({
+                text: cleanQuote,
+                author: authorName
+              });
+            }
+          }
+        }
+
+        if (quotes.length > 0) {
+          const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+          // Build the quote with textContent so fetched text is never run as HTML
+          const blockquote = document.createElement('blockquote');
+
+          const p = document.createElement('p');
+          p.textContent = `"${randomQuote.text}"`;
+
+          const footer = document.createElement('footer');
+          footer.append(`\u2014 ${randomQuote.author}`, document.createElement('br'));
+
+          const source = document.createElement('a');
+          source.href = 'https://github.com/victorlaerte/awesome-it-quotes';
+          source.target = '_blank';
+          source.rel = 'noopener';
+          source.className = 'quote-source';
+          source.textContent = 'source';
+          footer.append(source);
+
+          blockquote.append(p, footer);
+          quoteElement.replaceChildren(blockquote);
+        }
+      } catch (error) {
+        console.error('Error fetching quote:', error);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', displayRandomQuote);
+  </script>
+
+  <script>
+    (function () {
+      const images = document.querySelectorAll('.web-card img, .case-img');
+      if (!images.length) return;
+
+      // One shared dialog, reused for every image
+      const dialog = document.createElement('dialog');
+      dialog.className = 'lightbox';
+      const big = document.createElement('img');
+      big.className = 'lightbox-img';
+      dialog.appendChild(big);
+      document.body.appendChild(dialog);
+
+      function open(img) {
+        big.src = img.currentSrc || img.src;
+        big.alt = img.alt;
+        dialog.showModal();
+      }
+
+      images.forEach(function (img) {
+        img.addEventListener('click', function (e) {
+          e.preventDefault(); // stop the surrounding link from navigating
+          open(img);
+        });
+
+        // Images that aren't inside a link need to be keyboard-reachable
+        if (!img.closest('a')) {
+          img.tabIndex = 0;
+          img.setAttribute('role', 'button');
+          img.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              open(img);
+            }
+          });
+        }
+      });
+
+      // Click anywhere (or press Esc) to close
+      dialog.addEventListener('click', function () { dialog.close(); });
+    })();
+  </script>
+  
+</body>
+
+</html>
