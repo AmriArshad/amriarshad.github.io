@@ -162,6 +162,50 @@
 
     document.addEventListener('DOMContentLoaded', displayRandomQuote);
   </script>
+
+  <script>
+    (function () {
+      const images = document.querySelectorAll('.web-card img, .case-img');
+      if (!images.length) return;
+
+      // One shared dialog, reused for every image
+      const dialog = document.createElement('dialog');
+      dialog.className = 'lightbox';
+      const big = document.createElement('img');
+      big.className = 'lightbox-img';
+      dialog.appendChild(big);
+      document.body.appendChild(dialog);
+
+      function open(img) {
+        big.src = img.currentSrc || img.src;
+        big.alt = img.alt;
+        dialog.showModal();
+      }
+
+      images.forEach(function (img) {
+        img.addEventListener('click', function (e) {
+          e.preventDefault(); // stop the surrounding link from navigating
+          open(img);
+        });
+
+        // Images that aren't inside a link need to be keyboard-reachable
+        if (!img.closest('a')) {
+          img.tabIndex = 0;
+          img.setAttribute('role', 'button');
+          img.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              open(img);
+            }
+          });
+        }
+      });
+
+      // Click anywhere (or press Esc) to close
+      dialog.addEventListener('click', function () { dialog.close(); });
+    })();
+  </script>
+  
 </body>
 
 </html>

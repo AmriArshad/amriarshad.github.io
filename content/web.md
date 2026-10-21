@@ -1,5 +1,5 @@
 +++
-title = "Web Dev"
+title = "Web Dev & Design"
 page_template = "page.html"
 +++
 
@@ -24,7 +24,7 @@ A selection of websites I've designed and built, plus a few design concepts.
   </a>
   <h3><a href="https://holocryptic.xyz">Holocryptic</a></h3>
   <p class="web-tools">Zola, p5.js</p>
-  <p>Home for my generative art and design project. Read more <a href="/portfolio">here</a>.</p>
+  <p>Home for my generative art and design project. Read more <a href="https://holocryptic.xyz/about/">here</a>.</p>
 </div>
 
 </div>
