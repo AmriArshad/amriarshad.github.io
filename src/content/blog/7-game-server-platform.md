@@ -5,6 +5,7 @@ description: "This year I built a multi-instance game server platform on a bare-
 ---
 
 This year I built a multi-instance game server platform on a bare-metal Ubuntu machine at home for me and my friends. It hosts modded Minecraft and Terraria, with each Minecraft server isolated in its own container, and everyone connects without me opening a single port on my router.
+
 ---
 
 ## Why build it?
