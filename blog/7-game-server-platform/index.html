@@ -1,49 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  
-  <title>Building a Self-Hosted Game Server Platform</title>
-  
-  <meta name="description" content="Amri Arshad - IT Operations Specialist, web developer and designer. Projects, web work and generative art.">
-  <meta name="author" content="Amri Arshad">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="icon" type="image/png" href="/favicon.ico">
-</head>
-
-<body>
-  <header>
-    <h1 class="name-header">Amri Arshad</h1>
-  </header>
-
-  <nav>
-    <a href="/">Home</a>
-    <a href="/portfolio">Portfolio</a>
-    <a href="/web">Web Dev &amp; Design</a>
-    <!-- <a href="/links">Links</a> -->
-    <a href="/blog/">Posts</a>
-    <a href="/about">About</a>
-  </nav>
-
-  <section class="section">
-    <div class="container">
-      
-<h1 class="title">
-  Building a Self-Hosted Game Server Platform 
- <!-- Building a Self-Hosted Game Server Platform -->
-</h1>
-<p class="subtitle"><strong>2026-10-19</strong></p>
-<p>This year I built a multi-instance game server platform on a bare-metal Ubuntu machine at home for me and my friends. It hosts modded Minecraft and Terraria, with each Minecraft server isolated in its own container, and everyone connects without me opening a single port on my router.</p>
-<span id="continue-reading"></span>
-<hr />
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Building a Self-Hosted Game Server Platform · Amri Arshad</title><meta name="description" content="This year I built a multi-instance game server platform on a bare-metal Ubuntu machine at home for me and my friends. It hosts modded Minecraft and Terraria, with each Minecraft server isolated in its own container, and everyone connects without me opening a single port on my router."><meta name="author" content="Amri Arshad"><link rel="canonical" href="https://amri.dev/blog/7-game-server-platform/"><meta property="og:type" content="article"><meta property="og:title" content="Building a Self-Hosted Game Server Platform · Amri Arshad"><meta property="og:description" content="This year I built a multi-instance game server platform on a bare-metal Ubuntu machine at home for me and my friends. It hosts modded Minecraft and Terraria, with each Minecraft server isolated in its own container, and everyone connects without me opening a single port on my router."><meta property="og:url" content="https://amri.dev/blog/7-game-server-platform/"><meta name="theme-color" content="#11111b" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#eff1f5" media="(prefers-color-scheme: light)"><link rel="icon" href="/favicon.ico"><link rel="alternate" type="application/rss+xml" title="Amri Arshad · Posts" href="/rss.xml"><link rel="sitemap" href="/sitemap-index.xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@1&display=swap"><script>
+      // Apply a saved theme before first paint so there's no flash.
+      try {
+        const t = localStorage.getItem("theme");
+        if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script><link rel="stylesheet" href="/_astro/Base.DgYfcIv0.css"></head><body><a class="skip" href="#main">Skip to content</a><header class="site-header"><div class="wrap inner"><a class="wordmark" href="/" aria-label="amri.dev, home">amri<span>.dev</span></a><nav aria-label="Main"><a href="/projects/">Projects</a><a href="/web/">Web &amp; design</a><a href="/blog/" aria-current="page">Posts</a><a href="/about/">About</a></nav><button class="theme-toggle" type="button" aria-label="Toggle light and dark theme" title="Toggle theme"><svg class="moon" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path></svg><svg class="sun" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"></path></g></svg></button></div></header><main id="main"><div class="wrap"><header class="page-head"><p class="crumb"><a href="/blog/">← Posts</a></p><h1>Building a Self-Hosted Game Server Platform</h1><dl class="meta-strip"><div><dt>Published</dt><dd><time datetime="2026-10-19T00:00:00.000Z">19 October 2026</time></dd></div><div><dt>Reading time</dt><dd>2 min</dd></div><div><dt>Sections</dt><dd>8</dd></div></dl></header><article class="prose"><h2 id="this-year-i-built-a-multi-instance-game-server-platform-on-a-bare-metal-ubuntu-machine-at-home-for-me-and-my-friends-it-hosts-modded-minecraft-and-terraria-with-each-minecraft-server-isolated-in-its-own-container-and-everyone-connects-without-me-opening-a-single-port-on-my-router">This year I built a multi-instance game server platform on a bare-metal Ubuntu machine at home for me and my friends. It hosts modded Minecraft and Terraria, with each Minecraft server isolated in its own container, and everyone connects without me opening a single port on my router.</h2>
 <h2 id="why-build-it">Why build it?</h2>
-<p>My friends and I wanted to play some modded Minecraft and Terraria, but we didn't want to pay for a hosted server or run it locally from someone's PC. If that person wants to close the game, the server closes with it. So the best solution was to build a self-hosted server.</p>
+<p>My friends and I wanted to play some modded Minecraft and Terraria, but we didn’t want to pay for a hosted server or run it locally from someone’s PC. If that person wants to close the game, the server closes with it. So the best solution was to build a self-hosted server.</p>
 <h2 id="the-stack">The stack</h2>
 <ul>
 <li><strong>Ubuntu</strong> on bare metal as the host</li>
@@ -52,190 +15,18 @@
 <li><strong>playit.gg</strong> tunnels to expose the servers to players</li>
 </ul>
 <h2 id="isolating-servers-with-podman">Isolating servers with Podman</h2>
-<p>Every modded Minecraft server runs in its own Podman container. If one modpack needs something different from another, or one server misbehaves, it can't affect the rest. Podman is daemonless and can run containers rootless, which fits the goal of keeping the host as clean as possible.</p>
+<p>Every modded Minecraft server runs in its own Podman container. If one modpack needs something different from another, or one server misbehaves, it can’t affect the rest. Podman is daemonless and can run containers rootless, which fits the goal of keeping the host as clean as possible.</p>
 <p>This allows me to run multiple instances of several game servers with their own resource limits and configs without interfering with each other.</p>
 <h2 id="managing-everything-with-amp">Managing everything with AMP</h2>
-<p>AMP gives me a single panel for starting and stopping instances, scheduling backups and handling mod updates. That's the part that turns a pile of containers into a platform: the day-to-day operations are repeatable and I'm not SSHing in to restart things.</p>
+<p>AMP gives me a single panel for starting and stopping instances, scheduling backups and handling mod updates. That’s the part that turns a pile of containers into a platform: the day-to-day operations are repeatable and I’m not SSHing in to restart things.</p>
 <h2 id="keeping-the-network-closed">Keeping the network closed</h2>
-<p>Rather than forwarding ports on my router, I use playit.gg tunnels. The tunnel agent makes an outbound connection, and players connect through playit.gg's address, so my home IP and network perimeter stay closed. It's the same idea as the Cloudflare Tunnel I used for n8n: let the service reach out instead of letting the internet reach in.</p>
+<p>Rather than forwarding ports on my router, I use playit.gg tunnels. The tunnel agent makes an outbound connection, and players connect through playit.gg’s address, so my home IP and network perimeter stay closed. It’s the same idea as the Cloudflare Tunnel I used for n8n: let the service reach out instead of letting the internet reach in.</p>
 <h2 id="what-i-learned">What I learned</h2>
 <ul>
 <li><strong>Isolation pays off.</strong> Separate containers made it painless to run servers with different requirements on one host.</li>
 <li><strong>Management tooling matters.</strong> AMP handling backups and updates is the difference between a hobby setup and something I can actually maintain.</li>
 <li><strong>Outbound tunnels beat open ports.</strong> For a home network, avoiding port forwarding removes a whole class of exposure.</li>
 </ul>
-<h2 id="what-s-next">What's next</h2>
+<h2 id="whats-next">What’s next</h2>
 <p>Its gaming time :)</p>
-
-
-    </div>
-  </section>
-
-  <footer>
-    <div>
-      <p> &#128064;</p>
-      <a href="https://amri.dev" target="_blank" title="amri.dev">
-        <img src="/images/button-dark.png" alt="amri.dev">
-      </a>
-      <a href="https://landchad.net" target="_blank" title="LandChad">
-        <img src="https://landchad.net/pix/landchad.gif" alt="LandChad.net">
-      </a>
-      <a href="https://wiby.me" target="_blank" title="Wiby">
-        <img src="https://wiby.me/about/wiby.gif" alt="Wiby.me">
-      </a>
-      <a href="https://sadgrl.online/" target="_blank" title="Sadgrl">
-        <img src="https://sadgrlonline.github.io/archived-sadgrl.online/assets/images/buttons/sadgrlonline.gif" alt="sadgrl online">
-      </a>
-      <a href="https://eggramen.neocities.org" target="_blank" title="Eggramen">
-        <img src="https://eggramen.neocities.org/link5.png" alt="Eggramen">
-      </a>
-      <a href="https://code.visualstudio.com/" target="_blank" title="Visual Studio Code">
-        <img src="https://openbooks.neocities.org/img/codebutton.gif" alt="Visual Studio Code">
-      </a>
-      <a href="https://cyuucat.moe/" target="_blank" title="Cyuucat">
-        <img src="https://cyuucat.moe/images/buttons/cyuu.gif" alt="Cyuucat">
-      </a>
-    </div>
-
-    <br>
-    <a href="https://github.com/AmriArshad">GitHub</a> |
-    <a href="https://www.linkedin.com/in/amriarshad/">linkedIn</a> |
-    <a href="mailto:amriarshad0@gmail.com">amriarshad0@gmail.com</a>
-  </footer>
-  <script>
-    async function displayRandomQuote() {
-      // Only run on pages that have a quote container (the homepage)
-      const quoteElement = document.getElementById('random-quote');
-      if (!quoteElement) return;
-
-      try {
-        const response = await fetch('https://raw.githubusercontent.com/victorlaerte/awesome-it-quotes/refs/heads/master/README.md');
-        const text = await response.text();
-
-        const lines = text.split('\n');
-        const tableLines = lines.filter(line => line.startsWith('|') && line.includes('"'));
-        const quotes = [];
-
-        for (const line of tableLines) {
-          if (line.includes('Quote') || line.includes(':-:')) {
-            continue;
-          }
-
-          const parts = line.split('|');
-
-          if (parts.length >= 3) {
-            const quoteText = parts[1].trim();
-            const authorPart = parts[2].trim();
-
-            // Extract author name - look for text after <br> or just plain text
-            let authorName = 'Unknown';
-
-            // Try to find text between [ and ] (from markdown links)
-            const bracketMatch = authorPart.match(/\[([^\]]+)\]/);
-            if (bracketMatch) {
-              authorName = bracketMatch[1];
-            } else {
-              // Try to find plain text after <br>
-              const brMatch = authorPart.match(/<br>\s*([^(<]+)/);
-              if (brMatch) {
-                authorName = brMatch[1].trim();
-              }
-            }
-
-            // Remove any remaining markdown image syntax
-            authorName = authorName.replace(/^!\[/, '').replace(/\].*$/, '');
-
-            // Split multiple quotes and only take the first one, then tidy it up:
-            // turn <br> into spaces and strip straight/curly quote marks at the ends
-            const firstQuote = quoteText.split('<br><br>')[0].trim();
-            const cleanQuote = firstQuote
-              .replace(/<br\s*\/?>/gi, ' ')
-              .replace(/^[\u201C\u201D"]+|[\u201C\u201D"]+$/g, '')
-              .trim();
-
-            if (cleanQuote && cleanQuote.length > 20) {
-              quotes.push({
-                text: cleanQuote,
-                author: authorName
-              });
-            }
-          }
-        }
-
-        if (quotes.length > 0) {
-          const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-
-          // Build the quote with textContent so fetched text is never run as HTML
-          const blockquote = document.createElement('blockquote');
-
-          const p = document.createElement('p');
-          p.textContent = `"${randomQuote.text}"`;
-
-          const footer = document.createElement('footer');
-          footer.append(`\u2014 ${randomQuote.author}`, document.createElement('br'));
-
-          const source = document.createElement('a');
-          source.href = 'https://github.com/victorlaerte/awesome-it-quotes';
-          source.target = '_blank';
-          source.rel = 'noopener';
-          source.className = 'quote-source';
-          source.textContent = 'source';
-          footer.append(source);
-
-          blockquote.append(p, footer);
-          quoteElement.replaceChildren(blockquote);
-        }
-      } catch (error) {
-        console.error('Error fetching quote:', error);
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', displayRandomQuote);
-  </script>
-
-  <script>
-    (function () {
-      const images = document.querySelectorAll('.web-card img, .case-img');
-      if (!images.length) return;
-
-      // One shared dialog, reused for every image
-      const dialog = document.createElement('dialog');
-      dialog.className = 'lightbox';
-      const big = document.createElement('img');
-      big.className = 'lightbox-img';
-      dialog.appendChild(big);
-      document.body.appendChild(dialog);
-
-      function open(img) {
-        big.src = img.currentSrc || img.src;
-        big.alt = img.alt;
-        dialog.showModal();
-      }
-
-      images.forEach(function (img) {
-        img.addEventListener('click', function (e) {
-          e.preventDefault(); // stop the surrounding link from navigating
-          open(img);
-        });
-
-        // Images that aren't inside a link need to be keyboard-reachable
-        if (!img.closest('a')) {
-          img.tabIndex = 0;
-          img.setAttribute('role', 'button');
-          img.addEventListener('keydown', function (e) {
-            if (e.key === 'Enter' || e.key === ' ') {
-              e.preventDefault();
-              open(img);
-            }
-          });
-        }
-      });
-
-      // Click anywhere (or press Esc) to close
-      dialog.addEventListener('click', function () { dialog.close(); });
-    })();
-  </script>
-  
-</body>
-
-</html>
+</article><nav class="post-foot" aria-label="More posts"><a href="/blog/6-using-obsidian-for-a-year/"><span class="label">← Older</span><span class="display">I used Obsidian everyday in 2025</span></a></nav></div></main><footer class="site-footer"><div class="wrap inner"><div><div class="buttons"><a href="https://amri.dev" title="amri.dev" target="_blank" rel="noopener"><img src="/images/button-dark.png" alt="amri.dev" width="88" height="31" loading="lazy"></a><a href="https://landchad.net" title="LandChad" target="_blank" rel="noopener"><img src="https://landchad.net/pix/landchad.gif" alt="LandChad" width="88" height="31" loading="lazy"></a><a href="https://wiby.me" title="Wiby" target="_blank" rel="noopener"><img src="https://wiby.me/about/wiby.gif" alt="Wiby" width="88" height="31" loading="lazy"></a><a href="https://sadgrl.online/" title="Sadgrl" target="_blank" rel="noopener"><img src="https://sadgrlonline.github.io/archived-sadgrl.online/assets/images/buttons/sadgrlonline.gif" alt="Sadgrl" width="88" height="31" loading="lazy"></a><a href="https://eggramen.neocities.org" title="Eggramen" target="_blank" rel="noopener"><img src="https://eggramen.neocities.org/link5.png" alt="Eggramen" width="88" height="31" loading="lazy"></a><a href="https://code.visualstudio.com/" title="Visual Studio Code" target="_blank" rel="noopener"><img src="https://openbooks.neocities.org/img/codebutton.gif" alt="Visual Studio Code" width="88" height="31" loading="lazy"></a></div><p>© 2026 Amri Arshad · Built with Astro, coloured with Catppuccin.</p></div><nav aria-label="Elsewhere"><a href="https://github.com/AmriArshad">GitHub</a><a href="https://www.linkedin.com/in/amriarshad/">LinkedIn</a><a href="mailto:amriarshad0@gmail.com">Email</a><a href="/rss.xml">RSS</a></nav></div></footer><script type="module">var e=document.documentElement,t=document.querySelector(`.theme-toggle`);function n(){return e.dataset.theme?e.dataset.theme:window.matchMedia(`(prefers-color-scheme: light)`).matches?`light`:`dark`}e.dataset.theme=n(),t?.addEventListener(`click`,()=>{let t=n()===`dark`?`light`:`dark`;e.dataset.theme=t;try{localStorage.setItem(`theme`,t)}catch{}window.dispatchEvent(new CustomEvent(`themechange`,{detail:t}))});var r=document.querySelectorAll(`img.zoomable`);if(r.length){let e=document.createElement(`dialog`);e.className=`lightbox`;let t=document.createElement(`img`);e.appendChild(t),document.body.appendChild(e);function n(n){t.src=n.currentSrc||n.src,t.alt=n.alt,e.showModal()}r.forEach(e=>{e.addEventListener(`click`,t=>{t.preventDefault(),n(e)}),e.closest(`a`)||(e.tabIndex=0,e.setAttribute(`role`,`button`),e.addEventListener(`keydown`,t=>{(t.key===`Enter`||t.key===` `)&&(t.preventDefault(),n(e))}))}),e.addEventListener(`click`,()=>e.close())}var i=400,a=document.querySelectorAll(`.card-media iframe`);if(a.length){let e=e=>{let t=e.parentElement.getBoundingClientRect();e.style.transform=`scale(${t.width/i})`},t=new ResizeObserver(t=>t.forEach(t=>e(t.target.querySelector(`iframe`))));a.forEach(e=>t.observe(e.parentElement))}</script></body></html>
