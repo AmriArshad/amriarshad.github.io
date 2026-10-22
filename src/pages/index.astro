@@ -1,0 +1,136 @@
+---
+import Base from "../layouts/Base.astro";
+import { projects } from "../data/projects";
+import { holocryptic } from "../data/web";
+import { getPosts, formatDate } from "../lib/posts";
+
+const posts = (await getPosts()).slice(0, 3);
+const featured = projects.filter((p) => p.featured);
+
+const focus = [
+  {
+    title: "Infrastructure & automation",
+    href: "/projects/",
+    text: "Hybrid Active Directory and Entra ID, PowerShell that makes repetitive work disappear, and self-hosted services on Linux.",
+  },
+  {
+    title: "Web & design",
+    href: "/web/",
+    text: "Client websites from Figma to deployment, branding, and design concepts for products that don't exist yet.",
+  },
+  {
+    title: "Generative art",
+    href: "https://holocryptic.xyz",
+    text: "Holocryptic, a few years of maths-driven sketches in p5.js. Like the knot up there, drawn from code.",
+  },
+];
+---
+<Base>
+  <section class="wrap hero" aria-labelledby="hero-title">
+    <div>
+      <p class="eyebrow">IT Operations · Auckland, New Zealand</p>
+      <h1 id="hero-title">Building systems that <span class="accent">just work</span>.</h1>
+      <p class="lede">
+        I'm Amri, a multi-disciplinary IT Operations Specialist. I manage hybrid Active Directory and
+        Azure environments, automate with PowerShell and run self-hosted services on Linux. I also
+        design and build websites and make generative art.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="/projects/">See projects</a>
+        <a class="btn" href="/about/">About me</a>
+      </div>
+    </div>
+
+    <div class="stage" id="hero-stage" tabindex="0" role="img" aria-label="A torus knot drawn in ASCII characters. Drag to rotate it, or use the arrow keys.">
+      <canvas id="hero-canvas"></canvas>
+      <button class="stage-shape" id="hero-shape" type="button" aria-label="Change shape">knot 2·3 ↻</button>
+      <span class="stage-hint">Drag to rotate</span>
+      <span class="stage-readout" id="hero-readout">yaw 0° · pitch 0°</span>
+    </div>
+  </section>
+
+  <section class="wrap section" aria-labelledby="focus-title">
+    <h2 id="focus-title">What I do</h2>
+    <ol class="steps">
+      {focus.map((item, i) => (
+        <li>
+          <span class="step-no">{String(i + 1).padStart(2, "0")}</span>
+          <h3><a href={item.href}>{item.title}</a></h3>
+          <p>{item.text}</p>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <section class="wrap section" aria-labelledby="projects-title">
+    <div class="section-head">
+      <h2 id="projects-title">Selected projects</h2>
+      <a class="more" href="/projects/">All projects →</a>
+    </div>
+    <ul class="rows">
+      {featured.map((p) => (
+        <li>
+          <a class="row" href={p.href}>
+            <span class="row-meta">{p.timeline}</span>
+            <h3 class="row-title">{p.title}</h3>
+            <span class="row-arrow" aria-hidden="true">→</span>
+            <p class="row-text">{p.stack.join(" · ")}</p>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="wrap section" aria-labelledby="posts-title">
+    <div class="section-head">
+      <h2 id="posts-title">Latest posts</h2>
+      <a class="more" href="/blog/">All posts →</a>
+    </div>
+    <ul class="rows">
+      {posts.map((post) => (
+        <li>
+          <a class="row" href={`/blog/${post.id}/`}>
+            <time class="row-meta" datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+            <h3 class="row-title">{post.data.title}</h3>
+            <span class="row-arrow" aria-hidden="true">→</span>
+            <p class="row-text">{post.data.description}</p>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="wrap section" aria-label="A random IT quote">
+    <div class="quote" id="random-quote" aria-live="polite">
+      <p class="label">Loading a quote…</p>
+    </div>
+  </section>
+
+  <section class="wrap section" aria-labelledby="art-title">
+    <div class="section-head">
+      <h2 id="art-title">From Holocryptic</h2>
+      <a class="more" href="https://holocryptic.xyz">holocryptic.xyz ↗</a>
+    </div>
+    <p class="section-intro">
+      A few of my favourite generative pieces, running live. Some regenerate when you click them.
+    </p>
+    <div class="grid">
+      {holocryptic.map((art) => (
+        <article class="card">
+          <div class="card-media square">
+            <iframe src={art.embed} title={art.title} loading="lazy" scrolling="no"></iframe>
+          </div>
+          <div class="card-body">
+            <h3><a href={art.href}>{art.title}</a></h3>
+            <p>{art.blurb}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+</Base>
+
+<script>
+  import "../scripts/hero.js";
+  import "../scripts/quote.js";
+</script>

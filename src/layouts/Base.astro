@@ -1,0 +1,60 @@
+---
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import { site } from "../data/site";
+import "../styles/site.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  type?: "website" | "article";
+}
+const { title, description = site.description, type = "website" } = Astro.props;
+const fullTitle = title ? `${title} · Amri Arshad` : "Amri Arshad";
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content={site.name} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="theme-color" content="#11111b" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#eff1f5" media="(prefers-color-scheme: light)" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="alternate" type="application/rss+xml" title="Amri Arshad · Posts" href="/rss.xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@1&display=swap"
+    />
+    <script is:inline>
+      // Apply a saved theme before first paint so there's no flash.
+      try {
+        const t = localStorage.getItem("theme");
+        if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <SiteHeader />
+    <main id="main">
+      <slot />
+    </main>
+    <SiteFooter />
+    <script>
+      import "../scripts/theme.js";
+      import "../scripts/lightbox.js";
+    </script>
+  </body>
+</html>

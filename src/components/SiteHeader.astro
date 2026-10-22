@@ -1,0 +1,19 @@
+---
+import { nav } from "../data/site";
+const path = Astro.url.pathname;
+---
+<header class="site-header">
+  <div class="wrap inner">
+    <a class="wordmark" href="/" aria-label="amri.dev, home">amri<span>.dev</span></a>
+    <nav aria-label="Main">
+      {nav.map((item) => (
+        <a href={item.href} aria-current={path.startsWith(item.href) ? "page" : undefined}>
+          {item.label}
+        </a>
+      ))}
+      <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme" title="Toggle theme">
+        <span class="moon" aria-hidden="true">☾</span><span class="sun" aria-hidden="true">☀</span>
+      </button>
+    </nav>
+  </div>
+</header>
