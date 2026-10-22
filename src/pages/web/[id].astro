@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from "astro:content";
 import Base from "../../layouts/Base.astro";
+import Article from "../../components/Article.astro";
 
 export async function getStaticPaths() {
   const entries = await getCollection("work");
@@ -8,7 +9,7 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { Content } = await render(entry);
+const { Content, headings } = await render(entry);
 const { title, description, services, industry, year, cover, coverAlt } = entry.data;
 ---
 <Base title={title} description={description} type="article">
@@ -17,15 +18,16 @@ const { title, description, services, industry, year, cover, coverAlt } = entry.
       <p class="crumb"><a href="/web/">← Web &amp; design</a></p>
       <h1>{title}</h1>
       <p class="lede">{description}</p>
-      <dl class="meta-strip">
+    </header>
+    <img class="cover zoomable" src={cover} alt={coverAlt} />
+    <Article headings={headings}>
+      <Content />
+      <dl class="facts" slot="aside">
         <div><dt>Services</dt><dd>{services}</dd></div>
         <div><dt>Industry</dt><dd>{industry}</dd></div>
         {year && <div><dt>Year</dt><dd>{year}</dd></div>}
+        <div><dt>More work</dt><dd><a href="/web/">Web &amp; design</a></dd></div>
       </dl>
-    </header>
-    <img class="cover zoomable" src={cover} alt={coverAlt} />
-    <article class="prose">
-      <Content />
-    </article>
+    </Article>
   </div>
 </Base>
