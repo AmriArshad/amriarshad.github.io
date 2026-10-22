@@ -135,8 +135,9 @@ if (stage && canvas) {
     }).observe(stage);
   }
 
-  // Canvas text needs the web font; redraw sizing once it lands.
-  document.fonts?.ready.then(() => renderer.resize());
+  // The canvas draws in Plex Mono 500, which no DOM text uses, so the browser won't fetch it on
+  // its own. Ask for it explicitly, then re-measure once it lands.
+  document.fonts?.load('500 13px "IBM Plex Mono"').finally(() => renderer.resize());
 
   kick();
 }
