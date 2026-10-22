@@ -11,11 +11,13 @@ if (stage && canvas) {
   const renderer = createRenderer(canvas);
   const cache = new Map();
   let shapeIndex = 0;
+  // Phones get a coarser mesh; the character grid there is too small to show the difference.
+  const detail = stage.clientWidth < 520 ? { nu: 560, nv: 26 } : { nu: 900, nv: 36 };
 
   function setShape(i) {
     shapeIndex = (i + SHAPES.length) % SHAPES.length;
     const shape = SHAPES[shapeIndex];
-    if (!cache.has(shape.key)) cache.set(shape.key, buildGeometry(shape));
+    if (!cache.has(shape.key)) cache.set(shape.key, buildGeometry(shape, detail));
     renderer.setGeometry(cache.get(shape.key));
     if (shapeBtn) shapeBtn.textContent = shape.label + " ↻";
     stage.setAttribute(
