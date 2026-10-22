@@ -3,6 +3,14 @@ layout: ../layouts/Page.astro
 eyebrow: "About"
 lede: "IT operations by day, websites and generative art on the side."
 title: "About me"
+description: "Amri Arshad is an IT Operations Specialist in Auckland, New Zealand, working across Active Directory, Entra ID and PowerShell automation, with a background in web development and generative art."
+contact: true
+facts:
+  - { label: "Role", value: "IT Operations Specialist" }
+  - { label: "Based in", value: "Auckland, New Zealand" }
+  - { label: "Works with", value: "AD, Entra ID, PowerShell, Linux" }
+  - { label: "Studied", value: "BSc Computer Science, University of Auckland" }
+  - { label: "Daily driver", value: "Arch Linux, since 2020" }
 ---
 
 Hey, I'm Amri, a multi-disciplinary IT Operations Specialist and Computer Science graduate from The University of Auckland. I'm passionate about automation, infrastructure, and building systems that just work. There's something deeply satisfying about writing a script that saves hours of manual work, or setting up infrastructure that runs smoothly in the background.

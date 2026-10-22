@@ -6,11 +6,6 @@ title: "Links"
 
 A collection of resources that I have found over the years.
 
-- [Islam](#islam)
-- [Computer Science](#computer-science)
-- [Entertainment](#entertainment)
-- [Tools](#tools)
-- [Misc](#misc)
 
 ### Islam
 - [Quran.com](https://quran.com/) - Read the Quran
