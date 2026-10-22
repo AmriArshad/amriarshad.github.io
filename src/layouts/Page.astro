@@ -1,0 +1,17 @@
+---
+// Layout for plain Markdown pages in src/pages (about, links).
+import Base from "./Base.astro";
+const { frontmatter } = Astro.props;
+---
+<Base title={frontmatter.title} description={frontmatter.description}>
+  <div class="wrap">
+    <header class="page-head">
+      {frontmatter.eyebrow && <p class="eyebrow">{frontmatter.eyebrow}</p>}
+      <h1>{frontmatter.title}</h1>
+      {frontmatter.lede && <p class="lede">{frontmatter.lede}</p>}
+    </header>
+    <article class="prose">
+      <slot />
+    </article>
+  </div>
+</Base>

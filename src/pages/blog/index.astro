@@ -1,0 +1,34 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getPosts, formatDate } from "../../lib/posts";
+
+const posts = await getPosts();
+const years = [...new Set(posts.map((p) => p.data.date.getUTCFullYear()))];
+---
+<Base title="Posts" description="Notes on self-hosting, infrastructure and the tools I use, by Amri Arshad.">
+  <div class="wrap">
+    <header class="page-head">
+      <p class="eyebrow">Posts · <a href="/rss.xml">RSS</a></p>
+      <h1>Notes from the <span class="accent">lab</span>.</h1>
+      <p class="lede">Write-ups on self-hosting, infrastructure and the tools I use every day.</p>
+    </header>
+
+    {years.map((year) => (
+      <section class="year-group" aria-label={String(year)}>
+        <h2>{year}</h2>
+        <ul class="rows">
+          {posts.filter((p) => p.data.date.getUTCFullYear() === year).map((post) => (
+            <li>
+              <a class="row" href={`/blog/${post.id}/`}>
+                <time class="row-meta" datetime={post.data.date.toISOString()}>{formatDate(post.data.date, "short")}</time>
+                <h3 class="row-title">{post.data.title}</h3>
+                <span class="row-arrow" aria-hidden="true">→</span>
+                <p class="row-text">{post.data.description}</p>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </div>
+</Base>

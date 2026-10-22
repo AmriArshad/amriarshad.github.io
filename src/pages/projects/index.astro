@@ -1,0 +1,40 @@
+---
+import Base from "../../layouts/Base.astro";
+import { projects, skills } from "../../data/projects";
+---
+<Base title="Projects" description="Infrastructure, automation and creative coding projects by Amri Arshad.">
+  <div class="wrap">
+    <header class="page-head">
+      <p class="eyebrow">Portfolio</p>
+      <h1>Things I've <span class="accent">built</span> and run.</h1>
+      <p class="lede">Home labs, self-hosted platforms and automation, plus a few years of generative art.</p>
+    </header>
+
+    <div class="split">
+      <div>
+        {projects.map((p) => (
+          <article class="project">
+            <div class="project-head">
+              <h2>{p.href ? <a href={p.href}>{p.title}</a> : p.title}</h2>
+              <span class="label">{p.timeline}</span>
+            </div>
+            {p.summary.map((para) => <p>{para}</p>)}
+            <ul class="tags" aria-label="Tech stack">
+              {p.stack.map((s) => <li>{s}</li>)}
+            </ul>
+          </article>
+        ))}
+      </div>
+
+      <aside class="aside" aria-labelledby="skills-title">
+        <h2 id="skills-title">Skills</h2>
+        {skills.map((g) => (
+          <section class="skill-group">
+            <h3>{g.group}</h3>
+            <ul>{g.items.map((s) => <li>{s}</li>)}</ul>
+          </section>
+        ))}
+      </aside>
+    </div>
+  </div>
+</Base>

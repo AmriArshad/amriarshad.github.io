@@ -1,0 +1,100 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import { liveSites, concepts, holocryptic, vectorSeries } from "../../data/web";
+import { site } from "../../data/site";
+
+const work = (await getCollection("work")).sort((a, b) => a.data.order - b.data.order);
+const art = [...vectorSeries, ...holocryptic.slice(0, 2)];
+---
+<Base title="Web & design" description="Websites, branding and design concepts by Amri Arshad.">
+  <div class="wrap">
+    <header class="page-head">
+      <p class="eyebrow">Web dev &amp; design</p>
+      <h1>Sites, brands and <span class="accent">concepts</span>.</h1>
+      <p class="lede">A selection of websites I've designed and built, client branding, and a few design concepts.</p>
+    </header>
+  </div>
+
+  <section class="wrap section" aria-labelledby="live-title">
+    <h2 id="live-title">Live sites</h2>
+    <div class="grid two">
+      {liveSites.map((item) => (
+        <article class="card">
+          <a class="card-media" href={item.href} tabindex="-1">
+            <img src={item.image} alt={item.alt} loading="lazy" />
+          </a>
+          <div class="card-body">
+            <div class="card-title">
+              <h3><a href={item.href}>{item.title} ↗</a></h3>
+              <span class="card-tools">{item.tools}</span>
+            </div>
+            <p>{item.blurb}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="wrap section" aria-labelledby="client-title">
+    <h2 id="client-title">Client design work</h2>
+    <div class="grid two">
+      {work.map((entry) => (
+        <article class="card">
+          <a class="card-media" href={`/web/${entry.id}/`} tabindex="-1">
+            <img src={entry.data.cover} alt={entry.data.coverAlt} loading="lazy" />
+          </a>
+          <div class="card-body">
+            <div class="card-title">
+              <h3><a href={`/web/${entry.id}/`}>{entry.data.title}</a></h3>
+              <span class="card-tools">{entry.data.services.split(",")[0]}</span>
+            </div>
+            <p>{entry.data.description}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="wrap section" aria-labelledby="concepts-title">
+    <div class="section-head">
+      <h2 id="concepts-title">Design concepts</h2>
+      <a class="more" href={site.dribbble}>More on Dribbble ↗</a>
+    </div>
+    <div class="grid four">
+      {concepts.map((item) => (
+        <article class="card">
+          <div class="card-media">
+            <img class="zoomable" src={item.image} alt={item.alt} loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3><a href={item.href}>{item.title}</a></h3>
+            <p>{item.blurb}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="wrap section" aria-labelledby="holo-title">
+    <div class="section-head">
+      <h2 id="holo-title">Holocryptic highlights</h2>
+      <a class="more" href="https://holocryptic.xyz/about/">About the project ↗</a>
+    </div>
+    <div class="grid four">
+      {art.map((item) => (
+        <article class="card">
+          <div class="card-media square">
+            {item.embed
+              ? <iframe src={item.embed} title={item.title} loading="lazy" scrolling="no"></iframe>
+              : <img class="zoomable" src={item.image} alt={item.alt} loading="lazy" />}
+          </div>
+          <div class="card-body">
+            <h3><a href={item.href}>{item.title}</a></h3>
+            <p>{item.blurb}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+</Base>
