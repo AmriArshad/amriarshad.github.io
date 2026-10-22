@@ -1,5 +1,6 @@
 ---
 layout: ../layouts/Page.astro
+eyebrow: "Bookmarks"
 title: "Links"
 ---
 

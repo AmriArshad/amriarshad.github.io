@@ -1,5 +1,7 @@
 ---
 layout: ../layouts/Page.astro
+eyebrow: "About"
+lede: "IT operations by day, websites and generative art on the side."
 title: "About me"
 ---
 
