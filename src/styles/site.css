@@ -533,17 +533,6 @@ a.row:hover .row-arrow { color: var(--accent); transform: translateX(4px); }
   max-width: 18ch;
 }
 .page-head .lede { margin: 18px 0 0; max-width: 60ch; }
-.meta-strip {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 32px;
-  margin: 24px 0 0;
-  padding: 14px 0 0;
-  border-top: 1px solid var(--line);
-}
-.meta-strip div { display: grid; gap: 2px; }
-.meta-strip dt { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
-.meta-strip dd { margin: 0; color: var(--fg); }
 
 .crumb { margin: 0 0 18px; }
 .crumb a { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); text-decoration: none; }
@@ -606,6 +595,8 @@ a.row:hover .row-arrow { color: var(--accent); transform: translateX(4px); }
   background: var(--panel);
   border: 1px solid var(--line);
   color: var(--accent-3);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 .prose pre {
   margin: 1.6em 0;
@@ -635,6 +626,68 @@ a.row:hover .row-arrow { color: var(--accent); transform: translateX(4px); }
 .prose th,
 .prose td { padding: 10px 16px 10px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
 
+/* ---------- article: prose plus sticky sidebar ---------- */
+
+.article {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 248px;
+  gap: clamp(40px, 6vw, 88px);
+  align-items: start;
+}
+/* The column already sets the measure; this only stops lines growing past ~80 characters. */
+.article .prose { max-width: 80ch; }
+.article-aside {
+  position: sticky;
+  top: 24px;
+  display: grid;
+  gap: 28px;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+.article-aside:empty { display: none; }
+
+.toc summary {
+  margin-bottom: 12px;
+  list-style: none;
+  pointer-events: none; /* always open in the sidebar */
+}
+.toc summary::-webkit-details-marker { display: none; }
+.toc ol { margin: 0; padding: 0; list-style: none; border-left: 1px solid var(--line); }
+.toc a {
+  display: block;
+  margin-left: -1px;
+  padding: 5px 0 5px 14px;
+  border-left: 1px solid transparent;
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.15s, border-color 0.15s;
+}
+.toc .depth-3 a { padding-left: 28px; font-size: 11.5px; }
+.toc a:hover { color: var(--fg); }
+.toc a[aria-current] { color: var(--accent); border-left-color: var(--accent); }
+
+.facts { margin: 0; border-top: 1px solid var(--line); }
+.facts div { padding: 10px 0; border-bottom: 1px solid var(--line); display: grid; align-content: start; gap: 2px; }
+.facts dt { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+.facts dd { margin: 0; font-size: 13px; color: var(--fg); }
+.facts a { color: var(--accent-2); text-decoration: none; }
+.facts a:hover { color: var(--accent); }
+
+@media (max-width: 960px) {
+  .article { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  /* On narrow screens the sidebar sits above the text, with the contents list collapsed. */
+  .article-aside { position: static; max-height: none; order: -1; }
+  .facts { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr)); column-gap: 20px; }
+  .toc { border: 1px solid var(--line); padding: 12px 14px; }
+  .toc summary { margin: 0; pointer-events: auto; cursor: pointer; display: flex; justify-content: space-between; }
+  .toc summary::after { content: "+"; color: var(--accent); }
+  .toc[open] summary { margin-bottom: 12px; }
+  .toc[open] summary::after { content: "−"; }
+}
+
 /* Shiki dual themes: Mocha by default, Latte when the page is light. */
 .astro-code,
 .astro-code span { color: var(--shiki-dark); font-style: var(--shiki-dark-font-style); }
@@ -642,8 +695,9 @@ a.row:hover .row-arrow { color: var(--accent); transform: translateX(4px); }
 :root[data-theme="light"] .astro-code span { color: var(--shiki-light); font-style: var(--shiki-light-font-style); }
 
 .post-foot {
-  max-width: 70ch;
-  margin-top: 56px;
+  margin-top: 64px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;

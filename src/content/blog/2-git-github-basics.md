@@ -6,18 +6,6 @@ description: "Git/GitHub are extremely useful tools that every developer should 
 
 Git/GitHub are extremely useful tools that every developer should be familiar with. In this post I highlight some of the main features and how to use them.
 
-- [What is Git?](#what-is-git)
-- [What is GitHub](#what-is-github)
-- [Definitions](#definitions)
-- [Using Git and GitHub](#using-git-and-github)
-  - [Cloning](#cloning)
-  - [Committing](#committing)
-  - [Pushing to GitHub](#pushing-to-github)
-  - [Branching](#branching)
-  - [Creating a PR](#creating-a-pr)
-  - [Reviewing a PR](#reviewing-a-pr)
-  - [Merging](#merging)
-  - [Deleting local branches](#deleting-local-branches)
 
 ## What is Git?
 Git is an open-source version control software widely used in software development to collaborate and track changes to a set of files. The latest version of Git can be downloaded [here.](https://git-scm.com/)

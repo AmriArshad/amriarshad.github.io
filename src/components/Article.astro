@@ -1,0 +1,36 @@
+---
+// Two-column reading layout: prose on the left, a sticky sidebar on the right with whatever the page
+// passes into the "aside" slot, then an "On this page" list built from the Markdown headings.
+import type { MarkdownHeading } from "astro";
+
+interface Props {
+  headings?: MarkdownHeading[];
+}
+const toc = (Astro.props.headings ?? []).filter((h) => h.depth === 2 || h.depth === 3);
+---
+<div class="article">
+  <article class="prose">
+    <slot />
+  </article>
+  <aside class="article-aside">
+    <slot name="aside" />
+    {toc.length > 1 && (
+      <details class="toc" open>
+        <summary class="label">On this page</summary>
+        <nav aria-label="On this page">
+          <ol>
+            {toc.map((h) => (
+              <li class={`depth-${h.depth}`}>
+                <a href={`#${h.slug}`}>{h.text}</a>
+              </li>
+            ))}
+          </ol>
+        </nav>
+      </details>
+    )}
+  </aside>
+</div>
+
+<script>
+  import "../scripts/toc.js";
+</script>
