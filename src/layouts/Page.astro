@@ -1,7 +1,15 @@
 ---
 // Layout for plain Markdown pages in src/pages (about, links).
 import Base from "./Base.astro";
-const { frontmatter } = Astro.props;
+import Article from "../components/Article.astro";
+import { site } from "../data/site";
+
+interface Fact {
+  label: string;
+  value: string;
+}
+const { frontmatter, headings } = Astro.props;
+const facts: Fact[] = frontmatter.facts ?? [];
 ---
 <Base title={frontmatter.title} description={frontmatter.description}>
   <div class="wrap">
@@ -10,8 +18,24 @@ const { frontmatter } = Astro.props;
       <h1>{frontmatter.title}</h1>
       {frontmatter.lede && <p class="lede">{frontmatter.lede}</p>}
     </header>
-    <article class="prose">
+    <Article headings={headings}>
       <slot />
-    </article>
+      {(facts.length > 0 || frontmatter.contact) && (
+        <dl class="facts" slot="aside">
+          {facts.map((f) => (
+            <div><dt>{f.label}</dt><dd>{f.value}</dd></div>
+          ))}
+          {frontmatter.contact && (
+            <div>
+              <dt>Elsewhere</dt>
+              <dd>
+                <a href={site.github}>GitHub</a> · <a href={site.linkedin}>LinkedIn</a> ·{" "}
+                <a href={`mailto:${site.email}`}>Email</a>
+              </dd>
+            </div>
+          )}
+        </dl>
+      )}
+    </Article>
   </div>
 </Base>

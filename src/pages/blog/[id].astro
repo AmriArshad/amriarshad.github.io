@@ -1,6 +1,7 @@
 ---
 import { render } from "astro:content";
 import Base from "../../layouts/Base.astro";
+import Article from "../../components/Article.astro";
 import { getPosts, formatDate } from "../../lib/posts";
 
 export async function getStaticPaths() {
@@ -21,15 +22,15 @@ const minutes = Math.max(1, Math.round(words / 220));
     <header class="page-head">
       <p class="crumb"><a href="/blog/">← Posts</a></p>
       <h1>{post.data.title}</h1>
-      <dl class="meta-strip">
+    </header>
+    <Article headings={headings}>
+      <Content />
+      <dl class="facts" slot="aside">
         <div><dt>Published</dt><dd><time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time></dd></div>
         <div><dt>Reading time</dt><dd>{minutes} min</dd></div>
-        {headings.length > 2 && <div><dt>Sections</dt><dd>{headings.filter((h) => h.depth === 2).length}</dd></div>}
+        <div><dt>Follow</dt><dd><a href="/rss.xml">RSS feed</a></dd></div>
       </dl>
-    </header>
-    <article class="prose">
-      <Content />
-    </article>
+    </Article>
 
     <nav class="post-foot" aria-label="More posts">
       {older && (
