@@ -2,7 +2,7 @@ export const site = {
   name: "Amri Arshad",
   url: "https://amri.dev",
   description:
-    "Amri Arshad – IT Operations Specialist, web developer and designer. Projects, web work and generative art.",
+    "IT Operations Specialist in Auckland, NZ. Active Directory, PowerShell automation and self-hosted infrastructure, plus websites, design and generative art.",
   email: "amriarshad0@gmail.com",
   github: "https://github.com/AmriArshad",
   linkedin: "https://www.linkedin.com/in/amriarshad/",

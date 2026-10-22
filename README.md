@@ -27,6 +27,21 @@ npm run build    # static site in dist/
 | `src/scripts/knot.js`      | ASCII torus-knot renderer for the hero             |
 | `src/styles/site.css`      | All styles and theme tokens                        |
 
+## Link preview image
+
+`public/og.png` is the 1200×630 card shown when amri.dev is shared. Its source is
+`scripts/og-card.html`, which draws the hero knot with the same renderer. To change and re-render it,
+serve the repo root and screenshot the page at 1200×630 at 1× scale (2× and downscaling washes out
+the glyph colours):
+
+```bash
+python3 -m http.server 8766
+```
+
+```bash
+chromium --headless --hide-scrollbars --window-size=1200,630 --virtual-time-budget=8000 --screenshot=public/og.png http://localhost:8766/scripts/og-card.html
+```
+
 ## Deploy
 
 Pushing to `main` builds with GitHub Actions and publishes `dist/` to the `gh-pages` branch.
