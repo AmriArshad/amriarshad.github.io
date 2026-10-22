@@ -28,5 +28,4 @@ export const buttons = [
   },
   { href: "https://eggramen.neocities.org", title: "Eggramen", src: "https://eggramen.neocities.org/link5.png" },
   { href: "https://code.visualstudio.com/", title: "Visual Studio Code", src: "https://openbooks.neocities.org/img/codebutton.gif" },
-  { href: "https://cyuucat.moe/", title: "Cyuucat", src: "https://cyuucat.moe/images/buttons/cyuu.gif" },
 ];

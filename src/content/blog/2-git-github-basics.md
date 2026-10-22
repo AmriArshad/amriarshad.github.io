@@ -54,7 +54,7 @@ Create a new repo on GitHub by clicking on the plus dropdown at the top right.
 To download/clone the repo to your computer, click on the green code button and copy the HTTPS link to your repo. Now in the terminal of your choice or the git bash terminal, enter:
 
 ```
-$ git clone &lt;insert your HTTPS repo link here&gt;
+$ git clone <insert your HTTPS repo link here>
 ````
 
 ### Committing
@@ -67,13 +67,13 @@ $ git status
 After identifying the files you want to commit, use:
 
 ```
-$ git add &lt;name of file&gt;
+$ git add <name of file>
 ```
 
 If you need to add multiple files, you can simply name those files one after the other like:
 
 ```
-$ git add &lt;name of file 1&gt; &lt;name of file 2&gt; &lt;etc&gt;
+$ git add <name of file 1> <name of file 2> <etc>
 ```
 
 If you simply want to commit all changes, you can use:
@@ -85,7 +85,7 @@ $ git add .
 Now that your files have been added, you can commit our changes using (make sure to include the quotation marks):
 
 ```
-$ git commit -m “&lt;insert description of changes made here&gt;"
+$ git commit -m “<insert description of changes made here>"
 ```
 
 ### Pushing to GitHub
@@ -109,13 +109,13 @@ $ git fetch
 To create a new branch, you can now use:
 
 ```
-$ git checkout -b &lt;insert name of new branch&gt;
+$ git checkout -b <insert name of new branch>
 ```
 
 Now that our new branch has been created and you have checked out to said branch, you can begin making changes. Once you have committed these new changes and are ready to push to GitHub use:
 
 ```
-$ git push origin &lt;insert name of branch&gt;
+$ git push origin <insert name of branch>
 ```
 
 At this point, if you navigate to your repo on GitHub, you should see a dropdown displaying the various active branches. Selecting your new branch will display your recent commit whilst the main branch will not.
@@ -137,7 +137,7 @@ $ git fetch
 Then checkout to the desired branch using:
 
 ```
-$ git checkout &lt;insert branch name&gt;
+$ git checkout <insert branch name>
 ```
 
 Now that you have the branch you want to review on your local system, you can test the implementation of your team member’s code. Once you have reviewed the code, you can either request changes or approve the PR.
@@ -159,7 +159,7 @@ $ git checkout main
 Then delete the now merged feature branch:
 
 ```
-$ git branch -D &lt;name of merged branch&gt;
+$ git branch -D <name of merged branch>
 ```
 
 Thats the general gist of Git/GitHub. There are more commands and features, but this post covers the most common commands.

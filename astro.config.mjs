@@ -4,6 +4,7 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: "https://amri.dev",
   output: "static",
+  devToolbar: { enabled: false },
   integrations: [sitemap()],
   redirects: {
     "/portfolio": "/projects/",
