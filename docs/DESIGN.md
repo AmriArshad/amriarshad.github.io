@@ -13,13 +13,14 @@ type and hairline borders.
 
 Principles carried over from Glyphbloom:
 
-- **Two typefaces, strict roles.** Newsreader *italic* for display
+- **Two typefaces, strict roles.** Bricolage Grotesque (500) for display
   (wordmark, headings, card titles). IBM Plex Mono for everything else.
-  Glyphbloom uses Instrument Serif; amri.dev swapped to Newsreader because
-  Instrument's condensed, hairline italic got hard to read at the 22–34px
-  sizes used for post titles and section headings. Newsreader keeps the
-  editorial italic but is drawn for screens, and its optical sizes make small
-  headings sturdier.
+  This is the one deliberate break from Glyphbloom, which uses Instrument
+  Serif italic. Instrument's condensed hairline italic got hard to read at
+  the 22–34px sizes used for post titles and section headings, and a serif
+  italic (Newsreader was tried too) felt out of place next to so much
+  monospace. Bricolage is an upright grotesque with optical sizes and enough
+  quirk to suit the generative-art side; emphasis comes from Mauve, not italics.
 - **Hairlines, not boxes.** 1px borders in `--line`, square corners, panels
   only one step lighter than the page.
 - **Small uppercase labels.** Nav, buttons, eyebrows and metadata are 11–12px
@@ -57,10 +58,11 @@ Text `#4c4f69`, Mauve `#8839ef`) so no component needs to know which theme is on
 
 | Role        | Face                    | Size                       |
 |-------------|-------------------------|----------------------------|
-| Hero h1     | Newsreader italic       | `clamp(42px, 6.2vw, 74px)`, lh 1.04 |
-| Page h1     | Newsreader italic       | `clamp(40px, 6vw, 68px)`, lh 1.06 |
-| Section h2  | Newsreader italic       | `clamp(30px, 4vw, 44px)`, lh 1.08 |
-| Card h3     | Newsreader italic       | 26–28px                    |
+| Hero h1     | Bricolage Grotesque 500 | `clamp(40px, 5.8vw, 68px)`, lh 1, −0.028em |
+| Page h1     | Bricolage Grotesque 500 | `clamp(38px, 5.6vw, 62px)`, lh 1.02, −0.028em |
+| Section h2  | Bricolage Grotesque 500 | `clamp(28px, 3.6vw, 40px)`, lh 1.05, −0.02em |
+| Card / row  | Bricolage Grotesque 500 | 22–24px, −0.02em           |
+| Wordmark    | Bricolage Grotesque 600 | 27px, −0.025em             |
 | Body        | IBM Plex Mono 400       | 14px / 1.6 (prose 15px / 1.75) |
 | Labels      | IBM Plex Mono 500       | 11–12px uppercase, 0.1–0.16em tracking |
 
@@ -93,7 +95,7 @@ Pink along the tube. It's a nod to Holocryptic (maths as art) and to `donut.c`.
 
 ## Components
 
-- **Header** — wordmark `amri.dev` (Newsreader italic, `.dev` in Mauve), uppercase
+- **Header** — wordmark `amri.dev` (Bricolage Grotesque 600, `.dev` in Mauve), uppercase
   nav, theme toggle. Current page gets the Mauve underline.
 - **Footer** — hairline top border; the 88×31 button wall (kept from the old site,
   it's part of the personality); GitHub · LinkedIn · email.
