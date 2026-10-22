@@ -97,7 +97,11 @@ function buildPalette() {
     }
     lut.push(row);
   }
-  return { lut, glow: parseColor(cs.getPropertyValue("--glow")) };
+  return {
+    lut,
+    glow: parseColor(cs.getPropertyValue("--glow")),
+    glowAlpha: parseFloat(cs.getPropertyValue("--glow-alpha")) || 0.2,
+  };
 }
 
 /* ---------- renderer ---------- */
@@ -190,8 +194,8 @@ export function createRenderer(canvas, { minFs = 9, maxFs = 14, fsDiv = 46 } = {
     const gr = Math.min(W, H) * 0.55 * breathe;
     const g = ctx.createRadialGradient(ox, oy, 0, ox, oy, gr);
     const rgb = palette.glow.join(",");
-    g.addColorStop(0, "rgba(" + rgb + ",0.2)");
-    g.addColorStop(0.5, "rgba(" + rgb + ",0.07)");
+    g.addColorStop(0, "rgba(" + rgb + "," + palette.glowAlpha + ")");
+    g.addColorStop(0.5, "rgba(" + rgb + "," + (palette.glowAlpha * 0.35).toFixed(3) + ")");
     g.addColorStop(1, "rgba(" + rgb + ",0)");
     ctx.fillStyle = g;
     ctx.fillRect(0, 0, W, H);

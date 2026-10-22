@@ -86,7 +86,7 @@ const focus = [
       <h2 id="posts-title">Latest posts</h2>
       <a class="more" href="/blog/">All posts →</a>
     </div>
-    <ul class="rows">
+    <ul class="rows compact">
       {posts.map((post) => (
         <li>
           <a class="row" href={`/blog/${post.id}/`}>
@@ -114,7 +114,7 @@ const focus = [
     <p class="section-intro">
       A few of my favourite generative pieces, running live. Some regenerate when you click them.
     </p>
-    <div class="grid">
+    <div class="grid four">
       {holocryptic.map((art) => (
         <article class="card">
           <div class="card-media square">
