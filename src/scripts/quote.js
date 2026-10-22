@@ -18,11 +18,11 @@ function parse(markdown) {
     else if (br) author = br[1].trim();
     author = author.replace(/^!\[/, "").replace(/\].*$/, "");
 
-    // Only the first quote in a cell; tidy <br> and strip quote marks at the ends.
+    // Only the first quote in a cell; tidy <br> and strip quote marks and stray spaces at the ends,
+    // since the page adds its own curly quotes.
     const text = parts[1].trim().split("<br><br>")[0]
       .replace(/<br\s*\/?>/gi, " ")
-      .replace(/^[“”"]+|[“”"]+$/g, "")
-      .trim();
+      .replace(/^[\s“”"]+|[\s“”"]+$/g, "");
     if (text.length > 20 && text.length < 220) quotes.push({ text, author });
   }
   return quotes;
