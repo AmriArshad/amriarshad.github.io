@@ -1,0 +1,49 @@
+---
+import { render } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import { getPosts, formatDate } from "../../lib/posts";
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return posts.map((post, i) => ({
+    params: { id: post.id },
+    props: { post, newer: posts[i - 1], older: posts[i + 1] },
+  }));
+}
+
+const { post, newer, older } = Astro.props;
+const { Content, headings } = await render(post);
+const words = (post.body ?? "").split(/\s+/).filter(Boolean).length;
+const minutes = Math.max(1, Math.round(words / 220));
+---
+<Base title={post.data.title} description={post.data.description} type="article">
+  <div class="wrap">
+    <header class="page-head">
+      <p class="crumb"><a href="/blog/">← Posts</a></p>
+      <h1>{post.data.title}</h1>
+      <dl class="meta-strip">
+        <div><dt>Published</dt><dd><time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time></dd></div>
+        <div><dt>Reading time</dt><dd>{minutes} min</dd></div>
+        {headings.length > 2 && <div><dt>Sections</dt><dd>{headings.filter((h) => h.depth === 2).length}</dd></div>}
+      </dl>
+    </header>
+    <article class="prose">
+      <Content />
+    </article>
+
+    <nav class="post-foot" aria-label="More posts">
+      {older && (
+        <a href={`/blog/${older.id}/`}>
+          <span class="label">← Older</span>
+          <span class="display">{older.data.title}</span>
+        </a>
+      )}
+      {newer && (
+        <a class="next" href={`/blog/${newer.id}/`}>
+          <span class="label">Newer →</span>
+          <span class="display">{newer.data.title}</span>
+        </a>
+      )}
+    </nav>
+  </div>
+</Base>

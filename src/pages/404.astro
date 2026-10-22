@@ -1,0 +1,23 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="Not found">
+  <section class="wrap notfound">
+    <p class="eyebrow">Error · page not found</p>
+    <h1>4<span class="accent">0</span>4</h1>
+    <pre aria-hidden="true">$ curl -I <span id="missing-path">/404</span>
+HTTP/2 404
+x-served-by: amri.dev</pre>
+    <p>Whatever was here has moved or never existed. The home page still works.</p>
+    <div class="actions">
+      <a class="btn primary" href="/">Go home</a>
+      <a class="btn" href="/blog/">Read posts</a>
+    </div>
+  </section>
+</Base>
+
+<script>
+  // GitHub Pages serves this one file for every miss, so fill in the real path at runtime.
+  const el = document.getElementById("missing-path");
+  if (el) el.textContent = location.pathname;
+</script>
