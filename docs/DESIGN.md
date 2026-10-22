@@ -13,8 +13,13 @@ type and hairline borders.
 
 Principles carried over from Glyphbloom:
 
-- **Two typefaces, strict roles.** Instrument Serif *italic* for display
+- **Two typefaces, strict roles.** Newsreader *italic* for display
   (wordmark, headings, card titles). IBM Plex Mono for everything else.
+  Glyphbloom uses Instrument Serif; amri.dev swapped to Newsreader because
+  Instrument's condensed, hairline italic got hard to read at the 22–34px
+  sizes used for post titles and section headings. Newsreader keeps the
+  editorial italic but is drawn for screens, and its optical sizes make small
+  headings sturdier.
 - **Hairlines, not boxes.** 1px borders in `--line`, square corners, panels
   only one step lighter than the page.
 - **Small uppercase labels.** Nav, buttons, eyebrows and metadata are 11–12px
@@ -52,9 +57,10 @@ Text `#4c4f69`, Mauve `#8839ef`) so no component needs to know which theme is on
 
 | Role        | Face                    | Size                       |
 |-------------|-------------------------|----------------------------|
-| Hero h1     | Instrument Serif italic | `clamp(46px, 7.4vw, 86px)`, lh 0.95 |
-| Section h2  | Instrument Serif italic | `clamp(32px, 4.4vw, 48px)`, lh 1 |
-| Card h3     | Instrument Serif italic | 26–28px                    |
+| Hero h1     | Newsreader italic       | `clamp(42px, 6.2vw, 74px)`, lh 1.04 |
+| Page h1     | Newsreader italic       | `clamp(40px, 6vw, 68px)`, lh 1.06 |
+| Section h2  | Newsreader italic       | `clamp(30px, 4vw, 44px)`, lh 1.08 |
+| Card h3     | Newsreader italic       | 26–28px                    |
 | Body        | IBM Plex Mono 400       | 14px / 1.6 (prose 15px / 1.75) |
 | Labels      | IBM Plex Mono 500       | 11–12px uppercase, 0.1–0.16em tracking |
 
@@ -87,7 +93,7 @@ Pink along the tube. It's a nod to Holocryptic (maths as art) and to `donut.c`.
 
 ## Components
 
-- **Header** — wordmark `amri.dev` (Instrument italic, `.dev` in Mauve), uppercase
+- **Header** — wordmark `amri.dev` (Newsreader italic, `.dev` in Mauve), uppercase
   nav, theme toggle. Current page gets the Mauve underline.
 - **Footer** — hairline top border; the 88×31 button wall (kept from the old site,
   it's part of the personality); GitHub · LinkedIn · email.
