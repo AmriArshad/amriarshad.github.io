@@ -1,0 +1,31 @@
+---
+import { getCollection, render } from "astro:content";
+import Base from "../../layouts/Base.astro";
+
+export async function getStaticPaths() {
+  const entries = await getCollection("work");
+  return entries.map((entry) => ({ params: { id: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { title, description, services, industry, year, cover, coverAlt } = entry.data;
+---
+<Base title={title} description={description} type="article">
+  <div class="wrap">
+    <header class="page-head">
+      <p class="crumb"><a href="/web/">← Web &amp; design</a></p>
+      <h1>{title}</h1>
+      <p class="lede">{description}</p>
+      <dl class="meta-strip">
+        <div><dt>Services</dt><dd>{services}</dd></div>
+        <div><dt>Industry</dt><dd>{industry}</dd></div>
+        {year && <div><dt>Year</dt><dd>{year}</dd></div>}
+      </dl>
+    </header>
+    <img class="cover zoomable" src={cover} alt={coverAlt} />
+    <article class="prose">
+      <Content />
+    </article>
+  </div>
+</Base>
