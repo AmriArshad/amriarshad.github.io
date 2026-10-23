@@ -3,6 +3,9 @@ import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import { site } from "../data/site";
 import "../styles/site.css";
+import { createHash } from "node:crypto";
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 
 interface Props {
   title?: string;
@@ -14,7 +17,13 @@ const { title, description = site.description, type = "website", published } = A
 const fullTitle = title ? `${title} · Amri Arshad` : "Amri Arshad · IT Operations & web";
 const canonical = new URL(Astro.url.pathname, Astro.site);
 // Link unfurlers need an absolute URL. The card is rendered from the hero design (see docs/DESIGN.md).
-const ogImage = new URL("/og.png", Astro.site).href;
+// Discord, Slack and friends cache previews by image URL, so a hash of the file goes in the query:
+// re-rendering og.png changes the URL and they fetch the new one.
+const ogHash = createHash("sha256")
+  .update(readFileSync(join(process.cwd(), "public/og.png")))
+  .digest("hex")
+  .slice(0, 10);
+const ogImage = new URL(`/og.png?v=${ogHash}`, Astro.site).href;
 ---
 <!doctype html>
 <html lang="en">
