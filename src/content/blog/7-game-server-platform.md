@@ -1,7 +1,7 @@
 ---
 title: "Building a Self-Hosted Game Server Platform"
 date: 2026-10-19
-description: "This year I built a multi-instance game server platform on a bare-metal Ubuntu machine at home for me and my friends. It hosts modded Minecraft and Terraria, with each Minecraft server isolated in its own container, and everyone connects without me opening a single port on my router."
+description: "Building a self-hosted game server platform on Ubuntu for modded Minecraft and Terraria, with AMP, Podman containers and playit.gg tunnels."
 ---
 
 This year I built a multi-instance game server platform on a bare-metal Ubuntu machine at home for me and my friends. It hosts modded Minecraft and Terraria, with each Minecraft server isolated in its own container, and everyone connects without me opening a single port on my router.

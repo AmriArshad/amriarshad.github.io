@@ -1,5 +1,6 @@
 ---
 import Base from "../layouts/Base.astro";
+import { graph, website, person } from "../lib/seo";
 import { projects } from "../data/projects";
 import { holocryptic } from "../data/web";
 import { getPosts, formatDate } from "../lib/posts";
@@ -25,7 +26,7 @@ const focus = [
   },
 ];
 ---
-<Base>
+<Base jsonLd={graph(website, person)}>
   <section class="wrap hero" aria-labelledby="hero-title">
     <div>
       <p class="eyebrow">IT Operations · Auckland, New Zealand</p>

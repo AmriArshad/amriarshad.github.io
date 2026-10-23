@@ -1,6 +1,6 @@
 ---
 title: "ThePenmanshipCo"
-description: "Logo and social media branding for a copywriting agency."
+description: "Logo, typography, colour palette and social media templates for ThePenmanshipCo, a professional copywriting agency."
 services: "Branding, logo design, social media templates"
 industry: "Copywriting"
 cover: "/images/web/penmanship.webp"

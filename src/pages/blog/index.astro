@@ -1,11 +1,12 @@
 ---
 import Base from "../../layouts/Base.astro";
+import { graph, breadcrumbs } from "../../lib/seo";
 import { getPosts, formatDate } from "../../lib/posts";
 
 const posts = await getPosts();
 const years = [...new Set(posts.map((p) => p.data.date.getUTCFullYear()))];
 ---
-<Base title="Posts" description="Notes on self-hosting, infrastructure and the tools I use, by Amri Arshad.">
+<Base title="Posts" description="Posts by Amri Arshad on self-hosting, home labs, Cloudflare, workflow automation and the tools he uses every day." jsonLd={graph(breadcrumbs([{ name: "Posts", path: "/blog/" }]))}>
   <div class="wrap">
     <header class="page-head">
       <p class="eyebrow">Posts · <a href="/rss.xml">RSS</a></p>
