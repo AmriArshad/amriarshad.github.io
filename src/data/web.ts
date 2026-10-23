@@ -12,7 +12,7 @@ export const liveSites: WebItem[] = [
   {
     title: "B Living",
     href: "https://bliving.co.nz/",
-    image: "/images/web/bliving.png",
+    image: "/images/web/bliving.webp",
     alt: "B Living website homepage",
     tools: "Figma, Framer",
     blurb: "Bespoke website for a property development company in Auckland, New Zealand.",
@@ -20,7 +20,7 @@ export const liveSites: WebItem[] = [
   {
     title: "Holocryptic",
     href: "https://holocryptic.xyz",
-    image: "/images/web/holocryptic.png",
+    image: "/images/web/holocryptic.webp",
     alt: "Holocryptic website homepage",
     tools: "Zola, p5.js",
     blurb: "Home for my generative art and design project.",

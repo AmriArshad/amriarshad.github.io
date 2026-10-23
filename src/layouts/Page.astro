@@ -3,6 +3,7 @@
 import Base from "./Base.astro";
 import Article from "../components/Article.astro";
 import { site } from "../data/site";
+import { graph, breadcrumbs, person } from "../lib/seo";
 
 interface Fact {
   label: string;
@@ -10,8 +11,13 @@ interface Fact {
 }
 const { frontmatter, headings } = Astro.props;
 const facts: Fact[] = frontmatter.facts ?? [];
+const crumbs = breadcrumbs([{ name: frontmatter.title, path: Astro.url.pathname }]);
+// About is the page about the person, which Google reads as a ProfilePage.
+const jsonLd = frontmatter.profile
+  ? graph({ "@type": "ProfilePage", url: new URL(Astro.url.pathname, site.url).href, mainEntity: person }, crumbs)
+  : graph(crumbs);
 ---
-<Base title={frontmatter.title} description={frontmatter.description}>
+<Base title={frontmatter.title} description={frontmatter.description} jsonLd={jsonLd}>
   <div class="wrap">
     <header class="page-head">
       {frontmatter.eyebrow && <p class="eyebrow">{frontmatter.eyebrow}</p>}

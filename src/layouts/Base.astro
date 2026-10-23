@@ -3,38 +3,35 @@ import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import { site } from "../data/site";
 import "../styles/site.css";
-import { createHash } from "node:crypto";
-import { readFileSync } from "node:fs";
-import { join } from "node:path";
+import { ogImage } from "../lib/seo";
 
 interface Props {
   title?: string;
   description?: string;
   type?: "website" | "article";
   published?: Date;
+  // Keep a page out of search results (the 404 page).
+  noindex?: boolean;
+  // schema.org structured data for this page, usually built with graph() from lib/seo.
+  jsonLd?: object;
 }
-const { title, description = site.description, type = "website", published } = Astro.props;
+const { title, description = site.description, type = "website", published, noindex, jsonLd } = Astro.props;
 const fullTitle = title ? `${title} · Amri Arshad` : "Amri Arshad · IT Operations & web";
 const canonical = new URL(Astro.url.pathname, Astro.site);
-// Link unfurlers need an absolute URL. The card is rendered from the hero design (see docs/DESIGN.md).
-// Discord, Slack and friends cache previews by image URL, so a hash of the file goes in the query:
-// re-rendering og.png changes the URL and they fetch the new one.
-const ogHash = createHash("sha256")
-  .update(readFileSync(join(process.cwd(), "public/og.png")))
-  .digest("hex")
-  .slice(0, 10);
-const ogImage = new URL(`/og.png?v=${ogHash}`, Astro.site).href;
+// Escape "<" so post text can never close the script tag early.
+const jsonLdText = jsonLd && JSON.stringify(jsonLd).replace(/</g, "\\u003c");
 ---
 <!doctype html>
-<html lang="en">
+<html lang="en-NZ">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <meta name="author" content={site.name} />
-    <link rel="canonical" href={canonical} />
+    {noindex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={canonical} />}
     <meta property="og:type" content={type} />
+    <meta property="og:locale" content="en_NZ" />
     <meta property="og:site_name" content="amri.dev" />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
@@ -54,6 +51,7 @@ const ogImage = new URL(`/og.png?v=${ogHash}`, Astro.site).href;
     <link rel="icon" href="/favicon.ico" />
     <link rel="alternate" type="application/rss+xml" title="Amri Arshad · Posts" href="/rss.xml" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    {jsonLdText && <script type="application/ld+json" set:html={jsonLdText} />}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

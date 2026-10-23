@@ -2,6 +2,7 @@
 import { getCollection, render } from "astro:content";
 import Base from "../../layouts/Base.astro";
 import Article from "../../components/Article.astro";
+import { graph, breadcrumbs } from "../../lib/seo";
 
 export async function getStaticPaths() {
   const entries = await getCollection("work");
@@ -12,7 +13,12 @@ const { entry } = Astro.props;
 const { Content, headings } = await render(entry);
 const { title, description, services, industry, year, cover, coverAlt } = entry.data;
 ---
-<Base title={title} description={description} type="article">
+<Base
+  title={title}
+  description={description}
+  type="article"
+  jsonLd={graph(breadcrumbs([{ name: "Web & design", path: "/web/" }, { name: title, path: `/web/${entry.id}/` }]))}
+>
   <div class="wrap">
     <header class="page-head">
       <p class="crumb"><a href="/web/">← Web &amp; design</a></p>

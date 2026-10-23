@@ -2,6 +2,7 @@
 layout: ../layouts/Page.astro
 eyebrow: "Bookmarks"
 title: "Links"
+description: "Links I've collected over the years: computer science learning resources, developer and terminal tools, Islamic resources and a few fun web toys."
 ---
 
 A collection of resources that I have found over the years.

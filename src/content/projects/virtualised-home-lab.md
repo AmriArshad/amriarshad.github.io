@@ -1,6 +1,6 @@
 ---
 title: "Windows Server & Active Directory Lab"
-description: "Designed, deployed, and managed a complete virtualised Active Directory environment to simulate real-world system administration tasks, focused on user, computer and policy management within an isolated internal network."
+description: "A virtualised Windows Server 2022 and Active Directory lab on KVM/QEMU for safely practising DNS, DHCP, Group Policy and user management."
 stack: ["Windows Server 2022", "KVM/QEMU", "Virt-Manager", "AD DS"]
 timeline: "2025"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Self-Hosting n8n with Cloudflare Tunnels"
 date: 2025-08-23
-description: "I recently set up n8n, a powerful workflow automation platform, on my local PC and made it accessible via my custom domain using Cloudflare Tunnels. This setup gives me a secure, always-on automation platform without exposing ports or dealing with traditional VPN configurations."
+description: "How I self-host n8n workflow automation on my own PC and reach it on a custom domain through Cloudflare Tunnels, with no open ports or VPN."
 ---
 
 I recently set up n8n, a powerful workflow automation platform, on my local PC and made it accessible via my custom domain using Cloudflare Tunnels. This setup gives me a secure, always-on automation platform without exposing ports or dealing with traditional VPN configurations.

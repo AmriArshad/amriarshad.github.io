@@ -1,7 +1,7 @@
 ---
 title: "I used Obsidian everyday in 2025"
 date: 2026-01-03
-description: "At the beginning of 2025, I started using Obsidian as my primary note-taking tool. The switch to Obsidian was a lot easier than expected and has helped me organise information, track my work, and manage my daily workflow."
+description: "A year of using Obsidian every day: my daily log template, habit and workout tracking, and keeping a private vault in sync with Syncthing."
 ---
 
 At the beginning of 2025, I started using Obsidian as my primary note-taking tool. The switch to Obsidian was a lot easier than expected and has helped me organise information, track my work, and manage my daily workflow.

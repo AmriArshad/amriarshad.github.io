@@ -1,8 +1,9 @@
 ---
 import Base from "../../layouts/Base.astro";
+import { graph, breadcrumbs } from "../../lib/seo";
 import { projects, skills } from "../../data/projects";
 ---
-<Base title="Projects" description="Infrastructure, automation and creative coding projects by Amri Arshad.">
+<Base title="Projects" description="Projects by Amri Arshad: a self-hosted game server platform, n8n automation, a Windows Server and Active Directory lab, a home server and Holocryptic." jsonLd={graph(breadcrumbs([{ name: "Projects", path: "/projects/" }]))}>
   <div class="wrap">
     <header class="page-head">
       <p class="eyebrow">Portfolio</p>
