@@ -42,6 +42,9 @@ python3 -m http.server 8766
 chromium --headless --hide-scrollbars --window-size=1200,630 --virtual-time-budget=8000 --screenshot=public/og.png http://localhost:8766/scripts/og-card.html
 ```
 
+The meta tags point at `og.png?v=<hash of the file>`, so a re-rendered image gets a new URL and
+apps that cache link previews (Discord, Slack, iMessage) pick it up on their next fetch.
+
 ## Deploy
 
 Pushing to `main` builds with GitHub Actions and publishes `dist/` to the `gh-pages` branch.
