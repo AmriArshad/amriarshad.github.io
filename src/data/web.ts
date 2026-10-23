@@ -10,6 +10,14 @@ export interface WebItem {
 
 export const liveSites: WebItem[] = [
   {
+    title: "Ruzaika Arshad",
+    href: "https://ruzaikaarshad.com/",
+    image: "/images/web/ruzaika-arshad.webp",
+    alt: "Ruzaika Arshad interpreter and translator website homepage",
+    tools: "Astro, Cloudflare",
+    blurb: "Website for a NAATI accredited Tamil and Sinhalese interpreter and translator, with a contact form for enquiries.",
+  },
+  {
     title: "B Living",
     href: "https://bliving.co.nz/",
     image: "/images/web/bliving.webp",
