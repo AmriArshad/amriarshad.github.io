@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://amri.dev/sitemap-index.xml

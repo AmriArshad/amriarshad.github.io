@@ -1,7 +1,7 @@
 ---
 title: "Migrating my domain to Cloudflare"
 date: 2025-12-29
-description: "I decided to migrate my domain from Namecheap to Cloudflare and wanted to share why I made the switch and how the process went. If you're considering a similar move, this guide should help you understand the benefits and walk through the migration process."
+description: "Why I moved my domain from Namecheap to Cloudflare Registrar, what it saves, and a step-by-step walkthrough of the transfer."
 ---
 
 I decided to migrate my domain from Namecheap to Cloudflare and wanted to share why I made the switch and how the process went. If you're considering a similar move, this guide should help you understand the benefits and walk through the migration process.
@@ -35,7 +35,7 @@ Cloudflare's DNS management is significantly faster and more intuitive than most
 
 ---
 
-# The Migration Process
+## The Migration Process
 
 The actual migration is straightforward, though it does require some patience as domain transfers can take several days to complete.
 

@@ -1,13 +1,14 @@
 ---
 import { getCollection } from "astro:content";
 import Base from "../../layouts/Base.astro";
+import { graph, breadcrumbs } from "../../lib/seo";
 import { liveSites, concepts, holocryptic, vectorSeries } from "../../data/web";
 import { site } from "../../data/site";
 
 const work = (await getCollection("work")).sort((a, b) => a.data.order - b.data.order);
 const art = [...vectorSeries, ...holocryptic.slice(0, 2)];
 ---
-<Base title="Web & design" description="Websites, branding and design concepts by Amri Arshad.">
+<Base title="Web & design" description="Websites, branding and UI concepts by Amri Arshad, from client sites built in Figma and Framer to Holocryptic generative art." jsonLd={graph(breadcrumbs([{ name: "Web & design", path: "/web/" }]))}>
   <div class="wrap">
     <header class="page-head">
       <p class="eyebrow">Web dev &amp; design</p>
