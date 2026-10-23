@@ -3,8 +3,9 @@ layout: ../layouts/Page.astro
 eyebrow: "About"
 lede: "IT operations by day, websites and generative art on the side."
 title: "About me"
-description: "Amri Arshad is an IT Operations Specialist in Auckland, New Zealand, working across Active Directory, Entra ID and PowerShell automation, with a background in web development and generative art."
+description: "Amri Arshad is an IT Operations Specialist in Auckland, NZ, working with Active Directory, Entra ID and PowerShell, plus web design and generative art."
 contact: true
+profile: true
 facts:
   - { label: "Role", value: "IT Operations Specialist" }
   - { label: "Based in", value: "Auckland, New Zealand" }
