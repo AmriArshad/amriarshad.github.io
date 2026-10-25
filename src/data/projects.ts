@@ -9,6 +9,27 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "VitalGlass",
+    href: "https://github.com/AmriArshad/VitalGlass",
+    stack: ["Rust", "Tauri", "Svelte", "TypeScript", "SQLite"],
+    timeline: "2026",
+    featured: true,
+    summary: [
+      "A desktop dashboard for my own Google Health data, so I can see steps, heart rate, sleep and workouts from my Google Fitbit Air without reaching for my phone. It reads from the new Google Health API (v4), runs locally and only ever reads, and is made to feel at home on KDE Plasma, following the Breeze colour scheme and accent colour.",
+      "A Rust core handles OAuth with PKCE, the API client and a two-pass sync engine that caches everything in SQLite, so the app opens instantly and works offline while it refreshes in the background. The refresh token lives in the OS keyring, and a small CLI shares the same core for debugging.",
+    ],
+  },
+  {
+    title: "Prayer Times for KDE Plasma",
+    href: "https://github.com/AmriArshad/plasma-prayer-times",
+    stack: ["QML", "Python", "KDE Plasma 6"],
+    timeline: "2026",
+    summary: [
+      "A Plasma 6 panel widget that counts down to the next prayer, with today's full schedule and the Hijri date in a dropdown. Passed times are dimmed and the next prayer is highlighted.",
+      "Times come from the Aladhan API by city and country, through a standard-library Python script that also works on its own in other status bars. The countdown uses the city's own timezone, so it stays correct even if the computer is set to a different one.",
+    ],
+  },
+  {
     title: "Self-Hosted Game Server Platform",
     href: "/blog/7-game-server-platform/",
     stack: ["Ubuntu", "AMP", "Podman", "playit.gg"],
@@ -63,7 +84,7 @@ export const projects: Project[] = [
 ];
 
 export const skills: { group: string; items: string[] }[] = [
-  { group: "Languages & scripting", items: ["PowerShell", "Bash", "Python", "JavaScript / TypeScript"] },
+  { group: "Languages & scripting", items: ["PowerShell", "Bash", "Python", "JavaScript / TypeScript", "Rust"] },
   {
     group: "Systems & infrastructure",
     items: [
@@ -88,6 +109,6 @@ export const skills: { group: string; items: string[] }[] = [
   { group: "Cloud & networking", items: ["Azure", "Remote Desktop Services", "VPN configuration", "Network administration"] },
   {
     group: "Development & design",
-    items: ["VS Code", "Vim", "Astro", "React & React Native", "Figma & Penpot", "Framer", "p5.js", "Zola"],
+    items: ["VS Code", "Vim", "Astro", "React & React Native", "Svelte & Tauri", "QML (KDE Plasma)", "Figma & Penpot", "Framer", "p5.js", "Zola"],
   },
 ];
