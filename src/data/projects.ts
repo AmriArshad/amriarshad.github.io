@@ -9,6 +9,28 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "Liftboard",
+    href: "https://liftboard.amri.dev",
+    stack: ["Svelte", "TypeScript", "ECharts", "Cloudflare Pages", "Terraform"],
+    timeline: "2026",
+    featured: true,
+    summary: [
+      "A browser app for exploring my Hevy workout history: drop in the CSV export and get workouts per week, weekly volume, every session set by set, e1RM and top-set trends for each exercise, personal records and stalled lifts. There is no server, so the CSV is parsed in a Web Worker and kept in IndexedDB, and no request ever carries the workouts.",
+      "Metrics are pure TypeScript functions tested with Vitest, with Playwright end-to-end tests and bundle-size and Lighthouse budgets in CI. Terraform manages the Cloudflare Pages project, domain and DNS, every pull request gets a plan and a preview deploy, and every push to main applies and deploys.",
+    ],
+  },
+  {
+    title: "Cephalon Grindstone",
+    href: "https://cephalon-grindstone.amri.dev",
+    stack: ["Astro", "TypeScript", "Node.js", "Cloudflare Workers", "GitHub Actions"],
+    timeline: "2026",
+    featured: true,
+    summary: [
+      "A Warframe acquisition planner: search any weapon, Warframe, companion, mod, arcane, resource or relic and see how to get its blueprint, the full Foundry recipe, where each component drops and at what rate. It even works out which Primes and relics are vaulted from the drop tables.",
+      "Every recipe and drop rate comes from extracted data rather than guesses, combining the game's public export, the official drop tables and community item data into a static site served by a Cloudflare Worker. A daily GitHub Actions job checks for game updates, rebuilds the data and opens a pull request summarising new items and changed drops.",
+    ],
+  },
+  {
     title: "VitalGlass",
     href: "https://github.com/AmriArshad/VitalGlass",
     stack: ["Rust", "Tauri", "Svelte", "TypeScript", "SQLite"],
@@ -100,7 +122,7 @@ export const skills: { group: string; items: string[] }[] = [
   },
   {
     group: "Containers & DevOps",
-    items: ["Docker", "Podman", "Git / GitHub", "GitHub Actions", "Cloudflare (DNS, Tunnels, Workers)"],
+    items: ["Docker", "Podman", "Git / GitHub", "GitHub Actions", "Terraform", "Cloudflare (DNS, Tunnels, Workers, Pages)"],
   },
   {
     group: "Tools & platforms",
@@ -109,6 +131,6 @@ export const skills: { group: string; items: string[] }[] = [
   { group: "Cloud & networking", items: ["Azure", "Remote Desktop Services", "VPN configuration", "Network administration"] },
   {
     group: "Development & design",
-    items: ["VS Code", "Vim", "Astro", "React & React Native", "Svelte & Tauri", "QML (KDE Plasma)", "Figma & Penpot", "Framer", "p5.js", "Zola"],
+    items: ["VS Code", "Vim", "Astro", "React & React Native", "Svelte & Tauri", "ECharts", "QML (KDE Plasma)", "Figma & Penpot", "Framer", "p5.js", "Zola"],
   },
 ];
