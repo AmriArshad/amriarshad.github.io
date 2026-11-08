@@ -119,7 +119,7 @@ const focus = [
       {holocryptic.map((art) => (
         <article class="card">
           <div class="card-media square">
-            <iframe src={art.embed} title={art.title} loading="lazy" scrolling="no"></iframe>
+            <iframe src={art.embed} title={art.title} loading="lazy" scrolling="no" sandbox="allow-scripts"></iframe>
           </div>
           <div class="card-body">
             <h3><a href={art.href}>{art.title}</a></h3>

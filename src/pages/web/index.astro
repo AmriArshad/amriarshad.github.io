@@ -87,7 +87,7 @@ const art = [...vectorSeries, ...holocryptic.slice(0, 2)];
         <article class="card">
           <div class="card-media square">
             {item.embed
-              ? <iframe src={item.embed} title={item.title} loading="lazy" scrolling="no"></iframe>
+              ? <iframe src={item.embed} title={item.title} loading="lazy" scrolling="no" sandbox="allow-scripts"></iframe>
               : <img class="zoomable" src={item.image} alt={item.alt} loading="lazy" />}
           </div>
           <div class="card-body">
