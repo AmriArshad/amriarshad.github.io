@@ -3,7 +3,7 @@ export const site = {
   url: "https://amri.dev",
   description:
     "IT Operations Specialist in Auckland, NZ. Active Directory, PowerShell automation and self-hosted infrastructure, plus websites, design and generative art.",
-  email: "amriarshad0@gmail.com",
+  email: "hello@amri.dev",
   github: "https://github.com/AmriArshad",
   linkedin: "https://www.linkedin.com/in/amriarshad/",
   dribbble: "https://dribbble.com/AmriArshad",
@@ -14,6 +14,7 @@ export const nav = [
   { href: "/web/", label: "Web & design" },
   { href: "/blog/", label: "Posts" },
   { href: "/about/", label: "About" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 // 88x31 buttons, kept from the original site.

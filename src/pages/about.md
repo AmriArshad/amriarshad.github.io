@@ -1,15 +1,16 @@
 ---
 layout: ../layouts/Page.astro
 eyebrow: "About"
-lede: "IT operations by day, websites and generative art on the side."
+lede: "IT operations by day. Available for consulting, automation, websites and custom builds."
 title: "About me"
-description: "Amri Arshad is an IT Operations Specialist in Auckland, NZ, working with Active Directory, Entra ID and PowerShell, plus web design and generative art."
+description: "Amri Arshad is an IT Operations Specialist in Auckland, NZ, available for IT consulting, automation, websites and custom solutions."
 contact: true
 profile: true
 facts:
   - { label: "Role", value: "IT Operations Specialist" }
   - { label: "Based in", value: "Auckland, New Zealand" }
   - { label: "Works with", value: "AD, Entra ID, PowerShell, Linux" }
+  - { label: "Available for", value: "IT consulting, automation, websites, custom solutions" }
   - { label: "Studied", value: "BSc Computer Science, University of Auckland" }
   - { label: "Daily driver", value: "Arch Linux, since 2020" }
 ---
@@ -21,6 +22,18 @@ Hey, I'm Amri, a multi-disciplinary IT Operations Specialist and Computer Scienc
 I work in a hybrid cloud environment managing Active Directory and Microsoft Entra ID, and supporting Amplifon's clinics across New Zealand. My days involve a mix of PowerShell automation, system administration, and troubleshooting interesting problems. I genuinely enjoy writing scripts that make repetitive tasks disappear and keeping infrastructure running smoothly.
 
 Before this, I freelanced as a web developer and designer, building client websites with Astro, React and Framer, from Figma designs through to deployment. That also meant looking after domains and DNS, and automating builds with GitHub Actions and Cloudflare Workers. Before that, I interned as a Software Engineer at an AI tech startup working with React and Redux. The variety of experience across different areas of tech has been valuable. It's helped me understand how different parts of the stack connect and how to think about problems from multiple angles.
+
+## Work With Me
+
+Alongside my day job, I take on work for people and businesses who need a hand with their tech:
+
+- **IT consulting:** a second opinion on your setup, Microsoft 365 and Entra ID, networking, backups, or working out what you actually need before you buy it.
+- **Automation:** scripts and workflows that take repetitive work off your plate, from PowerShell and Python to self-hosted tools like n8n.
+- **Websites:** design through to launch, plus the domains, DNS and hosting behind them.
+- **Custom solutions:** small tools, integrations and dashboards for when nothing off the shelf quite fits.
+- **Projects:** got an idea that doesn't fit a box? Tell me about it.
+
+If any of that sounds useful, [get in touch](/#contact). I usually reply within 24 hours.
 
 ## Learning & Skills
 
@@ -55,4 +68,4 @@ I enjoy tackling diverse technical challenges. Whether it's automating away tedi
 
 ---
 
-You can find me on [GitHub](https://github.com/AmriArshad) and [LinkedIn](https://www.linkedin.com/in/amriarshad/), or reach out via [email](mailto:amriarshad0@gmail.com). Check out my [Projects](/projects/) and [Web Dev](/web/) pages to see what I've been building.
+You can find me on [GitHub](https://github.com/AmriArshad) and [LinkedIn](https://www.linkedin.com/in/amriarshad/), or reach out at [hello@amri.dev](mailto:hello@amri.dev) for projects, consulting or anything else. Check out my [Projects](/projects/) and [Web Dev](/web/) pages to see what I've been building.
