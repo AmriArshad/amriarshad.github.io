@@ -4,6 +4,9 @@ import { graph, website, person } from "../lib/seo";
 import { projects } from "../data/projects";
 import { holocryptic } from "../data/web";
 import { getPosts, formatDate } from "../lib/posts";
+import { site } from "../data/site";
+
+const services = ["Projects", "Websites", "Automation", "Custom solutions", "IT consulting"];
 
 const posts = (await getPosts()).slice(0, 3);
 const featured = projects.filter((p) => p.featured);
@@ -29,16 +32,16 @@ const focus = [
 <Base jsonLd={graph(website, person)}>
   <section class="wrap hero" aria-labelledby="hero-title">
     <div>
-      <p class="eyebrow">IT Operations · Auckland, New Zealand</p>
+      <p class="eyebrow">IT · Automation · Web · Auckland, New Zealand</p>
       <h1 id="hero-title">Building systems that <span class="accent">just work</span>.</h1>
       <p class="lede">
-        I'm Amri, a multi-disciplinary IT Operations Specialist. I manage hybrid Active Directory and
-        Azure environments, automate with PowerShell and run self-hosted services on Linux. I also
-        design and build websites and make generative art.
+        I'm Amri, a multi-disciplinary IT Operations Specialist. I help people and businesses with IT
+        consulting, automation that takes the busywork off their plate, websites from design to launch
+        and custom solutions when nothing off the shelf fits.
       </p>
       <div class="actions">
-        <a class="btn primary" href="/projects/">See projects</a>
-        <a class="btn" href="/about/">About me</a>
+        <a class="btn primary" href="#contact">Work with me</a>
+        <a class="btn" href="/projects/">See my work</a>
       </div>
     </div>
 
@@ -129,9 +132,35 @@ const focus = [
       ))}
     </div>
   </section>
+
+  <section class="wrap section" id="contact" aria-labelledby="contact-title">
+    <div class="contact">
+      <div>
+        <p class="eyebrow">Open to work · Remote or Auckland</p>
+        <h2 id="contact-title">Got something in mind? <span class="accent">Let's talk.</span></h2>
+        <p class="section-intro">
+          Whether it's a project, a new website, automating the boring parts of your week or a second
+          opinion on your IT setup, I'm happy to help. Tell me what you're working on and I'll get back
+          to you.
+        </p>
+        <ul class="tags" aria-label="What I can help with">
+          {services.map((s) => <li>{s}</li>)}
+        </ul>
+      </div>
+      <div class="contact-reach">
+        <a class="contact-address" href={`mailto:${site.email}`}>{site.email}</a>
+        <div class="actions">
+          <a class="btn primary" href={`mailto:${site.email}?subject=${encodeURIComponent("Hello from amri.dev")}`}>Send an email</a>
+          <button class="btn" type="button" id="copy-email" data-email={site.email} hidden>Copy address</button>
+        </div>
+        <p class="label">Usually replies within 24 hours</p>
+      </div>
+    </div>
+  </section>
 </Base>
 
 <script>
   import "../scripts/hero.js";
   import "../scripts/quote.js";
+  import "../scripts/contact.js";
 </script>
