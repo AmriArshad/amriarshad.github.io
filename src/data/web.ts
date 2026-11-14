@@ -33,6 +33,14 @@ export const liveSites: WebItem[] = [
     tools: "Zola, p5.js",
     blurb: "Home for my generative art and design project.",
   },
+  {
+    title: "Glyphbloom",
+    href: "https://glyphbloom.amri.dev/",
+    image: "/images/web/glyphbloom.webp",
+    alt: "Glyphbloom concept florist homepage with a rose drawn from text characters",
+    tools: "Astro, Cloudflare",
+    blurb: "Concept florist that sends flowers drawn from text as a link, turning in 3D in the browser.",
+  },
 ];
 
 export const concepts: WebItem[] = [
