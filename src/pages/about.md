@@ -27,7 +27,7 @@ Before this, I freelanced as a web developer and designer, building client websi
 
 Alongside my day job, I take on work for people and businesses who need a hand with their tech:
 
-- **IT consulting:** a second opinion on your setup, Microsoft 365 and Entra ID, networking, backups, or working out what you actually need before you buy it.
+- **IT consulting:** not sure what you need? We start with a free 30-minute call to talk through your setup and goals, and I'll tell you honestly where I can help.
 - **Automation:** scripts and workflows that take repetitive work off your plate, from PowerShell and Python to self-hosted tools like n8n.
 - **Websites:** design through to launch, plus the domains, DNS and hosting behind them.
 - **Custom solutions:** small tools, integrations and dashboards for when nothing off the shelf quite fits.
